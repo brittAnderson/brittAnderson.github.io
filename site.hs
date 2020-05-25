@@ -6,7 +6,9 @@ import           Hakyll
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = do 
+  mycfg <- mkMyCfg 
+  hakyllWith  mycfg $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -65,3 +67,8 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+mkMyCfg :: IO Configuration
+mkMyCfg = do 
+    mydplyCmd <- readFile "./deploy"
+    return (defaultConfiguration {deployCommand = mydplyCmd})
