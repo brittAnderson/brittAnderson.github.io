@@ -1,0 +1,14 @@
+---
+title: Using Your Camera As A Webcam
+author: Britt Anderson
+---
+
+This is a popular topic in the era of work from home and remote presentations. I just wanted to post as landmarks a couple of useful links I found helpful. In addition I want to point out that you can make most of this work in Linux and using Nixos in particular if you are so inclined.
+
+The easiest route if you are a Windows or Mac user is to simply buy a supported Canon camera and use their beta software. Then everything seems to just work. However, if you are on linux the story is more complicated.
+
+One option is to buy the cheapest HDMI-USB video converter you can find and cross your fingers the lag is adequate for your use. 
+
+Another option is to search the gphoto2 list of supported cameras and then, if yours is supported, search for specfic instructions. 
+
+In my case I followed the advice here and set up a loopback device. The packages you need are shown for Ubuntu and the pace is slow, but methodical. You can skim if you know what you are doing. If you do not this is a nice overview. 
