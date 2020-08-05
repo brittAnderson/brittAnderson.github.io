@@ -3,7 +3,8 @@ title: Using Nix, Hakyll, and GithubPages
 author: Britt Anderson
 ---
 
-The first exercise is to get to stitch together a blog with the use of these tools. First, download and install NixOS. That is a big step and a lot of work on its own. I am not detailing that here. And that is good for you, because I don't really know what I am doing.  Compilation /= competency.
+The first exercise is to get to stitch together a blog with the use of these tools. First, download and install NixOS. That is a big step and a lot of work on its own. I am not detailing that here. And that is good for you, because I don\'t really know what I am doing.  Compilation /= competency.
+
 
 Next, you need some Haskell tooling. A secondary reason for using NixOS was the fact that haskell seems to play nice with nix, and my intermittent forays into haskell over the years have already made me aware that is not a trivial point. However, just like nix as a whole, the documentation is patchy, and it is easy to find popular, but out of date resources. A good source as of May 2020 is [Maybe Void](https://maybevoid.com/posts/2019-01-27-getting-started-haskell-nix.html).
 
