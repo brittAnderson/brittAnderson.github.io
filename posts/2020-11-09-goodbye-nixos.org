@@ -1,0 +1,17 @@
+---
+title: Good-bye Nixos
+author: Britt Anderson
+---
+
+I think [[https://nixos.org/][Nixos]] is the right way to run an operating system. I think declarative and reproducible are the future, and I don't think I am particularly forward in this thinking. Cabal basically is doing this with the new-build set of tools, and [[https://shopify.engineering/what-is-nix][Nix now is adopted by Shopify]].
+
+However, there is an anti-sweet spot for the adoption of nixos. If you are a very basic user and just want to run a basic desktop then nixos is ready to go and you should adopt it. I did not have too much trouble getting things to work even on a Surface Go. The plasma desktop was great, and with gnome even screen rotation worked. If you are a cutting edge user then you can use Nix as well as anything else and the need to learn a new special purpose one-off language for installing software is not big deal. However, if you are in between these cases then using Nixos can be painful. You have a desire to try out new tools, and not enough time or knowledge to be able to make them work in all the special cases that arise.
+
+I need to use [[https://www.psychopy.org][Psychopy]] for the programming of experiments in psychology. That python package requires knowing where a lot of other tools are, and that means you can't expect all the symlinks built by Nix to work quite how you expect. Want to try other programming languages: Idris or Idris2. Those need other compilers and to get things working I had to [[https://en.wikipedia.org/wiki/Blanche_DuBois][depend on the kindness]] of strangers. And there are many kind strangers out there in the world of programming languages, but it is a brittle dependency. I think the straw that broke the camel's back was [[https://julialang.org/][Julia]]. There is a lot of hum around this language in scientific computing, and it also attaches to the math-y world of [[https://github.com/AlgebraicJulia/Catlab.jl][Category Theory]]. While the julia compiler is no problem [[https://discourse.julialang.org/t/using-julia-with-nixos/35129][the packages are]]. If everytime you want to spend an afternoon playing with some new tool in a REPL you have to spend many days figuring out the installation then you end up not playing with the new tool. Maybe in some cases that is a beneficial protection against distraction. But if you believe that new insights can come from the fertile ground of intellectual play [fn:1], it is a bad thing indeed.
+
+For now I am warmly back into the world of ArchLinux where I may occassionally use the nix package manager tool for the occasional [[https://github.com/dmjio/miso][special case]]. I look forward to the day when time, documentation, and even wider adoption allow me to try Nixos for the third time and stick with it. 
+
+
+* Footnotes
+
+[fn:1] The more complex the mind, the greater the need for the simplicity of play. - James T. Kirk 
