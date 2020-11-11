@@ -5,8 +5,8 @@ git stash
 git checkout develop
 
 # Build new files
-./dist-newstyle/build/x86_64-linux/ghc-8.6.5/brittAnderson-github-io-0.1.0.0/x/site/build/site/site clean
-./dist-newstyle/build/x86_64-linux/ghc-8.6.5/brittAnderson-github-io-0.1.0.0/x/site/build/site/site build
+./dist-newstyle/build/x86_64-linux/ghc-8.8.4/brittAnderson-github-io-0.1.0.0/x/site/build/site/site clean
+./dist-newstyle/build/x86_64-linux/ghc-8.8.4/brittAnderson-github-io-0.1.0.0/x/site/build/site/site build
 
 # Get previous files
 git fetch --all
