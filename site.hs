@@ -30,6 +30,14 @@ main = do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+    create ["rss.xml"] $ do
+           route idRoute
+           compile $ do
+                let feedCtx = postCtx `mappend`
+                     constField "description" "This is the post description"
+                posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
+                renderRss myFeedConfiguration feedCtx posts
+    
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -68,7 +76,17 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
+myFeedConfiguration :: FeedConfiguration
+myFeedConfiguration = FeedConfiguration
+    { feedTitle       = "Britt Anderson´s Blog"
+    , feedDescription = "Little Random Thought Droplets"
+    , feedAuthorName  = "Britt Anderson"
+    , feedAuthorEmail = "britt@uwaterloo.ca"
+    , feedRoot        = "https://brittanderson.github.io"
+    }
+
 mkMyCfg :: IO Configuration
 mkMyCfg = do 
     mydplyCmd <- readFile "./deploy"
     return (defaultConfiguration {deployCommand = mydplyCmd})
+    
