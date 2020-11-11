@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Britt Anderson´s Blog</title>
+        <link>https://brittanderson.github.io</link>
+        <description><![CDATA[Little Random Thought Droplets]]></description>
+        <atom:link href="https://brittanderson.github.io/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Mon, 09 Nov 2020 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Good-bye Nixos</title>
+    <link>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</link>
+    <description><![CDATA[This is the post description]]></description>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>What's in a name?</title>
+    <link>https://brittanderson.github.io/posts/2020-08-14-titles.html</link>
+    <description><![CDATA[This is the post description]]></description>
+    <pubDate>Fri, 14 Aug 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-08-14-titles.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Using Your Camera As A Webcam</title>
+    <link>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</link>
+    <description><![CDATA[This is the post description]]></description>
+    <pubDate>Wed, 05 Aug 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Once more into the breech ...</title>
+    <link>https://brittanderson.github.io/posts/2020-05-25-imback.html</link>
+    <description><![CDATA[This is the post description]]></description>
+    <pubDate>Mon, 25 May 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-05-25-imback.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Using Nix, Hakyll, and GithubPages</title>
+    <link>https://brittanderson.github.io/posts/2020-05-25-Nix-Hakyll-GithubPages.html</link>
+    <description><![CDATA[This is the post description]]></description>
+    <pubDate>Mon, 25 May 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-05-25-Nix-Hakyll-GithubPages.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+
+    </channel>
+</rss>
