@@ -27,6 +27,7 @@ main = do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
+	    >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -34,8 +35,8 @@ main = do
            route idRoute
            compile $ do
                 let feedCtx = postCtx `mappend`
-                     constField "description" "This is the post description"
-                posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
+                     bodyField "description" 
+                posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*" "content"
                 renderRss myFeedConfiguration feedCtx posts
     
     create ["archive.html"] $ do
