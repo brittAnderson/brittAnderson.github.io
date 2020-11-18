@@ -11,7 +11,28 @@
         <item>
     <title>Good-bye Nixos</title>
     <link>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</link>
-    <description><![CDATA[This is the post description]]></description>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on November  9, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>I think <a href="https://nixos.org/">Nixos</a> is the right way to run an operating system. I think declarative and reproducible are the future, and I don’t think I am particularly forward in this thinking. Cabal basically is doing this with the new-build set of tools, and <a href="https://shopify.engineering/what-is-nix">Nix now is adopted by Shopify</a>.</p>
+<p>However, there is an anti-sweet spot for the adoption of nixos. If you are a very basic user and just want to run a basic desktop then nixos is ready to go and you should adopt it. I did not have too much trouble getting things to work even on a Surface Go. The plasma desktop was great, and with gnome even screen rotation worked. If you are a cutting edge user then you can use Nix as well as anything else and the need to learn a new special purpose one-off language for installing software is not big deal. However, if you are in between these cases then using Nixos can be painful. You have a desire to try out new tools, and not enough time or knowledge to be able to make them work in all the special cases that arise.</p>
+<p>I need to use <a href="https://www.psychopy.org">Psychopy</a> for the programming of experiments in psychology. That python package requires knowing where a lot of other tools are, and that means you can’t expect all the symlinks built by Nix to work quite how you expect. Want to try other programming languages: Idris or Idris2. Those need other compilers and to get things working I had to <a href="https://en.wikipedia.org/wiki/Blanche_DuBois">depend on the kindness</a> of strangers. And there are many kind strangers out there in the world of programming languages, but it is a brittle dependency. I think the straw that broke the camel’s back was <a href="https://julialang.org/">Julia</a>. There is a lot of hum around this language in scientific computing, and it also attaches to the math-y world of <a href="https://github.com/AlgebraicJulia/Catlab.jl">Category Theory</a>. While the julia compiler is no problem <a href="https://discourse.julialang.org/t/using-julia-with-nixos/35129">the packages are</a>. If everytime you want to spend an afternoon playing with some new tool in a REPL you have to spend many days figuring out the installation then you end up not playing with the new tool. Maybe in some cases that is a beneficial protection against distraction. But if you believe that new insights can come from the fertile ground of intellectual play <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, it is a bad thing indeed.</p>
+<p>For now I am warmly back into the world of ArchLinux where I may occassionally use the nix package manager tool for the occasional <a href="https://github.com/dmjio/miso">special case</a>. I look forward to the day when time, documentation, and even wider adoption allow me to try Nixos for the third time and stick with it.</p>
+<h1 id="footnotes">Footnotes</h1>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>The more complex the mind, the greater the need for the simplicity of play. - James T. Kirk<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+    </section>
+</article>
+]]></description>
     <pubDate>Mon, 09 Nov 2020 00:00:00 UT</pubDate>
     <guid>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</guid>
     <dc:creator>Britt Anderson</dc:creator>
@@ -19,7 +40,18 @@
 <item>
     <title>What's in a name?</title>
     <link>https://brittanderson.github.io/posts/2020-08-14-titles.html</link>
-    <description><![CDATA[This is the post description]]></description>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on August 14, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>The purpose of this blog is to provide a sandbox for playing and practicing with new tools related to blogging, not really to share content. So why then do I spend so much time thinking about a title? If I was going to title it based on the audience of readers I could call it “Me, Myself, and I.” Does anyone else waste too much time this way?</p>
+    </section>
+</article>
+]]></description>
     <pubDate>Fri, 14 Aug 2020 00:00:00 UT</pubDate>
     <guid>https://brittanderson.github.io/posts/2020-08-14-titles.html</guid>
     <dc:creator>Britt Anderson</dc:creator>
@@ -27,7 +59,44 @@
 <item>
     <title>Using Your Camera As A Webcam</title>
     <link>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</link>
-    <description><![CDATA[This is the post description]]></description>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on August  5, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>This is a popular topic in the era of work from home and remote presentations. I just wanted to post as landmarks a couple of useful links I found helpful. In addition I want to point out that you can make most of this work in Linux and using Nixos in particular if you are so inclined.</p>
+<p>The easiest route if you are a Windows or Mac user is to simply buy a supported Canon camera and use their <a href="https://www.canon.ca/en/Features/EOS-Webcam-Utility" title="Canon Canada Beta Webcam">beta software</a>. Then everything seems to just work. However, if you are on linux the story is more complicated.</p>
+<p>One option is to buy the cheapest HDMI-USB video converter you can find and cross your fingers the lag is adequate for your use.</p>
+<p>Another option is to search the <a href="http://gphoto.org/proj/libgphoto2/support.php" title="gphoto2 supported cameras">gphoto2</a> list of supported cameras and then, if yours is supported, search for specfic instructions.</p>
+<p>In my case I followed the advice in this <a href="https://youtu.be/EqrZrKC1WA0" title="Using OBS to Stream Without special software">youtube video</a> and set up a loopback device. The packages you need are shown for Ubuntu and the pace is slow, but methodical. You can skim if you know what you are doing. If you do not this is a nice overview.</p>
+<p>As I tried to get things in my nixos installation working I tried a bunch of settings and packages. I will list them here, but they may not all be necessary for you.</p>
+<p>First, are the changes I made to my <code>configuration.nix</code></p>
+<p>I set a kernel package:</p>
+<p><code>boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];</code></p>
+<p>I also installed the package <code>linuxPackages.v4l2loopback</code> and some others for my applications and uses. The <code>screenkey</code> program allows you to show keypresses on the screen and is useful for screencasting.</p>
+<pre><code>zoom-us
+ffmpeg
+gphoto2
+screenkey</code></pre>
+<p>And I enabled the gphoto option <code>programs.gphoto2.enable=true;</code></p>
+<p>For reasons I can't quite remember I decided to only make the obs_studio package available for my user account, and I added the camera to my list of extra groups:</p>
+<pre><code>extraGroups = [ &quot;wheel&quot; &quot;networkmanager&quot; &quot;adbusers&quot; &quot;camera&quot;];
+packages =  with pkgs; [
+	pkgs.obs-studio </code></pre>
+<p>Then if all that installs, compiles and works well you can plug in your camera from its USB out to a USB port on your computer and then reboot all. In a terminal check if gphoto2 can find your camera with <code>gphoto2 --autodetect</code></p>
+<p>Figure out the names of your video devices with <code>ls /dev/video*</code> and then</p>
+<pre><code>sudo modprobe v4l2loopback</code></pre>
+<p>and repeat the <code>ls</code> command to identify the new device, and use it to run:</p>
+<pre><code>  gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo 
+	  -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video2
+  </code></pre>
+<p>Now you should have a dummy device you can use in obs or zoom or pretty much any application.</p>
+    </section>
+</article>
+]]></description>
     <pubDate>Wed, 05 Aug 2020 00:00:00 UT</pubDate>
     <guid>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</guid>
     <dc:creator>Britt Anderson</dc:creator>
@@ -35,7 +104,17 @@
 <item>
     <title>Once more into the breech ...</title>
     <link>https://brittanderson.github.io/posts/2020-05-25-imback.html</link>
-    <description><![CDATA[This is the post description]]></description>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on May 25, 2020
+        
+    </section>
+    <section>
+        <p>It seems that every year I recreate this site, then it lays fallow, then it rots, then I plow it under and start again. The occassion this time around is that in addition to wanting to make hakyll work as a road to better haskell competency I decided to add nixos to the mix. <em>Sigh</em>.</p>
+<p>Despite the nicks and cuts I received from the bleeding edge, nothing was mortal. I hope to be back with more soon.</p>
+    </section>
+</article>
+]]></description>
     <pubDate>Mon, 25 May 2020 00:00:00 UT</pubDate>
     <guid>https://brittanderson.github.io/posts/2020-05-25-imback.html</guid>
     <dc:creator>Britt Anderson</dc:creator>
@@ -43,7 +122,22 @@
 <item>
     <title>Using Nix, Hakyll, and GithubPages</title>
     <link>https://brittanderson.github.io/posts/2020-05-25-Nix-Hakyll-GithubPages.html</link>
-    <description><![CDATA[This is the post description]]></description>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on May 25, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>The first exercise is to get to stitch together a blog with the use of these tools. First, download and install NixOS. That is a big step and a lot of work on its own. I am not detailing that here. And that is good for you, because I don't really know what I am doing. Compilation /= competency.</p>
+<p>Next, you need some Haskell tooling. A secondary reason for using NixOS was the fact that haskell seems to play nice with nix, and my intermittent forays into haskell over the years have already made me aware that is not a trivial point. However, just like nix as a whole, the documentation is patchy, and it is easy to find popular, but out of date resources. A good source as of May 2020 is <a href="https://maybevoid.com/posts/2019-01-27-getting-started-haskell-nix.html">Maybe Void</a>.</p>
+<p>The consensus seems to be that a couple of things you will want globally are <code>cabal2nix</code>, <code>nix-prefetch-git</code>, and <code>cabal-install</code>. The rest you can use via the <code>nix store</code>.</p>
+<p>You can then use a <code>shell.nix</code> file to pull in the packages your need from haskell to have an environment that lets you use <code>cabal</code> to build your <code>site.hs</code> file. Then instead of stack you can use the compiled <code>site</code> from deep inside your <code>dist-newstyle</code> subdirectory to run the various hakyll commands.</p>
+<p>In addition, I adapted the instructions on deploying from the <a href="https://jaspervdj.be/hakyll/tutorials/github-pages-tutorial.html">tutorial</a> to read from a file the deploy command. I just wrote it in the top directory and cobbled together some poorly understood code at the start of the <code>main</code> function in <code>site.hs</code> to build a configuration and supply it to <code>hakyllWith</code>. I think my files and commands should be readable from the develop branch.</p>
+    </section>
+</article>
+]]></description>
     <pubDate>Mon, 25 May 2020 00:00:00 UT</pubDate>
     <guid>https://brittanderson.github.io/posts/2020-05-25-Nix-Hakyll-GithubPages.html</guid>
     <dc:creator>Britt Anderson</dc:creator>
