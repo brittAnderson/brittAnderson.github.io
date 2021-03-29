@@ -11,6 +11,10 @@ I need to use [[https://www.psychopy.org][Psychopy]] for the programming of expe
 
 For now I am warmly back into the world of ArchLinux where I may occassionally use the nix package manager tool for the occasional [[https://github.com/dmjio/miso][special case]]. I look forward to the day when time, documentation, and even wider adoption allow me to try Nixos for the third time and stick with it. 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 * Footnotes
 
 [fn:1] The more complex the mind, the greater the need for the simplicity of play. - James T. Kirk 
