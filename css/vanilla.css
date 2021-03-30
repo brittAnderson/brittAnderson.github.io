@@ -48,7 +48,7 @@ body, input {
 }
 
 h1,h2,h3,h4,h5,h6,p,blockquote,dl,img,figure {
-    margin: 2rem 0;
+    margin: 2rem 1rem;
 }
 
 h1,h2,h3,h4,h5,h6 { font-weight: bold; line-height: 1.2; }
@@ -58,9 +58,11 @@ h3 { font-size: 120%; }
 h4,h5,h6 { font-size: 100%; }
 h5, h6 { text-transform: uppercase; }
 
-header h1 { border-bottom: 1px solid; }
+header h1 { border-bottom: 1px solid;}
+header{margin: 2rem 2rem;}
+footer {margin: 2rem 2rem;}
 
-p { margin: 2rem 0; }
+p { margin: 2rem 1rem; }
 
 a,a:visited { color: var(--link-color); }
 
@@ -103,7 +105,8 @@ hr {
 img {
     display: block;
     height: auto; 
-    max-width: 100%; 
+    max-width: 100%;
+    padding: 0 2rem 0 0;
 }
 
 figure {
