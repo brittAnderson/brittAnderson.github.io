@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Britt Anderson´s Blog</title>
+        <link>https://brittanderson.github.io</link>
+        <description><![CDATA[Little Random Thought Droplets]]></description>
+        <atom:link href="https://brittanderson.github.io/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Mon, 29 Mar 2021 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>What is Attention Redux</title>
+    <link>https://brittanderson.github.io/posts/2021-03-29-whatIsAttn.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on March 29, 2021
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <h1 id="what-is-attention">What is Attention</h1>
+<p>In 2011 I published an <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00246/full">article</a> called “There is no such thing as attention.” This year I wrote a submission that I hope will appear in <a href="https://onlinelibrary.wiley.com/journal/19395086#?tabActivePane=">WIREs Cognitive Science</a> revisiting this issues; this time as an opinion piece for a collection to be titled <em>What is Attention?</em></p>
+<h1 id="there-still-is-no-such-thing-as-attention.">There <em>still</em> is no such thing as attention.</h1>
+<p>Basically, my answer to the question is the same: What is attention? Nothing <strong>is</strong> attention. But my purpose here is to reflect a bit on coming back to a topic ten years later and how I perceive the changing landscape.</p>
+<p>I feel a lot less fervor for the issue. My opinion is as deeply held, and I feel the evidence is greater than before. What has changed is my general sense that the battle is won. Not because I wrote my article. My article did not direct the <em>zeitgeist</em> it reflected it. I have gotten a lot of feedback on that article. Some people cite me, but I have the sense that many more read it and liked it then ever quote it or cite it. I think that is because I gave voice to something that many people felt and that more people now feel. The word attention is not fit for purpose. It has a certain practical benefit of helping you find the posters that will interest you at a conference, but it doesn’t help you organize your data, conceive your experiments, or appear as a useful construct in your theories.</p>
+<h1 id="attention-as-exemplar">Attention as Exemplar</h1>
+<p>I gave words to some ideas that I didn’t invent, but simply detected. And one of the reasons I feel my piece got some attention was because others recognized their feelings and suspicions in my words, and it gave them a concrete signpost to point to when wanting to share their concerns with others.</p>
+<p>Well and good, but then why write again on the same topic if my opinion is largely the same and the consensus seems to be converging to the same position? There is probably an argument to be made for writing the same paper over and over as a tactic to achieve recognition in academics. I won’t deny the argument in general, but it doen’t appeal to me. I have enough trouble finding the personal capital to invest in writing articles the first time. Once I know what I want to say, and how I intend to say it; a stage that occurs fairly early in the writing process, my own personal goals are largely met, and I have to rely on my stubborness to finish <em>actually</em> writing the article, and not just living with my mentalized version. I accept the professional benefits of repeating your story over and over, but that wasn’t what got me to bother revisiting the question of what is attention. It is that attention seems to be a very good example of a more general problem. One that plagues psychology in particular: conceptual fragmentation. Understanding what that is can help us in science a lot. It can help us recognize terms we should eliminate from our discourse and arguments where we might think we are arguing about a shared concept, but in fact have been tricked by subtle distinctions into wasting our time and ink comparing apples and oranges. There are heuristic guidelines for recognizing these futile debates and suspect terms. I found the impetus to revisit the issue of attention, because it gave me the opportunity to read and think about the topic of conceptual fragmentation generally, and discourse eliminativism: where we agree to remove a word from our scientific conversations. Another article on “What is Attention?” allowed me to share this new enthusiam. That is the moral. To find the motivation to revisit an old, at least for you, topic find the new angle or the new application.</p>
+<h1 id="please-read">Please read …</h1>
+<p>I would like to advertise the article by <a href="https://link.springer.com/article/10.1007/s13194-016-0136-2">Taylor and Vickers</a>. It is a very readable overview of this topic that will benefit you regardless of your interest in the debate over attention. And they did cite me after all.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Mon, 29 Mar 2021 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2021-03-29-whatIsAttn.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>New Year's Raisins</title>
+    <link>https://brittanderson.github.io/posts/2021-01-07-raisins.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on January  7, 2021
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>I have recently learned of a Portuguese New Year’s tradition where you eat twelve raisins as the clock tolls midnight. Each raisin represents one month of the coming year and in the version I learned you make one wish for each raisin: one wish for each month of the year to come.</p>
+<p>When compared to the North American tradition of New Year’s resolutions this one seems preferable. One thinks discretely and concretely about the year to come, and, at least in my case, made me think about what I could do to contribute to each month’s opportunities.</p>
+<p>This blog is my idea overflow. The place where I intended to put the experimental meanderings and odd one-offs that were not really “academic” (thus not fitting on the <a href="https://brittlab.uwaterloo.ca">lab site</a>), but were still things that I wanted to pollinate the blog-o-sphere with. However, in practice it has not really worked out that way. Months (sometimes a year or more) go by with no entry. Then I change the software I use to produce the blog, write one post to proclaim that fact and my good intentions, and then silence.</p>
+<p>In the raisin spirit I decided to make this my raisin-<em>d’etre</em> for the year and come up with one blog title for each month of the year in an effort to encourage and guilt myself into writing on this blog more often.</p>
+<p>This obviously counts as the January entry<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, but here are some tentative ideas that I intend to produce for the remainder of the year.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Title/Topic</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan</td>
+<td>Raisins</td>
+<td>Blogging More: a resolution</td>
+</tr>
+<tr class="even">
+<td>Feb</td>
+<td>R or Julia</td>
+<td>If you know R should you bother?</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>If you know neither should start with</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>Julia? First thoughts.</td>
+</tr>
+<tr class="odd">
+<td>Mar</td>
+<td>There is no such thing</td>
+<td>One of my most popular papers.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>as attention - 10 Years On</td>
+<td>I want to revisit and rethink its ideas.</td>
+</tr>
+<tr class="odd">
+<td>Apr</td>
+<td>Pandemic Distractions:</td>
+<td>I wrote a kid’s book. Why? And here it</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>The Queen’s Own Detectress</td>
+<td>is in pdf.</td>
+</tr>
+<tr class="odd">
+<td>May</td>
+<td>Is Psychology a Science?</td>
+<td>I don’t think most people who call themselves</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>psychologists really are, and those that are</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>scientists are not really psychologists.</td>
+</tr>
+<tr class="even">
+<td>Jun</td>
+<td>Should Cognitive Scientists</td>
+<td>Yes. Well, Maybe. Well, oh I don’t know. Here</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Learn Category Theory?</td>
+<td>I’ll share my confusion.</td>
+</tr>
+<tr class="even">
+<td>Jul</td>
+<td>What math should neuro-</td>
+<td>What math would allow for a clearer expression</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>scientists know?</td>
+<td>of neuroscience theories?</td>
+</tr>
+<tr class="even">
+<td>Aug</td>
+<td>How should we communicate</td>
+<td>Do we just do pre-prints? Are journals dead?</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>science?</td>
+<td>Are twitter-ish forums healthy for science?</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>Are influencers good for science?</td>
+</tr>
+<tr class="odd">
+<td>Sep</td>
+<td>What do I think of Statistical</td>
+<td>I think it is great. Maybe publically obliging</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Rethinking?</td>
+<td>myself to write something about it will make me</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>read more than the first chapter.</td>
+</tr>
+<tr class="even">
+<td>Oct</td>
+<td>Haskell is the abusive spouse</td>
+<td>But I do so love her. And I think she can change.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>of programming languages.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Nov</td>
+<td>Idris, Agda, … what next</td>
+<td>Just in case I ever end my co-dependent relation</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Haskell. But seriously, what new languages should</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>one learn and why?</td>
+</tr>
+<tr class="odd">
+<td>Dec</td>
+<td>A Year of Raisins</td>
+<td>How do I think it went? Will I do it again?</td>
+</tr>
+</tbody>
+</table>
+<h1 id="footnotes">Footnotes</h1>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Note that it is appearing in February. Probably not a great omen for the coming year. And should not be interpreted as maligning a great Portuguese tradition.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+    </section>
+</article>
+]]></description>
+    <pubDate>Thu, 07 Jan 2021 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2021-01-07-raisins.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Good-bye Nixos</title>
+    <link>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on November  9, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>I think <a href="https://nixos.org/">Nixos</a> is the right way to run an operating system. I think declarative and reproducible are the future, and I don’t think I am particularly forward in this thinking. Cabal basically is doing this with the new-build set of tools, and <a href="https://shopify.engineering/what-is-nix">Nix now is adopted by Shopify</a>.</p>
+<p>However, there is an anti-sweet spot for the adoption of nixos. If you are a very basic user and just want to run a basic desktop then nixos is ready to go and you should adopt it. I did not have too much trouble getting things to work even on a Surface Go. The plasma desktop was great, and with gnome even screen rotation worked. If you are a cutting edge user then you can use Nix as well as anything else and the need to learn a new special purpose one-off language for installing software is not big deal. However, if you are in between these cases then using Nixos can be painful. You have a desire to try out new tools, and not enough time or knowledge to be able to make them work in all the special cases that arise.</p>
+<p>I need to use <a href="https://www.psychopy.org">Psychopy</a> for the programming of experiments in psychology. That python package requires knowing where a lot of other tools are, and that means you can’t expect all the symlinks built by Nix to work quite how you expect. Want to try other programming languages: Idris or Idris2. Those need other compilers and to get things working I had to <a href="https://en.wikipedia.org/wiki/Blanche_DuBois">depend on the kindness</a> of strangers. And there are many kind strangers out there in the world of programming languages, but it is a brittle dependency. I think the straw that broke the camel’s back was <a href="https://julialang.org/">Julia</a>. There is a lot of hum around this language in scientific computing, and it also attaches to the math-y world of <a href="https://github.com/AlgebraicJulia/Catlab.jl">Category Theory</a>. While the julia compiler is no problem <a href="https://discourse.julialang.org/t/using-julia-with-nixos/35129">the packages are</a>. If everytime you want to spend an afternoon playing with some new tool in a REPL you have to spend many days figuring out the installation then you end up not playing with the new tool. Maybe in some cases that is a beneficial protection against distraction. But if you believe that new insights can come from the fertile ground of intellectual play <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, it is a bad thing indeed.</p>
+<p>For now I am warmly back into the world of ArchLinux where I may occassionally use the nix package manager tool for the occasional <a href="https://github.com/dmjio/miso">special case</a>. I look forward to the day when time, documentation, and even wider adoption allow me to try Nixos for the third time and stick with it.</p>
+<h1 id="footnotes">Footnotes</h1>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>The more complex the mind, the greater the need for the simplicity of play. - James T. Kirk<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+    </section>
+</article>
+]]></description>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-11-09-goodbye-nixos.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>What's in a name?</title>
+    <link>https://brittanderson.github.io/posts/2020-08-14-titles.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on August 14, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>The purpose of this blog is to provide a sandbox for playing and practicing with new tools related to blogging, not really to share content. So why then do I spend so much time thinking about a title? If I was going to title it based on the audience of readers I could call it “Me, Myself, and I.” Does anyone else waste too much time this way?</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Fri, 14 Aug 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-08-14-titles.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Using Your Camera As A Webcam</title>
+    <link>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on August  5, 2020
+        
+            by Britt Anderson
+        
+    </section>
+    <section>
+        <p>This is a popular topic in the era of work from home and remote presentations. I just wanted to post as landmarks a couple of useful links I found helpful. In addition I want to point out that you can make most of this work in Linux and using Nixos in particular if you are so inclined.</p>
+<p>The easiest route if you are a Windows or Mac user is to simply buy a supported Canon camera and use their <a href="https://www.canon.ca/en/Features/EOS-Webcam-Utility" title="Canon Canada Beta Webcam">beta software</a>. Then everything seems to just work. However, if you are on linux the story is more complicated.</p>
+<p>One option is to buy the cheapest HDMI-USB video converter you can find and cross your fingers the lag is adequate for your use.</p>
+<p>Another option is to search the <a href="http://gphoto.org/proj/libgphoto2/support.php" title="gphoto2 supported cameras">gphoto2</a> list of supported cameras and then, if yours is supported, search for specfic instructions.</p>
+<p>In my case I followed the advice in this <a href="https://youtu.be/EqrZrKC1WA0" title="Using OBS to Stream Without special software">youtube video</a> and set up a loopback device. The packages you need are shown for Ubuntu and the pace is slow, but methodical. You can skim if you know what you are doing. If you do not this is a nice overview.</p>
+<p>As I tried to get things in my nixos installation working I tried a bunch of settings and packages. I will list them here, but they may not all be necessary for you.</p>
+<p>First, are the changes I made to my <code>configuration.nix</code></p>
+<p>I set a kernel package:</p>
+<p><code>boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];</code></p>
+<p>I also installed the package <code>linuxPackages.v4l2loopback</code> and some others for my applications and uses. The <code>screenkey</code> program allows you to show keypresses on the screen and is useful for screencasting.</p>
+<pre><code>zoom-us
+ffmpeg
+gphoto2
+screenkey</code></pre>
+<p>And I enabled the gphoto option <code>programs.gphoto2.enable=true;</code></p>
+<p>For reasons I can't quite remember I decided to only make the obs_studio package available for my user account, and I added the camera to my list of extra groups:</p>
+<pre><code>extraGroups = [ &quot;wheel&quot; &quot;networkmanager&quot; &quot;adbusers&quot; &quot;camera&quot;];
+packages =  with pkgs; [
+	pkgs.obs-studio </code></pre>
+<p>Then if all that installs, compiles and works well you can plug in your camera from its USB out to a USB port on your computer and then reboot all. In a terminal check if gphoto2 can find your camera with <code>gphoto2 --autodetect</code></p>
+<p>Figure out the names of your video devices with <code>ls /dev/video*</code> and then</p>
+<pre><code>sudo modprobe v4l2loopback</code></pre>
+<p>and repeat the <code>ls</code> command to identify the new device, and use it to run:</p>
+<pre><code>  gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo 
+	  -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video2
+  </code></pre>
+<p>Now you should have a dummy device you can use in obs or zoom or pretty much any application.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Wed, 05 Aug 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-08-05-using-a-camera-as-a-webcam.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+<item>
+    <title>Once more into the breech ...</title>
+    <link>https://brittanderson.github.io/posts/2020-05-25-imback.html</link>
+    <description><![CDATA[<article>
+    <section class="header">
+        Posted on May 25, 2020
+        
+    </section>
+    <section>
+        <p>It seems that every year I recreate this site, then it lays fallow, then it rots, then I plow it under and start again. The occassion this time around is that in addition to wanting to make hakyll work as a road to better haskell competency I decided to add nixos to the mix. <em>Sigh</em>.</p>
+<p>Despite the nicks and cuts I received from the bleeding edge, nothing was mortal. I hope to be back with more soon.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Mon, 25 May 2020 00:00:00 UT</pubDate>
+    <guid>https://brittanderson.github.io/posts/2020-05-25-imback.html</guid>
+    <dc:creator>Britt Anderson</dc:creator>
+</item>
+
+    </channel>
+</rss>
