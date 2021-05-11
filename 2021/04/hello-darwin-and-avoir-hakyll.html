@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Hello Darwin and Avoir Hakyll</title>
+    <meta name="description" content="I have moved this blog from Hakyll to Darwin. Here I describe some of what motivated the move....">
+    <meta name="author"      content="The Unknown Author">
+    <meta name="keywords"    content="raisin, Author: Britt Anderson">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html">
+    <link rel="next" href="/2021/03/what-is-attention-redux.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+
+  </head>
+  <body>
+
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+
+      <a href="/index.html" class="navbar-brand">YABB: Yet Another Britt Blog</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+              data-target="#navbar_collapse" aria-controls="navbar_collapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar_collapse">
+          <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b>
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/tags/Author-Britt-Anderson.html">Author: Britt Anderson</a><a class="dropdown-item" href="/tags/raisin.html">raisin</a>
+              </div>
+            </li>
+
+            <li>
+              <a class="nav-link" href="/About.html">About</a>
+            </li> 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds/all.atom.xml">Atom</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds/all.rss.xml">RSS</a>
+            </li>
+          </ul>
+      </div>
+
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+          -->
+              <p>This is an experimental blog. It is where I try out static blog generators, post twice, and then start all over again. Now trying Frog -> Darwin and using the Racket language.</p>
+
+
+
+          <article>
+  <header>
+    <h1>Hello Darwin and Avoir Hakyll</h1>
+    <p class='date-and-tags'>
+<time datetime="2021-04-14" pubdate="true">2021-04-14</time> :: <span class="tags"><a href="/tags/raisin.html">raisin</a></span></p>
+    <p class='authors'>By: <span class="authors"><a href="/tags/Author-Britt-Anderson.html">Britt Anderson</a></span></p>
+  </header>
+
+<p>I have moved this blog from <a href="https://jaspervdj.be/hakyll/">Hakyll</a> to <a href="https://github.com/pmatos/darwin">Darwin</a>. Here I describe some of what motivated the move.</p>
+<!--more-->
+
+<h1><a name="(part._.Why_not_.Hakyll_)"></a>Why not Hakyll?</h1>
+
+<p>First, I like hakyll and I really like <a href="https://en.wikipedia.org/wiki/Haskell_%28programming_language%29">Haskell</a>, but the relation is very asymmetric. I give and give some more, but Haskell is never happy. And despite its slogan, Haskell is a <a href="https://arifordsham.com/haskell-doomed-to-succeed/">victim of its own success</a>. You cannot be a casual user of Haskell. You can be a tutorial user that works through exercises in <a href="https://docs.haskellstack.org/en/stable/ghci/">ghci</a>. Or you can be a power user, but you cannot be a mid-level user. At least not for long. The reason is that someone will upgrade ghc, or cabal will change its installation defaults (and that was a great change by the way) or <a href="https://github.com/commercialhaskell/stack/issues">stack will fail</a> to build something it used to, or everyone moves to nix and so now you have to <a href="https://elland.me/posts/2021-03-26-haskell-docker-nix.html">learn nix to use haskell</a>. Then, despite all that, you can lose a day (or more) trying and failing to install something like <a href="https://github.com/ghcjs/ghcjs/issues">ghcjs</a>. That was for me the last straw. Time to move on.</p>
+
+<p>Like a lot of laboratories in the time of Covid we are trying to move studies on line. I have some brilliant students who have jumped into the world of javascript and made everything just work. But I find javascript aesthetically distasteful. When I try to use it I feel like I am crushing a piece of aluminum foil between two fillings. If I have to learn yet another programming language to be productive, I don&rsquo;t want it to be javascript. And with the dream of <a href="https://webassembly.org/">web-assembly</a> always on the horizon, I am especially reluctant to inflict such pain on myself for only a temporary gain. Thus, I wanted to see what I could use that might be more pleasant, and educational. I tried and failed with both <a href="https://www.purescript.org/">purescript</a> and haskell.</p>
+
+<p>Purescript is a very nice language. I recommend it, but again not for the casual user; not for the non-cs/software engineer. It is growing. It&rsquo;s <a href="https://github.com/purescript/spago">package manager changes</a>. Installation is changing. You can use npm, but you can also use cabal - or at least I managed to. But everything is under development and one of the favorite educational tools is <a href="https://github.com/JordanMartinez/purescript-jordans-reference">losing its active development</a>, and so the beginner has a hard time unless they are in an environment where there are local experts.</p>
+
+<p>Haskell can compile to javascript, but wait. The two most interesting modern tools are <a href="https://haskell-miso.org/">miso</a> and <a href="https://reflex-frp.org/">reflex</a>, both of which rely on ghcjs. GHCJS lags behind ghc, and cannot, currently, be installed the same way. Both of these packages recommend nix. Well I tried, and the instructions failed. And not having a local expert, and requests for comments on Reddit unanswered, I felt compelled to move on. Too much time has been spent chasing a dream. I never actually got to really explore the dream either, because I was always too busy either combating cabal hell, trying to learn stack, trying to get the cabal-new commands to work, trying to puzzle out nix (or maybe even nixos, I tried that too). I will amplify on the nature of the dream below, but for now let it be said that the purpose of hakyll was to give me a chance to play within the haskell garden in a low risk fashion: learn some haskell; examine some of the abstractions; and do so in a way that I could pick it up and put it down as time demands for other projects. However, picking-up and putting-down cycles don&rsquo;t work in haskell. The development cycle is too fast. There is always a new tool or a new <a href="https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/pragmas.html">pragma</a>, and the people developing them are not writing the documentation at the <a href="http://learnyouahaskell.com/">learn you a haskell level</a> (a very nice beginner&rsquo;s book by the way). Even worse is that the internet is not self-cleansing, and all the old, now wrong, documentation for how to do something is still there. I think <a href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a> is awesome, I think lazy evaluation might capture aspects of human cognition. I also think the tight relationship between haskell code and the <a href="https://plato.stanford.edu/entries/category-theory/">category theory</a> vocabulary, <a href="https://plato.stanford.edu/entries/lambda-calculus/"> and lambda calculus</a> origins might make haskell the preferred language for  implementing computational cognitive models where the code itself transparently documents the model&rsquo;s mathematical structure. But not if you are not in a position to use it daily, and to have around a group of users that also are using it daily. So, for now, I am setting haskell aside, though I will come back to it, and I am looking elsewhere for a tool that offers some of the same expressiveness, but with a lower bar to entry and casual exploration. I think I may have found it in racket.</p>
+
+<h1><a name="(part._.Why_.Darwin_)"></a>Why Darwin?</h1>
+
+<p>Darwin is a fork of the Frog static site generator written in Racket. The answer to "why darwin" is really the same as for using hakyll: I have decided to learn some racket and I am using darwin as a mechanism to do so. And let me say it has been a pleasure. I cannot emphasize enough the difference in the experience. Racket has a nice <a href="https://docs.racket-lang.org/">updated documentation</a> site. They have a much smaller user base that clusters around a few principal sources of interaction for questions and answers. As a language with a big focus on education they cater to the new user, and the user with limited time or knowledge.</p>
+
+<p>I have not had to leave that much behind. Racket does give you modern features if you want them. You want <a href="https://docs.racket-lang.org/lazy/index.html?q=lazy">laziness</a>, you can get it. You want <a href="https://docs.racket-lang.org/ts-guide/">static types</a>, you can have them. But they are not forced, and that does make it easier to backslide.</p>
+
+<p>Racket reminds me of haskell 15 years ago. Then you had hackage and cabal, and maybe things were hard, but they were solvable, and help was available and active in an IRC. But the people who gravitated to haskell were very smart and ambitious, and many of them did not see academics as their frontier, but they wanted to build things that people used, and as as the needs and priorities of industry dominated their use cases, the language begin to show their influence. This seems to me, an outsider, as extremely valuable for anyone who wants to use haskell for a real world project, but to the disadvantage of the hobbyist. Tant pis. I would not ask the language development to cater to my use cases.</p>
+
+<p>However, I appreciate that I can find another language where all the packages seem to be written by graduate students. If that means they are active for only a few years before the <a href="https://github.com/ntoronto/drbayes">packages lose a maintainer</a> so be it. I prefer the vibrancy of graduate enthusiasms to the move-fast and break-things of the industrial mover and shakers. I have already benefited by being guided to <a href="https://www.philosophie.uni-konstanz.de/ag-spohn/personen/prof-dr-wolfgang-spohn/papers/">ranking theory</a> by a <a href="https://github.com/tjitze/ranked-programming/tree/48cbec099f04c6e49c519415be36b910c8aff790">package</a> in the racket database.</p>
+
+<h2><a name="(part._.The_dream)"></a>The dream</h2>
+
+<p>The dream is to think about how to express cognitive models with a single broad language that will make them concrete and comparable across domains. The language should obviously be math, and the language within the field of mathematics that is most suited to translating across domains is category theory. It also seems to work well in applied fields, and I think holds promise for computational cognitive modelling. Languages like <a href="https://github.com/statebox/idris-ct">Idris</a>, <a href="https://hackage.haskell.org/package/data-category">Haskell</a>, and even <a href="https://algebraicjulia.github.io/Catlab.jl/dev/">Julia</a> have libraries and packages for category theory, and even though one does not exist for racket there are <a href="https://docs.racket-lang.org/lathe-morphisms/index.html">some early efforts</a>. Maybe racket can be the language the connects mathematical structures like the lambda calculus and category theory to computational models of psychology and neuroscience. </p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <g:plusone size="medium" href="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html"></g:plusone>-->
+    <!--<div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_config = function () {
+            this.page.identifier = undefined;
+            this.page.url = undefined;
+            this.page.title = undefined;
+            this.page.category_id = undefined;
+          };
+          var disqus_shortname = 'shortname';
+          (function() {
+              var dsq = document.createElement('script');
+              dsq.type = 'text/javascript';
+              dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              dsq.setAttribute('data-timestamp', +new Date());
+              (document.head || document.body).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>-->
+    <div class="row justify-content-center">
+      <nav aria-label="Page Navigation">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/2021/03/what-is-attention-redux.html"
+               aria-label="Previous">
+              <span aria-hidden="true">&larr; What is Attention Redux</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/racketlang"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow RacketLang"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/pmatos/darwin">Darwin</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <!--<p><em>Your legal notice here</em>.</p>-->
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
