@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
  <link href="http://www.example.com/index.html" />
  <id>urn:http-www-example-com:-index-html</id>
- <updated>2021-03-29T04:00:00Z</updated>
+ <updated>2021-04-14T15:04:09Z</updated>
+ <entry>
+  <title type="text">Hello Darwin and Avoir Hakyll</title>
+  <link rel="alternate" href="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2021-04-hello-darwin-and-avoir-hakyll-html</id>
+  <published>2021-04-14T15:04:09Z</published>
+  <updated>2021-04-14T15:04:09Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;I have moved this blog from &lt;a href="https://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt; to &lt;a href="https://github.com/pmatos/darwin"&gt;Darwin&lt;/a&gt;. Here I describe some of what motivated the move.&lt;/p&gt;&lt;a href="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">What is Attention Redux</title>
   <link rel="alternate" href="http://www.example.com/2021/03/what-is-attention-redux.html?utm_source=all&amp;utm_medium=Atom" />
