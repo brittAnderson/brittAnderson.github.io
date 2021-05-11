@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: Posts tagged 'raisin'</title>
+ <link rel="self" href="http://www.example.com/feeds/raisin.atom.xml" />
+ <link href="http://www.example.com/tags/raisin.html" />
+ <id>urn:http-www-example-com:-tags-raisin-html</id>
+ <updated>2021-03-29T04:00:00Z</updated>
+ <entry>
+  <title type="text">What is Attention Redux</title>
+  <link rel="alternate" href="http://www.example.com/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2021-03-what-is-attention-redux-html</id>
+  <published>2021-03-29T04:00:00Z</published>
+  <updated>2021-03-29T04:00:00Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;In 2011 I published an &lt;a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00246/full"&gt;article&lt;/a&gt; called &amp;ldquo;There is no such thing as attention.&amp;rdquo; This year I wrote a submission that I hope will appear in &lt;a href="https://onlinelibrary.wiley.com/journal/19395086#?tabActivePane="&gt;WIREs Cognitive Science&lt;/a&gt; revisiting this issue; this time as an opinion piece for a collection to be titled &lt;em&gt;What is Attention?&lt;/em&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">New Year's Raisins</title>
+  <link rel="alternate" href="http://www.example.com/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2021-01-new-year-s-raisins-html</id>
+  <published>2021-01-07T05:00:00Z</published>
+  <updated>2021-01-07T05:00:00Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;I have recently learned of a Portuguese New Year&amp;rsquo;s tradition where you eat twelve raisins as the clock tolls midnight. Each raisin represents one month of the coming year and in the version I learned you make one wish for each raisin: one wish for each month of the year to come.&lt;/p&gt;&lt;a href="http://www.example.com/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
