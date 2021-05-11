@@ -1,7 +1,0 @@
----
-title: Once more into the breech ...
----
-
-It seems that every year I recreate this site, then it lays fallow, then it rots, then I plow it under and start again. The occassion this time around is that in addition to wanting to make hakyll work as a road to better haskell competency I decided to add nixos to the mix. *Sigh*.
-
-Despite the nicks and cuts I received from the bleeding edge, nothing was mortal. I hope to be back with more soon. 
