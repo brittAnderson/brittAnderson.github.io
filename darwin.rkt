@@ -4,9 +4,10 @@
 ;; in darwin/params.
 (define/contract (init)
   (-> any)
-  (current-scheme/host "http://www.example.com")
-  (current-title "My Blog")
-  (current-author "The Unknown Author"))
+  (current-scheme/host "https://brittAnderson.github.io")
+  (current-title "YABB: yet another Britt blog")
+  (current-author "Britt Anderson")
+  (current-editor "emacsclient"))
 
 ;; Called once per post and non-post page, on the contents.
 (define/contract (enhance-body xs)
