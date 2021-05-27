@@ -2,7 +2,7 @@
 
 Title: Hello Darwin and Avoir Hakyll
 Date: 2021-04-14T11:04:09
-Tags: raisin
+Tags: raisin,haskell,racket,programming
 Authors: Britt Anderson
 
 I have moved this blog from @hyperlink["https://jaspervdj.be/hakyll/" "Hakyll"] to @hyperlink["https://github.com/pmatos/darwin" "Darwin"]. Here I describe some of what motivated the move.
