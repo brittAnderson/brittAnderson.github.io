@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <rss version="2.0">
  <channel>
-  <title>My Blog: Posts tagged 'raisin'</title>
-  <description>My Blog: Posts tagged 'raisin'</description>
-  <link>http://www.example.com/tags/raisin.html</link>
-  <lastBuildDate>Wed, 14 Apr 2021 15:04:09 UT</lastBuildDate>
-  <pubDate>Wed, 14 Apr 2021 15:04:09 UT</pubDate>
+  <title>YABB: yet another Britt blog: Posts tagged 'raisin'</title>
+  <description>YABB: yet another Britt blog: Posts tagged 'raisin'</description>
+  <link>https://brittAnderson.github.io/tags/raisin.html</link>
+  <lastBuildDate>Wed, 26 May 2021 20:21:50 UT</lastBuildDate>
+  <pubDate>Wed, 26 May 2021 20:21:50 UT</pubDate>
   <ttl>1800</ttl>
   <item>
+   <title>Learning Racket via some Pollen</title>
+   <link>https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html?utm_source=raisin&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-05-learning-racket-via-some-pollen-html</guid>
+   <pubDate>Wed, 26 May 2021 20:21:50 UT</pubDate>
+   <author>Britt Anderson</author>
+   <description>
+&lt;p&gt;Learning a new programming language has two characteristic early stages: the tutorial stage where everything is scripted and goes well; and the stage where you first try to do something yourself and it all gets much more real. This entry records some of my impressions on this process as regards &lt;a href="https://racket-lang.org/"&gt;racket&lt;/a&gt; and &lt;a href="https://docs.racket-lang.org/pollen/"&gt;pollen&lt;/a&gt;. Can I turn the children&amp;rsquo;s story I wrote for my wife into a series of web pages?&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
    <title>Hello Darwin and Avoir Hakyll</title>
-   <link>http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=raisin&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2021-04-hello-darwin-and-avoir-hakyll-html</guid>
+   <link>https://brittAnderson.github.io/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=raisin&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-04-hello-darwin-and-avoir-hakyll-html</guid>
    <pubDate>Wed, 14 Apr 2021 15:04:09 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
-&lt;p&gt;I have moved this blog from &lt;a href="https://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt; to &lt;a href="https://github.com/pmatos/darwin"&gt;Darwin&lt;/a&gt;. Here I describe some of what motivated the move.&lt;/p&gt;&lt;a href="http://www.example.com/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;I have moved this blog from &lt;a href="https://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt; to &lt;a href="https://github.com/pmatos/darwin"&gt;Darwin&lt;/a&gt;. Here I describe some of what motivated the move.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>What is Attention Redux</title>
-   <link>http://www.example.com/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2021-03-what-is-attention-redux-html</guid>
+   <link>https://brittAnderson.github.io/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-03-what-is-attention-redux-html</guid>
    <pubDate>Mon, 29 Mar 2021 04:00:00 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
-&lt;p&gt;In 2011 I published an &lt;a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00246/full"&gt;article&lt;/a&gt; called &amp;ldquo;There is no such thing as attention.&amp;rdquo; This year I wrote a submission that I hope will appear in &lt;a href="https://onlinelibrary.wiley.com/journal/19395086#?tabActivePane="&gt;WIREs Cognitive Science&lt;/a&gt; revisiting this issue; this time as an opinion piece for a collection to be titled &lt;em&gt;What is Attention?&lt;/em&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;In 2011 I published an &lt;a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00246/full"&gt;article&lt;/a&gt; called &amp;ldquo;There is no such thing as attention.&amp;rdquo; This year I wrote a submission that I hope will appear in &lt;a href="https://onlinelibrary.wiley.com/journal/19395086#?tabActivePane="&gt;WIREs Cognitive Science&lt;/a&gt; revisiting this issue; this time as an opinion piece for a collection to be titled &lt;em&gt;What is Attention?&lt;/em&gt;&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/03/what-is-attention-redux.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>New Year's Raisins</title>
-   <link>http://www.example.com/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2021-01-new-year-s-raisins-html</guid>
+   <link>https://brittAnderson.github.io/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-01-new-year-s-raisins-html</guid>
    <pubDate>Thu, 07 Jan 2021 05:00:00 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
-&lt;p&gt;I have recently learned of a Portuguese New Year&amp;rsquo;s tradition where you eat twelve raisins as the clock tolls midnight. Each raisin represents one month of the coming year and in the version I learned you make one wish for each raisin: one wish for each month of the year to come.&lt;/p&gt;&lt;a href="http://www.example.com/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
+&lt;p&gt;I have recently learned of a Portuguese New Year&amp;rsquo;s tradition where you eat twelve raisins as the clock tolls midnight. Each raisin represents one month of the coming year and in the version I learned you make one wish for each raisin: one wish for each month of the year to come.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/01/new-year-s-raisins.html?utm_source=raisin&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
