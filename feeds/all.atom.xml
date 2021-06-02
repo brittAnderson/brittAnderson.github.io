@@ -4,7 +4,29 @@
  <link rel="self" href="https://brittAnderson.github.io/feeds/all.atom.xml" />
  <link href="https://brittAnderson.github.io/index.html" />
  <id>urn:https-brittAnderson-github-io:-index-html</id>
- <updated>2021-05-26T20:21:50Z</updated>
+ <updated>2021-06-02T21:06:49Z</updated>
+ <entry>
+  <title type="text">The Queen's Own Detectress</title>
+  <link rel="alternate" href="https://brittAnderson.github.io/2021/06/the-queen-s-own-detectress.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-brittAnderson-github-io:-2021-06-the-queen-s-own-detectress-html</id>
+  <published>2021-06-02T21:06:49Z</published>
+  <updated>2021-06-02T21:06:49Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;This is a story that I wrote for my wife. It emerged as a combination of dream merging to day-dream. When I related the idea over coffee the next morning my wife asked for more, and I gradually set about doing that.  It ended up as a pdf that I gave her as a gift, but in response to a few family members asking me to make it available I cobbled together some old versions to make a linkable/readable version here. In the future I hope to make it pretty and eventually to fix the horde of grammar and spelling mistakes, but for now this will have to do. The easiest way to start is with &lt;a href="/assets/detectress/chapter1"&gt;Chapter 1&lt;/a&gt; (you can also get to chapter one from the navigation bar above). From there follow the links at the end of each chapter. Cheers.&lt;/p&gt;
+
+&lt;p&gt;P.S. If you can make an issue if the grammar or spelling really bothers you and I will try to fix.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">More Pollen</title>
+  <link rel="alternate" href="https://brittAnderson.github.io/2021/06/more-pollen.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-brittAnderson-github-io:-2021-06-more-pollen-html</id>
+  <published>2021-06-02T20:39:34Z</published>
+  <updated>2021-06-02T20:39:34Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;Working with Pollen is powerful, but challenging. A few brief comments on converting my Queen&amp;rsquo;s Own Detectress Children&amp;rsquo;s story.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/06/more-pollen.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Learning Racket via some Pollen</title>
   <link rel="alternate" href="https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html?utm_source=all&amp;utm_medium=Atom" />
