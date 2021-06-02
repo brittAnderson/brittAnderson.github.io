@@ -1,0 +1,145 @@
+# Confoederatio Helvetica
+
+’Gina and her mother were shuttled from the castle the next day. ’Gina
+was not told and did not ask where the Queen and her family had gone.
+Their lives were threatened. Their security was paramount. It had been
+decided that if word got out about ’Gina’s role then her life might be
+threatened too. This did not surprise nor worry ’Gina or her mother.
+They felt secure in the servants’ nook in the castle, but they did not
+protest when a French speaking Swiss Guard they had never seen before,
+but who was vouched for by the local commandant, appeared one morning
+and told them to come with him now and with only the clothes they were
+wearing.
+
+They were escorted that first night to a safe house. The clothes they
+had worn, their only connection to the castle and their former life,
+were abandoned. ’Gina’s finger wound was properly dressed and her mother
+was supplied with proper materials for its care. The next night they
+were at an Inn. In their room were more clothes and two small traveling
+suitcases. In ’Gina’s suitcase was a set of books including a small
+introductory calculus text with selected exercises indicated in the
+unmistakable hand of Monsieur Franz. There were also two passports: one
+for a Mrs Isabella Pine and the other for her daughter Leah. They were
+apparently the widow and daughter of a moderately well to-do merchant
+and were mourning his death by taking a Cooke’s tour of the continent.
+Their itinerary and carriage tickets took them first, by a rather
+indirect route, to the village of Beatenberg in Canton Bern in
+Switzerland. There they were expected at the Gasthaus Falkon owned by a
+Herr and Frau Gafner. At first ’Gina and her mother simply rested. Then
+they learned to enjoy the mountains on long hikes guided by Herr Gafner
+who regaled them with the childhood tales of young Hans. After a couple
+of weeks ’Gina and her Mother were moved at night to the next stop of
+their disappearance.
+
+At the Pension Stoll, in the small village of Stein-am-Rhine, ’Gina, or
+rather Leah as she was now called, took walks with her mother. They
+would track down one side of the river, ride across on a ferry if they
+found one, and walk back along the other bank. If no ferry came they
+simply walked back the way they came keeping time by the local church
+bells. ’Gina and her mother visited the local monks who made wine at the
+monastery in town. Some days they stayed in and Leah worked away at the
+calculus of that infuriating Herr Leibniz. ’Gina’s French and German
+improved during these days, though the only dialect she managed to pick
+up was apparently not deemed appropriate for a young lady. *Chabis*.
+
+A winter was passed in this peaceful village, and then abruptly one day
+another anonymous messenger came wearing the same red socks with the
+small white cross. He had the tickets, he said, “that they had ordered.”
+
+“Had we ordered tickets?” Mrs. Pine asked her daughter with a smile?
+“And if so did ’Gina know where they were going?”
+
+The train took them to Zürich. At the Hauptbahnhof they were met by a
+gnomic Swiss man with a broad accent who insisted speaking German to
+them though his comprehension of the mother’s and daughter’s
+conversation revealed that he spoke English perfectly well. He had, he
+told them *auf Deutsch*, been appointed by their travel agency as their
+attaché and representative. ’Gina and her mother tried to suppress their
+surprise at hearing they had a travel agency and an attaché. He had been
+led to understand, so he said, that they expected to be in the city for
+some time, so that the young lady could complete her preparatory studies
+in anticipation of attending the University in a few years. He had taken
+the initiative of finding them a small apartment in an attractive area
+of the lower village, the Niederdorf.
+
+Mrs. Pine and Leah were taken by tram and then led on foot through the
+small winding medieval lanes of the Niderdorf to a stone building with a
+half timbered front near the Grossmünster. Their apartment had a small
+parlor, kitchen, and one bedroom. It was the largest space they had ever
+been able to call their own.
+
+In the apartment they found the schedule of classes with a local tutor
+for which Leah had been enrolled. The receipt for the tuition payment,
+informed Leah that she was on a scholarship, and congratulations by the
+way. Their attaché informed them of the address of the bank where the
+monthly stipend from Mrs. Pine’s estate was to be deposited. He then
+told them they should feel free to contact him with any questions. Then,
+having given them neither his name nor his contact information, he left
+never to be seen again.
+
+The Pines, Leah and Isabella, ’Gina and her mother, settled into their
+new and unexpected life. Days passed peacefully and pleasantly. Leah
+went to class and her mother tended home. Leah’s mother pursued her own
+study of German, and tried, unsuccessfully, to befriend the neighbors.
+Left mostly to themselves, the two took many walks about the town. Their
+favorite discovery was a small elevated plaza across the river from
+their apartment. It was near an old church. From the *Platz* one could
+look across the river to the other side of town and see in the distance
+the Polyterrase of the university that Leah hoped to attend. Leah would
+sit on a bench near the edge of the *Platz* with her books spread out
+upon the parapet. She would study and gaze in alternation. Her Mother
+would knit or crochet, or, more recently, after several weeks of
+attentive observation, play chess against the men on the large outdoor
+set with the large wooden pieces. Mrs. Pine could beat some of the men
+and was gradually coming to be accepted as one of the regulars. They
+referred to as Frau Schatzmeisterin.
+
+On this day Leah was supposed to be learning line integrals. Despite her
+best efforts she felt herself being pulled back into the horrors of the
+year before. ’Gina felt her breathing quicken. The anxiety attacks had
+been quite frequent early on, but she had not felt one so strongly for
+some weeks now. ’Gina wondered what could have provoked her panic now.
+Then she became conscious of what must have been the stimulus. A cloaked
+figure with a limp was crossing the plaza towards her. She casually
+stuck her pen in her hair and then unsheathed the blades of her snake
+bracelet. With the other hand she leaned back to confirm the presence of
+her throwing knife in her boot. She began to feel there was something
+familiar about the face underneath the shroud. Despite the limp there
+was something reassuring about the man’s gait and carriage. Then she saw
+the boots, and for a moment she hoped. Then she began to doubt.
+
+Slowly, and without any quick or threatening moves, the figure
+approached. He came to face her, and sat on the low wall that divided
+the plaza from the steep descending hillside and the houses below. Two
+hands came up and slowly pulled back the cloak’s hood.
+
+“Al...!” then quietly “Albrecht!” ’Gina hissed with glee. “Your here!
+Your leg! What happened.”
+
+He smiled. “It is a pleasure to make your acquaintance again Miss Pine.”
+He purposefully looked slowly both right and left to signal to ’Gina
+that they could not be sure that they were not being watched.
+
+“Good day to you too Sir,” she said with the sunniest of smiles. And
+then quietly, “Tell me of Her Majesty and your family.”
+
+Albrecht replied in *sotto voce*, “They are all well thanks to you. The
+Queen, and I, owe you a debt that we will never be able to repay.”
+
+“And Jimmie?”
+
+“We never found him, but we did catch up with Miss Bostick,” and here
+Albrecht reflexively glanced at his right leg and patted it. “She was a
+danger, but is no longer a threat. Nor will she ever be again.”
+
+“What about the sugar? Who did that? Did Jimmie do it before he left?
+Was that the job for those other men? Or was there someone else in the
+household? I worry about that.”
+
+“So does my Mother, the Queen. We simply do not know Miss Pine. And that
+is why my Mother still has need of you. She has allowed me to come and
+tell you that when you have finished your education, as she promised
+your Mother you would do, and not a moment sooner, the Queen wishes you
+to return. The Queen feels a great need for your intelligence and
+loyalty. She has made a unique position just for you. She wishes to
+appoint you the Queen’s Own Detectress.”

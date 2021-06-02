@@ -1,0 +1,24 @@
+body {
+    margin: 4em;
+/*    border: 2em double gray; */
+    padding: 2em;
+    font-size: 1.3em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+#prev, #next {
+    position: fixed;
+    top: 2em;
+}
+
+#prev {
+    left: 4em;
+}
+
+#next {
+    right: 4em;
+}
