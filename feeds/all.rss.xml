@@ -4,14 +4,22 @@
   <title>YABB: yet another Britt blog: YABB: yet another Britt blog</title>
   <description>YABB: yet another Britt blog: YABB: yet another Britt blog</description>
   <link>https://brittAnderson.github.io/index.html</link>
-  <lastBuildDate>Wed, 02 Jun 2021 21:06:49 UT</lastBuildDate>
-  <pubDate>Wed, 02 Jun 2021 21:06:49 UT</pubDate>
+  <lastBuildDate>Wed, 18 Aug 2021 08:17:48 UT</lastBuildDate>
+  <pubDate>Wed, 18 Aug 2021 08:17:48 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Should I Program in lisp?</title>
+   <link>https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-08-should-i-program-in-lisp-html</guid>
+   <pubDate>Wed, 18 Aug 2021 08:17:48 UT</pubDate>
+   <author>Britt Anderson</author>
+   <description>
+&lt;p&gt;I have spent a lot of time lately thinking about what programming language to use for a new project, and also thinking about whether it is productive to be thinking about which programming language to use for a new project?&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>The Queen's Own Detectress</title>
    <link>https://brittAnderson.github.io/2021/06/the-queen-s-own-detectress.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-06-the-queen-s-own-detectress-html</guid>
-   <pubDate>Wed, 02 Jun 2021 21:06:49 UT</pubDate>
+   <pubDate>Wed, 02 Jun 2021 15:06:49 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;This is a story that I wrote for my wife. It emerged as a combination of dream merging to day-dream. When I related the idea over coffee the next morning my wife asked for more, and I gradually set about doing that.  It ended up as a pdf that I gave her as a gift, but in response to a few family members asking me to make it available I cobbled together some old versions to make a linkable/readable version here. In the future I hope to make it pretty and eventually to fix the horde of grammar and spelling mistakes, but for now this will have to do. The easiest way to start is with &lt;a href="/assets/detectress/chapter1.html"&gt;Chapter 1&lt;/a&gt; (you can also get to chapter one from the navigation bar above). From there follow the links at the end of each chapter. Cheers.&lt;/p&gt;
@@ -21,7 +29,7 @@
    <title>More Pollen</title>
    <link>https://brittAnderson.github.io/2021/06/more-pollen.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-06-more-pollen-html</guid>
-   <pubDate>Wed, 02 Jun 2021 20:39:34 UT</pubDate>
+   <pubDate>Wed, 02 Jun 2021 14:39:34 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;Working with Pollen is powerful, but challenging. A few brief comments on converting my Queen&amp;rsquo;s Own Detectress Children&amp;rsquo;s story.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/06/more-pollen.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
@@ -29,7 +37,7 @@
    <title>Learning Racket via some Pollen</title>
    <link>https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-05-learning-racket-via-some-pollen-html</guid>
-   <pubDate>Wed, 26 May 2021 20:21:50 UT</pubDate>
+   <pubDate>Wed, 26 May 2021 14:21:50 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;Learning a new programming language has two characteristic early stages: the tutorial stage where everything is scripted and goes well; and the stage where you first try to do something yourself and it all gets much more real. This entry records some of my impressions on this process as regards &lt;a href="https://racket-lang.org/"&gt;racket&lt;/a&gt; and &lt;a href="https://docs.racket-lang.org/pollen/"&gt;pollen&lt;/a&gt;. Can I turn the children&amp;rsquo;s story I wrote for my wife into a series of web pages?&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
@@ -37,7 +45,7 @@
    <title>Hello Darwin and Avoir Hakyll</title>
    <link>https://brittAnderson.github.io/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-04-hello-darwin-and-avoir-hakyll-html</guid>
-   <pubDate>Wed, 14 Apr 2021 15:04:09 UT</pubDate>
+   <pubDate>Wed, 14 Apr 2021 09:04:09 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;I have moved this blog from &lt;a href="https://jaspervdj.be/hakyll/"&gt;Hakyll&lt;/a&gt; to &lt;a href="https://github.com/pmatos/darwin"&gt;Darwin&lt;/a&gt;. Here I describe some of what motivated the move.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/04/hello-darwin-and-avoir-hakyll.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
@@ -45,7 +53,7 @@
    <title>What is Attention Redux</title>
    <link>https://brittAnderson.github.io/2021/03/what-is-attention-redux.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-03-what-is-attention-redux-html</guid>
-   <pubDate>Mon, 29 Mar 2021 04:00:00 UT</pubDate>
+   <pubDate>Sun, 28 Mar 2021 22:00:00 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;In 2011 I published an &lt;a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00246/full"&gt;article&lt;/a&gt; called &amp;ldquo;There is no such thing as attention.&amp;rdquo; This year I wrote a submission that I hope will appear in &lt;a href="https://onlinelibrary.wiley.com/journal/19395086#?tabActivePane="&gt;WIREs Cognitive Science&lt;/a&gt; revisiting this issue; this time as an opinion piece for a collection to be titled &lt;em&gt;What is Attention?&lt;/em&gt;&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/03/what-is-attention-redux.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
@@ -53,7 +61,7 @@
    <title>New Year's Raisins</title>
    <link>https://brittAnderson.github.io/2021/01/new-year-s-raisins.html?utm_source=all&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2021-01-new-year-s-raisins-html</guid>
-   <pubDate>Thu, 07 Jan 2021 05:00:00 UT</pubDate>
+   <pubDate>Wed, 06 Jan 2021 23:00:00 UT</pubDate>
    <author>Britt Anderson</author>
    <description>
 &lt;p&gt;I have recently learned of a Portuguese New Year&amp;rsquo;s tradition where you eat twelve raisins as the clock tolls midnight. Each raisin represents one month of the coming year and in the version I learned you make one wish for each raisin: one wish for each month of the year to come.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/01/new-year-s-raisins.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>

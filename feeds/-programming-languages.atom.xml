@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">YABB: yet another Britt blog: Posts tagged '"programming languages"'</title>
+ <link rel="self" href="https://brittAnderson.github.io/feeds/-programming-languages.atom.xml" />
+ <link href="https://brittAnderson.github.io/tags/-programming-languages.html" />
+ <id>urn:https-brittAnderson-github-io:-tags-programming-languages-html</id>
+ <updated>2021-08-18T08:17:48Z</updated>
+ <entry>
+  <title type="text">Should I Program in lisp?</title>
+  <link rel="alternate" href="https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html?utm_source=-programming-languages&amp;utm_medium=Atom" />
+  <id>urn:https-brittAnderson-github-io:-2021-08-should-i-program-in-lisp-html</id>
+  <published>2021-08-18T08:17:48Z</published>
+  <updated>2021-08-18T08:17:48Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;I have spent a lot of time lately thinking about what programming language to use for a new project, and also thinking about whether it is productive to be thinking about which programming language to use for a new project?&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html?utm_source=-programming-languages&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
