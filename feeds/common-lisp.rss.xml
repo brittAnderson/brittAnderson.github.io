@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>YABB: yet another Britt blog: Posts tagged 'common-lisp'</title>
+  <description>YABB: yet another Britt blog: Posts tagged 'common-lisp'</description>
+  <link>https://brittAnderson.github.io/tags/common-lisp.html</link>
+  <lastBuildDate>Tue, 10 May 2022 14:54:28 UT</lastBuildDate>
+  <pubDate>Tue, 10 May 2022 14:54:28 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Common Lisp Is Old. And I Love It</title>
+   <link>https://brittAnderson.github.io/2022/05/common-lisp-is-old-and-i-love-it.html?utm_source=common-lisp&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2022-05-common-lisp-is-old-and-i-love-it-html</guid>
+   <pubDate>Tue, 10 May 2022 14:54:28 UT</pubDate>
+   <author>Britt Anderson</author>
+   <description>
+&lt;p&gt;Learning the basics of a programming language once is fun. Learning it every six months is tedious. One of the beautiful experiences of working with Common Lisp is that your learning is one and done.&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2022/05/common-lisp-is-old-and-i-love-it.html?utm_source=common-lisp&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>

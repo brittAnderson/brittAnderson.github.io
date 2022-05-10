@@ -1,8 +1,9 @@
-https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html
 https://brittAnderson.github.io/2021/01/new-year-s-raisins.html
+https://brittAnderson.github.io/2021/08/should-i-program-in-lisp.html
 https://brittAnderson.github.io/2021/06/more-pollen.html
-https://brittAnderson.github.io/2021/06/the-queen-s-own-detectress.html
 https://brittAnderson.github.io/2021/05/learning-racket-via-some-pollen.html
+https://brittAnderson.github.io/2021/06/the-queen-s-own-detectress.html
+https://brittAnderson.github.io/2022/05/common-lisp-is-old-and-i-love-it.html
 https://brittAnderson.github.io/2021/04/hello-darwin-and-avoir-hakyll.html
 https://brittAnderson.github.io/2021/03/what-is-attention-redux.html
 https://brittAnderson.github.io/About.html

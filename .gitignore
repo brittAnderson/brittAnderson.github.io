@@ -1,8 +1,5 @@
 _cache/
 _site/
 dist-newstyle/
-<<<<<<< HEAD
-=======
 *.swp
 *~
->>>>>>> develop
