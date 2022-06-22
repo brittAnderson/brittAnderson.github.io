@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Getting Started Writing With Scribble</title>
+    <meta name="description" content="I have been thinking of trying to write an online textbook for a course I teach. It involves some code and I thought that racket might be a good language choice for the coding material, and that seemed to suggest using scribble, the racket documentation t...">
+    <meta name="author"      content="Britt Anderson">
+    <meta name="keywords"    content="">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html">
+    <link rel="next" href="/2022/05/common-lisp-is-old-and-i-love-it.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+
+  </head>
+  <body>
+
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+
+      <a href="/index.html" class="navbar-brand">YABB: Yet Another Britt Blog</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+              data-target="#navbar_collapse" aria-controls="navbar_collapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar_collapse">
+          <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b>
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/tags/-programming-languages.html">"programming languages"</a><a class="dropdown-item" href="/tags/Author-Britt-Anderson.html">Author: Britt Anderson</a><a class="dropdown-item" href="/tags/common-lisp.html">common-lisp</a><a class="dropdown-item" href="/tags/haskell.html">haskell</a><a class="dropdown-item" href="/tags/lisp.html">lisp</a><a class="dropdown-item" href="/tags/mind.html">mind</a><a class="dropdown-item" href="/tags/pollen.html">pollen</a><a class="dropdown-item" href="/tags/programming.html">programming</a><a class="dropdown-item" href="/tags/programming-languages.html">programming-languages</a><a class="dropdown-item" href="/tags/qod.html">qod</a><a class="dropdown-item" href="/tags/racket.html">racket</a><a class="dropdown-item" href="/tags/raisin.html">raisin</a>
+              </div>
+            </li>
+
+            <li>
+              <a class="nav-link" href="/About.html">About</a>
+            </li> 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/assets/detectress/chapter1.html">The Queen's Own Detectress</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds/all.atom.xml">Atom</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds/all.rss.xml">RSS</a>
+            </li>
+          </ul>
+      </div>
+
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+          -->
+              <p>This is an experimental blog. It is where I try out static blog generators, post twice, and then start all over again. Now trying Frog -> Darwin and using the Racket language.</p>
+
+
+
+          <article>
+  <header>
+    <h1>Getting Started Writing With Scribble</h1>
+    <p class='date-and-tags'>
+<time datetime="2022-06-22" pubdate="true">2022-06-22</time> :: <span class="tags"></span></p>
+    <p class='authors'>By: <span class="authors">Britt Anderson</span></p>
+  </header>
+
+<p>I have been thinking of trying to write an online textbook for a course I teach. It involves some code and I thought that racket might be a good language choice for the coding material, and that seemed to suggest using scribble, the racket documentation tool, but then ...</p>
+<!--more-->
+
+<p>I found myself stymied doing even the most basic of things when I tried to adapt my org-mode workflow to a scribble work flow. Including a graph or typesetting some math was difficult, and I could not figure out how to emulate the org-babel functionality. It took a lot of on-line search and pouring through the source code to get examples of what I needed, and still many things are not quite right.</p>
+
+<p>As is often true of racket is that there is no middle level documentation. The quick and easy start from this file sort of stuff. You have exhaustive source code that you can read. And you have very basic step by step tutorials. But sometimes you don&rsquo;t want to learn from first principles. You just want to get something to work and for that it is sometimes ideal to have a short file that just works, and that you can use as a starting point for expanding your knowledge by adding features as you need them. So, to help myself in the future, and maybe others in the present I wrote this short explanation of a template to get one up and running.</p>
+
+<h1>1
+ <tt>&nbsp;</tt><a name="(part._.A_.Simple_.Scribble_.Book_.Template_.Explained)"></a>A Simple Scribble Book Template Explained</h1>
+
+<h2>1.1
+ <tt>&nbsp;</tt><a name="(part._.Starting_with_a__lang_declaration)"></a>Starting with a #lang declaration</h2>
+
+<p>Your file needs to start with a language declaration. This is what it looks like the for the scribble book form.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><a class="RktModLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/guide/Module_Syntax.html#%28part._hash-lang%29"><span class="RktMod">#lang</span></a><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><a class="RktModLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/scribble/Book_Format.html"><span class="RktSym">scribble/book</span></a><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="RktMeta">&#160;</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+
+<h2>1.2
+ <tt>&nbsp;</tt><a name="(part._.Importing_.Library_.Functions)"></a>Importing Library Functions</h2>
+
+<p>If you need additional functions not included by your language declaration you can <span class="RktSym">require</span> them. Here are some choices that seems to offer some reasonable functionality.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktSym">@</span><span class="RktPn">(</span><span class="RktSym">require</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">plot/pict</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">scribble/base</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">scribble-math/dollar</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">scribble/example</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">scribble/manual</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/math</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta">&#160;</span></td></tr></tbody></table></div>
+
+<p>The above <span class="RktSym">require</span> code is a way of importing additional libraries to give functionality to your scribble document. For example the <span class="RktSym">scribble-math/dollar</span> library allows you to use a latex like $ character to get a latex type setting of a mathematical formula.
+<span class="RktSym">scribble/example</span> is nice in that it allows you to type set code in the document <span style="font-style: italic">and</span> include the output of that code in the final product when you compile the document. There will be examples of both these uses shortly.</p>
+
+<h2>1.3
+ <tt>&nbsp;</tt><a name="(part._.Plotting)"></a>Plotting</h2>
+
+<p></p>
+
+<div class="SIntrapara">Plotting in racket is not something that I understand at all well, but it remains something I need to have available. Here is the creation of a plotting evaluator
+</div>
+
+<div class="SIntrapara">
+ <div class="SCodeFlow">
+  <table cellpadding="0" cellspacing="0" class="RktBlk">
+   <tbody>
+    <tr>
+     <td><span class="RktMeta">&#160;</span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="RktSym">@</span><span class="RktPn">(</span><span class="RktSym">define</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">plot-eval</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">let</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">eval</span><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">make-base-eval</span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">eval</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">'</span><span class="RktPn">(</span><span class="RktSym">begin</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">require</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/math</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/match</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/list</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/draw</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">racket/class</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">plot/pict</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">plot/utils</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">eval</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+    <tr>
+     <td><span class="RktMeta">&#160;</span></td></tr></tbody></table></div></div>
+
+<p>You can also put this near the top of your document to have access to that function later when you want to plot something.</p>
+
+<h2>1.4
+ <tt>&nbsp;</tt><a name="(part._.Some_.Meta_.Data)"></a>Some Meta Data</h2>
+
+<p>You continue to use the @ syntax to define some standard metadata such as title and author.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktMeta">&#160;</span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="RktSym">@title</span><span class="RktPn">{</span><span class="RktSym">This</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">is</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">where</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">you</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">put</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">the</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">title</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">of</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">your</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">document</span><span class="RktPn">}</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="RktSym">@section</span><span class="RktPn">{</span><span class="RktSym">And</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">this</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">is</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">a</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">section</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">title.</span><span class="RktPn">}</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta">&#160;</span></td></tr></tbody></table></div>
+
+<h2>1.5
+ <tt>&nbsp;</tt><a name="(part._.Actually_writing_stuff)"></a>Actually writing stuff</h2>
+
+<p></p>
+
+<div class="SIntrapara">The writing becomes a mixture of things you just type as if they were text, like you are used to, and things preceded with an @ sign that switches you into a mode that leads to the next bit of text being treated as code. There are complex rules for this. I don&rsquo;t have any good advice except to </div>
+
+<div class="SIntrapara">
+ <ul>
+  <li>
+   <p>Read the manual</p></li>
+  <li>
+   <p>Look at the Scribble document source code.</p></li></ul></div>
+
+<p>It was the second that often proved the most helpful since you could see what the scribble authors put in their .scbrl files which they compile to produce the documentation. These files are found at the <a href="https://github.com/racket/scribble/tree/master/scribble-doc">racket/scribble github repository</a>.</p>
+
+<h2>1.6
+ <tt>&nbsp;</tt><a name="(part._.Some_.Simple_.Formatting)"></a>Some Simple Formatting</h2>
+
+<p></p>
+
+<div class="SIntrapara">Most formatting commands look something like this </div>
+
+<div class="SIntrapara">
+ <div class="SCodeFlow">
+  <table cellpadding="0" cellspacing="0" class="RktBlk">
+   <tbody>
+    <tr>
+     <td><span class="RktSym">@centered</span><span class="RktPn">{</span><span class="RktSym">@bold</span><span class="RktPn">{</span><span class="RktSym">Some</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">text</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">I</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">want</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">centered</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">and</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">bold</span><span class="RktPn">}</span><span class="RktPn">}</span><span class="RktMeta"></span></td></tr></tbody></table></div></div>
+
+<div class="SIntrapara"> and produce something like this.
+</div>
+
+<div class="SIntrapara">
+ <blockquote class="SCentered">
+  <p><span style="font-weight: bold">Some text I want centered and bold</span></p></blockquote></div>
+
+<p>A simple itemized list looks like this with the use of an optional argument to make it numbered instead of bullet points. Lots of the @ formatting commands have the ability to accept these options.</p>
+
+<p></p>
+
+<table cellpadding="0" cellspacing="0" class="RktBlk">
+ <tbody>
+  <tr>
+   <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktSym">@itemlist</span><span class="RktPn">[</span><span class="RktPn">#:style</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">'</span><span class="RktSym">ordered</span><span class="RktMeta"></span></td></tr>
+  <tr>
+   <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">@item</span><span class="RktPn">{</span><span class="RktSym">This</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">is</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">the</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">first</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">item</span><span class="RktPn">}</span><span class="RktMeta"></span></td></tr>
+  <tr>
+   <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">@item</span><span class="RktPn">{</span><span class="RktSym">And</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">this</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">is</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">the</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">second</span><span class="RktPn">}</span><span class="RktPn">]</span><span class="RktMeta"></span></td></tr>
+  <tr>
+   <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta">&#160;</span></td></tr></tbody></table>
+
+<p>Which yields:</p>
+
+<ol>
+ <li>
+  <p>This is the first item</p></li>
+ <li>
+  <p>And this is the second</p></li></ol>
+
+<h2>1.7
+ <tt>&nbsp;</tt><a name="(part._.How_to_do_a_few_more_basic_things)"></a>How to do a few more basic things</h2>
+
+<p>For those of us coming to racket without institutional support or a local expert, it can be hard to get started on even basic document features. Here a few more simple examples of how to get things done.</p>
+
+<h3>1.7.1
+ <tt>&nbsp;</tt><a name="(part._.Links)"></a>Links</h3>
+
+<p>The format for a hyperlink is a bit tricky. Some things are strings. Some things are not. It depends on whether you are using [ or {.</p>
+
+<p></p>
+
+<div class="SIntrapara">Here is a <a href="https://commons.wikimedia.org/w/index.php?curid=44114666">link</a> to a picture of the action potential. I included it like this,
+</div>
+
+<div class="SIntrapara">
+ <div class="SCodeFlow">
+  <table cellpadding="0" cellspacing="0" class="RktBlk">
+   <tbody>
+    <tr>
+     <td><span class="RktSym">@hyperlink</span><span class="RktPn">[</span><span class="RktVal">"https://commons.wikimedia.org/w/index.php?curid=44114666"</span><span class="RktPn">]</span><span class="RktPn">{</span><span class="RktSym">link</span><span class="RktPn">}</span><span class="RktMeta"></span></td></tr></tbody></table></div></div>
+
+<h3>1.7.2
+ <tt>&nbsp;</tt><a name="(part._.Writing_.Math)"></a>Writing Math</h3>
+
+<p>To get this to work for html export I had to make sure I had this declaration in the document.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktSym">@</span><span class="RktPn">(</span><span class="RktSym">use-mathjax</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+
+<p>Then, because I imported that <span class="RktSym">scribble-math/dollar</span><span class="RktMeta"></span> library I could write a LaTeX like like and it got typeset on export.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktSym">@</span><span class="RktPn">(</span><span class="RktSym">$$</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">"\\sum_{\\forall</span><span class="hspace">&nbsp;</span><span class="RktVal">x</span><span class="hspace">&nbsp;</span><span class="RktVal">\\in</span><span class="hspace">&nbsp;</span><span class="RktVal">\\left\\{</span><span class="hspace">&nbsp;</span><span class="RktVal">1</span><span class="hspace">&nbsp;</span><span class="RktVal">,</span><span class="hspace">&nbsp;</span><span class="RktVal">2</span><span class="hspace">&nbsp;</span><span class="RktVal">,</span><span class="hspace">&nbsp;</span><span class="RktVal">3</span><span class="hspace">&nbsp;</span><span class="RktVal">\\right</span><span class="hspace">&nbsp;</span><span class="RktVal">\\}}</span><span class="hspace">&nbsp;</span><span class="RktVal">x</span><span class="hspace">&nbsp;</span><span class="RktVal">~=~</span><span class="hspace">&nbsp;</span><span class="RktVal">6"</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+
+<p>Produced this:</p>
+
+<p></p>
+
+<div class="math">\sum_{\forall x \in \left\{ 1 , 2 , 3 \right \}} x ~=~ 6</div>
+
+<h3>1.7.3
+ <tt>&nbsp;</tt><a name="(part._.Plotting)"></a>Plotting</h3>
+
+<p>This really needs a knowledge of the evaluator and the plot library. But if you really just need to put a small sample up of a function or a scatter plot here is some code to get your started.</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktSym">@examples</span><span class="RktPn">[</span><span class="RktPn">#:eval</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">plot-eval</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">define</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">xs</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">build-list</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">20</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">lambda</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">_</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">random</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">define</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">ys</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">build-list</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">20</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">lambda</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">_</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">random</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
+   <tr>
+    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">plot</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">points</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">map</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">vector</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">xs</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">ys</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+
+<p>Note that here I am using the <span class="RktSym">examples</span> function. This both typesets the code, and includes the result of running the code in the document. This is the result of executing what I have typeset in the paragraph proceding.</p>
+
+<p></p>
+
+<div class="SIntrapara">Examples:</div>
+
+<div class="SIntrapara">
+ <div class="SCodeFlow">
+  <table cellpadding="0" cellspacing="0" class="RktBlk">
+   <tbody>
+    <tr>
+     <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">define</span><span class="hspace">&nbsp;</span><span class="RktSym">xs</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">build-list</span><span class="hspace">&nbsp;</span><span class="RktVal">20</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">lambda</span><span class="hspace">&nbsp;</span><span class="RktSym">_</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">random</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+    <tr>
+     <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">define</span><span class="hspace">&nbsp;</span><span class="RktSym">ys</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">build-list</span><span class="hspace">&nbsp;</span><span class="RktVal">20</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">lambda</span><span class="hspace">&nbsp;</span><span class="RktSym">_</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">random</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+    <tr>
+     <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">plot</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">points</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">map</span><span class="hspace">&nbsp;</span><span class="RktSym">vector</span><span class="hspace">&nbsp;</span><span class="RktSym">xs</span><span class="hspace">&nbsp;</span><span class="RktSym">ys</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+    <tr>
+     <td>
+      <p><img src="/img/posts/2022-06-22-getting-started-writing-with-scribble/pict.png" alt="image" height="406" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="406" /></p></td></tr></tbody></table></div></div>
+
+<p>But you do not need to do it in this way. You can just write and run code. I am going to show what I typed, but you will only see the plot. If I had not formally made a code block to display the code for this document it would have been hidden from the reader of the final output.</p>
+
+<p><img src="/img/posts/2022-06-22-getting-started-writing-with-scribble/pict_2.png" alt="image" height="406" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="406" /></p>
+
+<p>Here is the code to produce that plot:</p>
+
+<div class="SCodeFlow">
+ <table cellpadding="0" cellspacing="0" class="RktBlk">
+  <tbody>
+   <tr>
+    <td><span class="RktSym">@</span><span class="RktPn">(</span><span class="RktSym">plot-eval</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">plot</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">function</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">sin</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><span class="nobreak">-</span></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">pi</span><span class="RktPn">)</span><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktSym">pi</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">#:label</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">"y</span><span class="hspace">&nbsp;</span><span class="RktVal">=</span><span class="hspace">&nbsp;</span><span class="RktVal">sin(x)"</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+
+<h2>1.8
+ <tt>&nbsp;</tt><a name="(part._.Conclusion)"></a>Conclusion</h2>
+
+<p>There is much more you can do with scribble. My point in sharing this is to provide a simple template for getting started. The formal documentation can scanning of source code can be a long road to get started. It can be nice to a have a relatively simple working example and then build the complexity in as you need it.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <g:plusone size="medium" href="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html"></g:plusone>-->
+    <!--<div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_config = function () {
+            this.page.identifier = undefined;
+            this.page.url = undefined;
+            this.page.title = undefined;
+            this.page.category_id = undefined;
+          };
+          var disqus_shortname = 'shortname';
+          (function() {
+              var dsq = document.createElement('script');
+              dsq.type = 'text/javascript';
+              dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              dsq.setAttribute('data-timestamp', +new Date());
+              (document.head || document.body).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>-->
+    <div class="row justify-content-center">
+      <nav aria-label="Page Navigation">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/2022/05/common-lisp-is-old-and-i-love-it.html"
+               aria-label="Previous">
+              <span aria-hidden="true">&larr; Common Lisp Is Old. And I Love It</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/racketlang"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow RacketLang"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/pmatos/darwin">Darwin</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <!--<p><em>Your legal notice here</em>.</p>-->
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
