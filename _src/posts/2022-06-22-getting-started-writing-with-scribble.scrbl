@@ -2,7 +2,7 @@
 
 Title: Getting Started Writing With Scribble
 Date: 2022-06-22T17:23:27
-Tags: 
+Tags: scribble,racket,programming-languages,writing
 
 I have been thinking of trying to write an online textbook for a course I teach. It involves some code and I thought that racket might be a good language choice for the coding material, and that seemed to suggest using scribble, the racket documentation tool, but then ...
 
