@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">YABB: yet another Britt blog: Posts tagged 'writing'</title>
+ <link rel="self" href="https://brittAnderson.github.io/feeds/writing.atom.xml" />
+ <link href="https://brittAnderson.github.io/tags/writing.html" />
+ <id>urn:https-brittAnderson-github-io:-tags-writing-html</id>
+ <updated>2022-06-22T21:23:27Z</updated>
+ <entry>
+  <title type="text">Getting Started Writing With Scribble</title>
+  <link rel="alternate" href="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html?utm_source=writing&amp;utm_medium=Atom" />
+  <id>urn:https-brittAnderson-github-io:-2022-06-getting-started-writing-with-scribble-html</id>
+  <published>2022-06-22T21:23:27Z</published>
+  <updated>2022-06-22T21:23:27Z</updated>
+  <author>
+   <name>Britt Anderson</name></author>
+  <content type="html">
+&lt;p&gt;I have been thinking of trying to write an online textbook for a course I teach. It involves some code and I thought that racket might be a good language choice for the coding material, and that seemed to suggest using scribble, the racket documentation tool, but then ...&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html?utm_source=writing&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

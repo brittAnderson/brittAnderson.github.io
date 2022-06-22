@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>YABB: yet another Britt blog: Posts tagged 'scribble'</title>
+  <description>YABB: yet another Britt blog: Posts tagged 'scribble'</description>
+  <link>https://brittAnderson.github.io/tags/scribble.html</link>
+  <lastBuildDate>Wed, 22 Jun 2022 21:23:27 UT</lastBuildDate>
+  <pubDate>Wed, 22 Jun 2022 21:23:27 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Getting Started Writing With Scribble</title>
+   <link>https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html?utm_source=scribble&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-brittAnderson-github-io:-2022-06-getting-started-writing-with-scribble-html</guid>
+   <pubDate>Wed, 22 Jun 2022 21:23:27 UT</pubDate>
+   <author>Britt Anderson</author>
+   <description>
+&lt;p&gt;I have been thinking of trying to write an online textbook for a course I teach. It involves some code and I thought that racket might be a good language choice for the coding material, and that seemed to suggest using scribble, the racket documentation tool, but then ...&lt;/p&gt;&lt;a href="https://brittAnderson.github.io/2022/06/getting-started-writing-with-scribble.html?utm_source=scribble&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
