@@ -10,19 +10,27 @@
 #+exclude_tags: noexport
 #+creator: Emacs 28.2 (Org mode 9.6-pre)
 
-Welcome to yet another Britt Blog. You can find some of my academic work in the [[file:pubs.org][Publications]] section and a bit [[file:about.org][about]] me as well as some of my recent thoughts in the Posts section [[ref:posts][below]].
-(erase-recent-posts)
+Welcome to yet another Britt Blog. You can find some of my academic work in the [[file:pubs.org][Publications]] section and a bit [[file:about.org][about]] me as well as some of my recent thoughts in the [[* Older Posts][Older Posts]] section below. 
+
 
 #+begin_src emacs-lisp :exports none :results silent
   (load-file "./../helper-functions.el")
 #+end_src
 
 #+begin_src emacs-lisp :exports none :results silent
-  (clean-and-refresh-new-posts "./posts/" 1)
+  (clean-and-refresh-new-posts "./posts/" 2)
 #+end_src
 
 
 * Recent Posts
+**  Publish Your Embarassing Code
+Date: <2023-04-03 Mon>
+Author: Britt Anderson
+
+I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.org][read full entry]] 
+
 **  Back to Org Mode
 Date: <2023-01-09 Mon>
 Author: Britt Anderson
@@ -33,9 +41,8 @@ The look was clean, everyone in the lab could update their own content, and new 
 However, Jekyll and the Ruby engine that powers it have gotten a bit harder to use over the years, and now everytime I want to update the lab webpage I have to figure out how to update all my gems, and various other housekeeping procedures just to write a blog post or remind myself how to create an internal link.
 I wanted to simplify again and use something that I would not have to constantly re-educate myself how to use.
 
-[[/home/britt/gitRepos/brittOrgSite/raw/posts/2023-01-09-back-to-org-mode.org][read full entry]] 
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.org][read full entry]] 
 
 
 * Older Posts
-label:posts
 For a listing of all posts [[./posts/sitemap.org][click here]].

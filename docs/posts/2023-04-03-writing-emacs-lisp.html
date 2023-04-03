@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-04-03 Mon 11:16 -->
+<!-- 2023-04-03 Mon 11:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Back to Org Mode</title>
+<title>Publish Your Embarassing Code</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -206,53 +206,96 @@
 </nav>
 </div>
 <div id="content" class="content">
-<h1 class="title">Back to Org Mode</h1>
+<h1 class="title">Publish Your Embarassing Code</h1>
 <p>
-For sometime now my <a href="https://brittlab.uwaterloo.ca">laboratory website</a> has been in Jekyll.
-This was a really nice solution in the beginning.
-The look was clean, everyone in the lab could update their own content, and new members could learn to use a mark-up language to write posts.
-However, Jekyll and the Ruby engine that powers it have gotten a bit harder to use over the years, and now everytime I want to update the lab webpage I have to figure out how to update all my gems, and various other housekeeping procedures just to write a blog post or remind myself how to create an internal link.
-I wanted to simplify again and use something that I would not have to constantly re-educate myself how to use.
+I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my <code>init.el</code>) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
 </p>
 
 <p>
-Static blog engines have also been a way for me to get familiar with some of the basics of new programming languages.
-Or at least that was they idea.
-It led me to use Hakyll (Haskell), Coleslaw (Common Lisp), and Darwin (Racket).
-All are fine, but they also require some knowledge of HTML and often Javascript.
-And there is the same problem as the above.
-If you go a few months without updating them, and since my day job is not writing Haskell or Common Lisp or Racket code I do go long periods without looking at code in those languages, you have the same problem of having to refresh your knowledge of the package and possibly (except in the case of Common Lisp) a lot of your programming language libraries.
+What I show here a are a couple of brittle bespoke emacs lisp functions I wrote to get some slugs of recent posts on to my home page. There may well be built in packages that do this better, but one of the way to motivate yourself to write code in a new language is to write something you can use instead of just doing tutorials on line or tricking yourself into thinking that watching YouTube videos is all there is to learning.
 </p>
 
 <p>
-With these two experiences in mind I decided to return to org mode.
-I use emacs constantly, it leverages some of the lisp knowledge I have picked up along the way, and it allows me to have the blog be something that I can easily keep updated, while using very little new tooling that is not part of my daily work load.
+As I have spent some of the last couple of years dabbling with Racket and Common Lisp I thought emacs-lisp would not be too hard. I was wrong. I really had trouble getting it through my head that things happened in buffers, and that buffers were more than just what I could see on the screen. I also had trouble with the fact that emacs-lisp functions did not return what I thought they should. For example, if I move to <code>end-of-visible-line</code> I wanted my current location in the buffer to be returned, but some of these functions move the point, some do not, and some do and some do not return locations I can use. I to write <code>(point (some-motion-function-here))</code>, but often had to chain things in a <code>progn</code> where a motion function was follwed by a <code>(point)</code>. But whether or not that makes sense to others, whether or not a work around exists, the only way I really came to grips with it was by trying to write my own code. And I recommend that you do to. Don't wait for the <i>right</i> answer, someone else to author that package, or for your emacs-lisp expertise to ripen. Just write code for something you can use. 
 </p>
 
 <p>
-I do not find that the published guides make it easy to get started, but the key is the <code>org-publish</code> set of functions and variables.
-Searching for blog and <code>org-publish</code> will get you most of the relevant hits.
-Then be aware that you have to pay close attention to which entries are strings and which are lists of strings, and to the escaping required of specifying a string within another string (such as when you might want to define an html header that points to a path to your css file).
+I am not sure that my code deserves a detailed deep dive, but I will include it here so as to give other beginners a concrete example, and so that people see that not everyone writes beautiful code.
 </p>
 
 <p>
-Good luck<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+Before the file dump, let me set up the goal. Org-publish functions are great for creating a static web site. But they do not provide out of the box some of the convenience function that you may see in some other static web site generators. What I wanted was to have the first paragraph of the last few blog posts I wrote appear on the home page with links to the full entry.
 </p>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-If you want to see what this site used to look like you should go to the github repo and view the <code>prior-to-org-redux</code> repo.  
-</p></div></div>
+<p>
+The way I decided to deal with this was by reading the post directory, finding blog posts based on convention of starting with a date, and then with the blog posts opened in a temporary buffer grabbing the necessary parts for insertion in to the home page, which I do using <code>babel</code> src blocks. I found a lot of problems with this approach. It depends on sort order. It gets confused by temporary files. If I use the text in my post that is also searched for (like the word "date") I can get un-predicatable effects. <b>But</b> it works for me today, and I learned so much by just writing it. So, if you think this is not the way it should be done, then make it better, but at least you have an imperfect starting point instead of just an aspiration combined with imposter syndrome.
+</p>
 
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">get-post-metadata</span> ()
+<span style="color: #8b2252;">"Relies on org-mode headers to extract post-meta data and first paragraph and stores in registers"</span>
+  (goto-char (point-min))
+  (<span style="color: #a020f0;">let</span> ((meta-data '((<span style="color: #483d8b;">:reg</span> ?t <span style="color: #483d8b;">:search-for</span> <span style="color: #8b2252;">"#+title: "</span> <span style="color: #483d8b;">:start</span> <span style="color: #8b2252;">"**  "</span>)
+                     (<span style="color: #483d8b;">:reg</span> ?d <span style="color: #483d8b;">:search-for</span> <span style="color: #8b2252;">"#+date: "</span>  <span style="color: #483d8b;">:start</span> <span style="color: #8b2252;">"Date: "</span>)
+                     (<span style="color: #483d8b;">:reg</span> ?a <span style="color: #483d8b;">:search-for</span> <span style="color: #8b2252;">"#+author: "</span> <span style="color: #483d8b;">:start</span> <span style="color: #8b2252;">"Author: "</span>))))
+    (<span style="color: #a020f0;">dolist</span> (md meta-data)
+      (set-register (plist-get md '<span style="color: #483d8b;">:reg</span>) (plist-get md '<span style="color: #483d8b;">:start</span>))
+      (append-to-register (plist-get md '<span style="color: #483d8b;">:reg</span>) (goto-char (search-forward (plist-get md '<span style="color: #483d8b;">:search-for</span>))) (line-end-position)))
+    (forward-paragraph)
+    (copy-to-register ?s (point) (<span style="color: #a020f0;">progn</span>
+                                   (forward-paragraph)
+                                   (point)))))
 
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">put-post-metadata</span> (fn)
+  <span style="color: #8b2252;">"Inserts the registers holding post metadata into current-buffer"</span>
+  (<span style="color: #a020f0;">let</span> ((reg-list '(?t ?d ?a ?s)))
+    (<span style="color: #a020f0;">dolist</span> (r reg-list)
+      (insert-register r t)
+      (insert <span style="color: #8b2252;">"\n"</span>))
+    (insert (format <span style="color: #8b2252;">"[[%s][%s]] \n\n"</span> fn <span style="color: #8b2252;">"read full entry"</span>))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">get-post-list</span> (post-dir n-posts)
+  <span style="color: #8b2252;">"Gets the list of the n-posts most recent files in the post-dir"</span>
+  (<span style="color: #a020f0;">setq</span> ps (directory-files post-dir t <span style="color: #8b2252;">"[0-9]\\{4\\}.*[org]$"</span>))
+  (<span style="color: #a020f0;">setq</span> most-recent (nreverse (last ps n-posts)))
+  most-recent)
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">erase-recent-posts</span> ()
+  <span style="color: #8b2252;">"Erases the text in the recent posts section so as to prepare for inserting updated data."</span>
+  (goto-char (point-min))
+  (search-forward <span style="color: #8b2252;">"Recent Posts"</span>)
+  (<span style="color: #a020f0;">let</span> ((begin-posts (point))
+        (end-posts (<span style="color: #a020f0;">progn</span> (search-forward <span style="color: #8b2252;">"Older Posts"</span>)
+                          (beginning-of-line)
+                          (point))))
+    (delete-region begin-posts end-posts)
+    (insert <span style="color: #8b2252;">"\n\n"</span>)))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">insert-recent-posts</span> (list-post-files)
+  <span style="color: #8b2252;">"Inserts the post data for all the desired posts into the current-buffer."</span>
+  (<span style="color: #a020f0;">dolist</span> (p (nreverse list-post-files))
+    (<span style="color: #a020f0;">with-temp-buffer</span>
+      (insert-file-contents p)
+      (goto-char (point-min))
+      (get-post-metadata))
+    (goto-char (point-min))
+    (search-forward <span style="color: #8b2252;">"Recent Posts"</span>)
+    (forward-line)
+    (put-post-metadata p)))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">clean-and-refresh-new-posts</span> (pd np)
+  <span style="color: #8b2252;">"The principal function that calls all others to erase the current entries, generate a new list of posts, get their meta data and put their meta data into the site home page."</span>
+  (goto-char (point-min))
+  (erase-recent-posts)
+  (<span style="color: #a020f0;">let</span> ((list-recent-posts (get-post-list pd np)))
+    (insert-recent-posts list-recent-posts)))
+</pre>
 </div>
-</div></div>
+</div>
 <div id="postamble" class="status">
-<p class="date">Date: 2023-01-09 Mon 00:00</p>
+<p class="date">Date: 2023-04-03 Mon 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2023-04-03 Mon 11:16</p>
+<p class="date">Created: 2023-04-03 Mon 11:23</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

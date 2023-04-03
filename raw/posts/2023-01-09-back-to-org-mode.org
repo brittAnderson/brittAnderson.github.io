@@ -33,5 +33,8 @@ I do not find that the published guides make it easy to get started, but the key
 Searching for blog and ~org-publish~ will get you most of the relevant hits.
 Then be aware that you have to pay close attention to which entries are strings and which are lists of strings, and to the escaping required of specifying a string within another string (such as when you might want to define an html header that points to a path to your css file).
 
-Good luck.
- 
+Good luck[fn:1].
+
+* Footnotes
+
+[fn:1] If you want to see what this site used to look like you should go to the github repo and view the ~prior-to-org-redux~ repo.  

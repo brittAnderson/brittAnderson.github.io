@@ -1,4 +1,5 @@
 (defun get-post-metadata ()
+"Relies on org-mode headers to extract post-meta data and first paragraph and stores in registers"
   (goto-char (point-min))
   (let ((meta-data '((:reg ?t :search-for "#+title: " :start "**  ")
 		     (:reg ?d :search-for "#+date: "  :start "Date: ")
@@ -12,6 +13,7 @@
 				   (point)))))
 
 (defun put-post-metadata (fn)
+  "Inserts the registers holding post metadata into current-buffer"
   (let ((reg-list '(?t ?d ?a ?s)))
     (dolist (r reg-list)
       (insert-register r t)
@@ -19,11 +21,13 @@
     (insert (format "[[%s][%s]] \n\n" fn "read full entry"))))
 
 (defun get-post-list (post-dir n-posts)
+  "Gets the list of the n-posts most recent files in the post-dir"
   (setq ps (directory-files post-dir t "[0-9]\\{4\\}.*[org]$"))
   (setq most-recent (nreverse (last ps n-posts)))
   most-recent)
 
 (defun erase-recent-posts ()
+  "Erases the text in the recent posts section so as to prepare for inserting updated data."
   (goto-char (point-min))
   (search-forward "Recent Posts")
   (let ((begin-posts (point))
@@ -34,6 +38,7 @@
     (insert "\n\n")))
 
 (defun insert-recent-posts (list-post-files)
+  "Inserts the post data for all the desired posts into the current-buffer."
   (dolist (p (nreverse list-post-files))
     (with-temp-buffer
       (insert-file-contents p)
@@ -45,6 +50,7 @@
     (put-post-metadata p)))
 
 (defun clean-and-refresh-new-posts (pd np)
+  "The principal function that calls all others to erase the current entries, generate a new list of posts, get their meta data and put their meta data into the site home page."
   (goto-char (point-min))
   (erase-recent-posts)
   (let ((list-recent-posts (get-post-list pd np)))
