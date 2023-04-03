@@ -1,0 +1,29 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Publish Your Embarassing Code
+#+date: <2023-04-03 Mon>
+#+author: Britt Anderson
+#+email: britt@uwaterloo.ca
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6-pre)
+
+I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
+
+What I show here a are a couple of brittle bespoke emacs lisp functions I wrote to get some slugs of recent posts on to my home page. There may well be built in packages that do this better, but one of the way to motivate yourself to write code in a new language is to write something you can use instead of just doing tutorials on line or tricking yourself into thinking that watching YouTube videos is all there is to learning.
+
+As I have spent some of the last couple of years dabbling with Racket and Common Lisp I thought emacs-lisp would not be too hard. I was wrong. I really had trouble getting it through my head that things happened in buffers, and that buffers were more than just what I could see on the screen. I also had trouble with the fact that emacs-lisp functions did not return what I thought they should. For example, if I move to ~end-of-visible-line~ I wanted my current location in the buffer to be returned, but some of these functions move the point, some do not, and some do and some do not return locations I can use. I to write =(point (some-motion-function-here))=, but often had to chain things in a =progn= where a motion function was follwed by a =(point)=. But whether or not that makes sense to others, whether or not a work around exists, the only way I really came to grips with it was by trying to write my own code. And I recommend that you do to. Don't wait for the /right/ answer, someone else to author that package, or for your emacs-lisp expertise to ripen. Just write code for something you can use. 
+
+I am not sure that my code deserves a detailed deep dive, but I will include it here so as to give other beginners a concrete example, and so that people see that not everyone writes beautiful code.
+
+Before the file dump, let me set up the goal. Org-publish functions are great for creating a static web site. But they do not provide out of the box some of the convenience function that you may see in some other static web site generators. What I wanted was to have the first paragraph of the last few blog posts I wrote appear on the home page with links to the full entry.
+
+The way I decided to deal with this was by reading the post directory, finding blog posts based on convention of starting with a date, and then with the blog posts opened in a temporary buffer grabbing the necessary parts for insertion in to the home page, which I do using ~babel~ src blocks. I found a lot of problems with this approach. It depends on sort order. It gets confused by temporary files. If I use the text in my post that is also searched for (like the word "date") I can get un-predicatable effects. *But* it works for me today, and I learned so much by just writing it. So, if you think this is not the way it should be done, then make it better, but at least you have an imperfect starting point instead of just an aspiration combined with imposter syndrome.
+
+#+include: "./../../helper-functions.el" src emacs-lisp
+
+
