@@ -1,0 +1,37 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Back to Org Mode
+#+date: <2023-01-09 Mon>
+#+author: Britt Anderson
+#+email: britt@uwaterloo.ca
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6-pre)
+#+cite_export:
+
+For sometime now my [[https://brittlab.uwaterloo.ca][laboratory website]] has been in Jekyll.
+This was a really nice solution in the beginning.
+The look was clean, everyone in the lab could update their own content, and new members could learn to use a mark-up language to write posts.
+However, Jekyll and the Ruby engine that powers it have gotten a bit harder to use over the years, and now everytime I want to update the lab webpage I have to figure out how to update all my gems, and various other housekeeping procedures just to write a blog post or remind myself how to create an internal link.
+I wanted to simplify again and use something that I would not have to constantly re-educate myself how to use.
+
+Static blog engines have also been a way for me to get familiar with some of the basics of new programming languages.
+Or at least that was they idea.
+It led me to use Hakyll (Haskell), Coleslaw (Common Lisp), and Darwin (Racket).
+All are fine, but they also require some knowledge of HTML and often Javascript.
+And there is the same problem as the above.
+If you go a few months without updating them, and since my day job is not writing Haskell or Common Lisp or Racket code I do go long periods without looking at code in those languages, you have the same problem of having to refresh your knowledge of the package and possibly (except in the case of Common Lisp) a lot of your programming language libraries.
+
+With these two experiences in mind I decided to return to org mode.
+I use emacs constantly, it leverages some of the lisp knowledge I have picked up along the way, and it allows me to have the blog be something that I can easily keep updated, while using very little new tooling that is not part of my daily work load.
+
+I do not find that the published guides make it easy to get started, but the key is the ~org-publish~ set of functions and variables.
+Searching for blog and ~org-publish~ will get you most of the relevant hits.
+Then be aware that you have to pay close attention to which entries are strings and which are lists of strings, and to the escaping required of specifying a string within another string (such as when you might want to define an html header that points to a path to your css file).
+
+Good luck.
+ 
