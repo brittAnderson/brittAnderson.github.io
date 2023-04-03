@@ -2,7 +2,7 @@
 #+Title: Britt Blog
 #+email: britt@b3l.xyz
 #+options: timestamp:t title:t toc:nil todo:t |:t
-#+date:
+#+date: <2023-04-03 Mon>
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
 #+language: en
