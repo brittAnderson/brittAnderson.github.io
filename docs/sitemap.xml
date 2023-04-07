@@ -24,9 +24,9 @@
     <link>https://brittanderson.github.io</link>
   </image>
 
-  <ul>
+ 
     <li><a href="2023-04-03-writing-emacs-lisp.html">Publish Your Embarassing Code</a></li>
     <li><a href="2023-01-09-back-to-org-mode.html">Back to Org Mode</a></li>
-  </ul>
+
 </channel>
 </rss>
