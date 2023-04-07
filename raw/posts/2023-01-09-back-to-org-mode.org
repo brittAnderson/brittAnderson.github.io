@@ -1,17 +1,7 @@
-#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
-#+options: author:t broken-links:nil c:nil creator:nil
-#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
-#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
-#+options: timestamp:t title:t toc:t todo:t |:t
 #+title: Back to Org Mode
 #+date: <2023-01-09 Mon>
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
-#+language: en
-#+select_tags: export
-#+exclude_tags: noexport
-#+creator: Emacs 28.2 (Org mode 9.6-pre)
-#+cite_export:
 
 For sometime now my [[https://brittlab.uwaterloo.ca][laboratory website]] has been in Jekyll.
 This was a really nice solution in the beginning.
@@ -36,5 +26,9 @@ Then be aware that you have to pay close attention to which entries are strings 
 Good luck[fn:1].
 
 * Footnotes
+:PROPERTIES:
+:ID:       f802fa6d-708b-459a-9062-e9dc63dfa9d0
+:PUBDATE:  2023-04-07 Fri 10:56
+:END:
 
 [fn:1] If you want to see what this site used to look like you should go to the github repo and view the ~prior-to-org-redux~ repo.  
