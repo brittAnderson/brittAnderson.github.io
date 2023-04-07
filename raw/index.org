@@ -48,4 +48,4 @@ I wanted to simplify again and use something that I would not have to constantly
 For a listing of all posts [[file:posts/sitemap.org][click here]].
 
 * RSS
-This [[https://brittanderson.github.io/feed][link]] should work for subscribing.
+This [[https://brittanderson.github.io/rss/][link]] should work for subscribing.
