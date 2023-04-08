@@ -32,3 +32,5 @@ Good luck[fn:1].
 :END:
 
 [fn:1] If you want to see what this site used to look like you should go to the github repo and view the ~prior-to-org-redux~ repo.  
+
+
