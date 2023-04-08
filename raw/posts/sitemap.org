@@ -1,4 +1,5 @@
-#+TITLE: Blog Posts
+#+TITLE: Sitemap for project britt-blog-sitemap
 
+- [[file:2023-04-08-rss-and-org-mode.org][RSS Feeds From Org Mode and Ox-rss]]
 - [[file:2023-04-03-writing-emacs-lisp.org][Publish Your Embarassing Code]]
 - [[file:2023-01-09-back-to-org-mode.org][Back to Org Mode]]
