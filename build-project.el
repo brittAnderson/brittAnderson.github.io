@@ -48,7 +48,7 @@
 		 (full-fn (expand-file-name fn bd)))
 	    (insert (format "*  %s\n" (org-publish-find-title fn my-proj-plist)))
 	    (insert (format ":PROPERTIES:\n:PUBDATE: %s\n:RSS_PERMALINK: %s\n:PERMALINK: %s\n:END:\n" my-date
-(concat (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
+(concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
 	    (insert "at some point will hold a preview")))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")

@@ -14,8 +14,8 @@
   <link>https://brittAnderson.github.io/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 10 Apr 2023 19:38:58 -0400</pubDate>
-  <lastBuildDate>Mon, 10 Apr 2023 19:38:58 -0400</lastBuildDate>
+  <pubDate>Mon, 10 Apr 2023 19:42:59 -0400</pubDate>
+  <lastBuildDate>Mon, 10 Apr 2023 19:42:59 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
   <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
@@ -26,9 +26,9 @@
 
   <item>
     <title>This is a test</title>
-    <link>https://brittAnderson.github.io/2023-04-09-test.html</link>
+    <link>https://brittAnderson.github.io/posts/2023-04-09-test.html</link>
     <author>britt@b3l.xyz (Britt Anderson)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io/2023-04-09-test.html</guid>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-04-09-test.html</guid>
     <pubDate>Sun, 09 Apr 2023 00:00:00 -0400</pubDate>
 
     <description><![CDATA[<p>
@@ -36,7 +36,7 @@
     </p>
     <p>
     :PUBDATE: 2023-04-08 Sat
-    :RSS<sub>PERMALINK</sub>: 2023-04-08-rss-and-org-mode.html
+    :RSS<sub>PERMALINK</sub>: posts/2023-04-08-rss-and-org-mode.html
     :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
     </p>
     <p>
@@ -44,7 +44,7 @@
     </p>
     <p>
     :PUBDATE: 2023-04-03 Mon
-    :RSS<sub>PERMALINK</sub>: 2023-04-03-writing-emacs-lisp.html
+    :RSS<sub>PERMALINK</sub>: posts/2023-04-03-writing-emacs-lisp.html
     :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
     </p>
     <p>
@@ -52,7 +52,7 @@
     </p>
     <p>
     :PUBDATE: 2023-01-09 Mon
-    :RSS<sub>PERMALINK</sub>: 2023-01-09-back-to-org-mode.html
+    :RSS<sub>PERMALINK</sub>: posts/2023-01-09-back-to-org-mode.html
     :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
     </p>
     <p>
