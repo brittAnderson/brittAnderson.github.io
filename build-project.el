@@ -49,7 +49,7 @@
 	    (insert (format "*  %s\n" (org-publish-find-title fn my-proj-plist)))
 	    (insert (format ":PROPERTIES:\n:PUBDATE: %s\n:RSS_PERMALINK: %s\n:PERMALINK: %s\n:END:\n" my-date
 (concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
-	    (insert "at some point will hold a preview")))
+	    (insert "at some point will hold a preview\n")))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")
 	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
@@ -112,7 +112,5 @@
 (message "Done")
 
 ;; add in the css
-;; fix the date format
-;; fix the link in xml output
 ;; add the blurb
 ;; make sure antichronological formatting

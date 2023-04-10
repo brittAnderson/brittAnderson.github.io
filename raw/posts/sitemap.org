@@ -7,24 +7,30 @@
 :PUBDATE: 2023-04-09 Sun
 :RSS_PERMALINK: posts/2023-04-09-test.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html
-:ID:       970345a3-899a-4fb0-a313-6086a349eca7
+:ID:       07ff38eb-b2e9-4ab4-9ab7-2359670d327a
 :END:
-at some point will hold a preview*  RSS Feeds From Org Mode and Ox-rss
+at some point will hold a preview
+*  RSS Feeds From Org Mode and Ox-rss
 :PROPERTIES:
 :PUBDATE: 2023-04-08 Sat
 :RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
+:ID:       15699e24-353c-487b-81ae-c56e0fb41f6f
 :END:
-at some point will hold a preview*  Publish Your Embarassing Code
+at some point will hold a preview
+*  Publish Your Embarassing Code
 :PROPERTIES:
 :PUBDATE: 2023-04-03 Mon
 :RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
+:ID:       5022699c-9b5b-46de-ae6c-66f34bc034ed
 :END:
-at some point will hold a preview*  Back to Org Mode
+at some point will hold a preview
+*  Back to Org Mode
 :PROPERTIES:
 :PUBDATE: 2023-01-09 Mon
 :RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
+:ID:       72b724eb-e165-4fb3-968d-ee5c472aaed4
 :END:
 at some point will hold a preview
