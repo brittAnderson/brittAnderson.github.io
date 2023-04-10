@@ -14,8 +14,8 @@
   <link>https://brittAnderson.github.io/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 10 Apr 2023 19:54:25 -0400</pubDate>
-  <lastBuildDate>Mon, 10 Apr 2023 19:54:25 -0400</lastBuildDate>
+  <pubDate>Mon, 10 Apr 2023 19:59:39 -0400</pubDate>
+  <lastBuildDate>Mon, 10 Apr 2023 19:59:39 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
   <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
@@ -24,30 +24,6 @@
     <link>https://brittAnderson.github.io/</link>
   </image>
 
-  <item>
-    <title>This is another Test</title>
-    <link>https://brittAnderson.github.io/posts/2023-04-10-test2.html</link>
-    <author>britt@b3l.xyz (Britt Anderson)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-04-10-test2.html</guid>
-    <pubDate>Mon, 10 Apr 2023 00:00:00 -0400</pubDate>
-
-    <description><![CDATA[<p>
-    at some point will hold a preview
-    </p>
-    ]]></description>
-  </item>
-  <item>
-    <title>This is a test</title>
-    <link>https://brittAnderson.github.io/posts/2023-04-09-test.html</link>
-    <author>britt@b3l.xyz (Britt Anderson)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-04-09-test.html</guid>
-    <pubDate>Sun, 09 Apr 2023 00:00:00 -0400</pubDate>
-
-    <description><![CDATA[<p>
-    at some point will hold a preview
-    </p>
-    ]]></description>
-  </item>
   <item>
     <title>RSS Feeds From Org Mode and Ox-rss</title>
     <link>https://brittAnderson.github.io/posts/2023-04-08-rss-and-org-mode.html</link>

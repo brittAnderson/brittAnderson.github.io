@@ -1,8 +1,0 @@
-#+title: This is a test
-#+date: <2023-04-09 Sun>
-#+author: Britt Anderson
-
-Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
-
-Stay tuned.
-
