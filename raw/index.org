@@ -52,4 +52,4 @@ I am a long term Emacs user, and I love it, but while I am quick to adopt new pa
 For a listing of all posts [[file:posts/sitemap.org][click here]].
 
 * RSS
-This [[file:rss.xml][link]] should work for subscribing.
+This [[file:sitemap.xml][link]] should work for subscribing.
