@@ -1,5 +1,28 @@
-#+TITLE: Sitemap for project britt-blog-sitemap
 
-- [[file:2023-04-08-rss-and-org-mode.org][RSS Feeds From Org Mode and Ox-rss]]
-- [[file:2023-04-03-writing-emacs-lisp.org][Publish Your Embarassing Code]]
-- [[file:2023-01-09-back-to-org-mode.org][Back to Org Mode]]
+* [[file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.org][This is a test]]
+:PROPERTIES:
+:PUBDATE: 2023-04-09 Sun 
+:RSS_PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html
+:ID:       3c77a7ae-c6d7-4189-a4ab-9ceba864de8e
+:END:
+
+* [[file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.org][RSS Feeds From Org Mode and Ox-rss]]
+:PROPERTIES:
+:PUBDATE: 2023-04-08 Sat 
+:RSS_PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
+:ID:       1e2b1e6d-ae14-4428-8852-0b44b0d4024c
+:END:
+
+* [[file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.org][Publish Your Embarassing Code]]
+:PROPERTIES:
+:PUBDATE: 2023-04-03 Mon 
+:RSS_PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
+:ID:       2e151110-40b2-498c-9e97-598dae434ada
+:END:
+
+* [[file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.org][Back to Org Mode]]
+:PROPERTIES:
+:PUBDATE: 2023-01-09 Mon 
+:RSS_PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
+:ID:       96ff80d1-9d73-4231-ae8a-63a6ed434697
+:END:

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:georss="http://www.georss.org/georss"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:media="http://search.yahoo.com/mrss/"><channel>
+  <title></title>
+  <atom:link href="https://brittAnderson.github.io/sitemap.xml" rel="self" type="application/rss+xml" />
+  <link>https://brittAnderson.github.io/</link>
+  <description><![CDATA[]]></description>
+  <language>en</language>
+  <pubDate>Mon, 10 Apr 2023 19:09:00 -0400</pubDate>
+  <lastBuildDate>Mon, 10 Apr 2023 19:09:00 -0400</lastBuildDate>
+  <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
+  <webMaster>britt@joy (nil)</webMaster>
+  <image>
+    <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
+    <title></title>
+    <link>https://brittAnderson.github.io/</link>
+  </image>
+
+  <item>
+    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.org</title>
+    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html</link>
+    <author>britt@joy (nil)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html</guid>
+    <pubDate>Sun, 09 Apr 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+
+  <item>
+    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.org</title>
+    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html</link>
+    <author>britt@joy (nil)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html</guid>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+
+  <item>
+    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.org</title>
+    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html</link>
+    <author>britt@joy (nil)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html</guid>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+
+  <item>
+    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.org</title>
+    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html</link>
+    <author>britt@joy (nil)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html</guid>
+    <pubDate>Mon, 09 Jan 2023 00:00:00 -0500</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+</channel>
+</rss>
