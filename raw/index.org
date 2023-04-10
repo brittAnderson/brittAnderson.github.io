@@ -23,6 +23,14 @@ Welcome to yet another Britt Blog. You can find some of my academic work in the 
 
 
 * Recent Posts
+**  This is another Test
+Date: <2023-04-10 Mon>
+Author: Britt Anderson
+
+Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-10-test2.org][read full entry]] 
+
 **  This is a test
 Date: <2023-04-09 Sun>
 Author: Britt Anderson
@@ -38,14 +46,6 @@ Author: Britt Anderson
 Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
 
 [[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.org][read full entry]] 
-
-**  Publish Your Embarassing Code
-Date: <2023-04-03 Mon>
-Author: Britt Anderson
-
-I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
-
-[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.org][read full entry]] 
 
 
 * Older Posts

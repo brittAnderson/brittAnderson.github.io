@@ -2,12 +2,20 @@
 #+TITLE: Blog - Britt Anderson's Personal Website
 #+AUTHOR: Britt Anderson
 #+EMAIL: britt@b3l.xyz
+*  This is another Test
+:PROPERTIES:
+:PUBDATE: 2023-04-10 Mon
+:RSS_PERMALINK: posts/2023-04-10-test2.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-10-test2.html
+:ID:       409f897a-17cd-4147-9b4f-bee3633ab335
+:END:
+at some point will hold a preview
 *  This is a test
 :PROPERTIES:
 :PUBDATE: 2023-04-09 Sun
 :RSS_PERMALINK: posts/2023-04-09-test.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html
-:ID:       07ff38eb-b2e9-4ab4-9ab7-2359670d327a
+:ID:       a848e419-4cae-4bb5-9af7-7830487e82fe
 :END:
 at some point will hold a preview
 *  RSS Feeds From Org Mode and Ox-rss
@@ -15,7 +23,7 @@ at some point will hold a preview
 :PUBDATE: 2023-04-08 Sat
 :RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
-:ID:       15699e24-353c-487b-81ae-c56e0fb41f6f
+:ID:       d9222d7e-7726-4059-b11e-bc59094ed307
 :END:
 at some point will hold a preview
 *  Publish Your Embarassing Code
@@ -23,7 +31,7 @@ at some point will hold a preview
 :PUBDATE: 2023-04-03 Mon
 :RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
-:ID:       5022699c-9b5b-46de-ae6c-66f34bc034ed
+:ID:       a2eacad5-312f-4c5f-9364-25309aec388d
 :END:
 at some point will hold a preview
 *  Back to Org Mode
@@ -31,6 +39,6 @@ at some point will hold a preview
 :PUBDATE: 2023-01-09 Mon
 :RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
-:ID:       72b724eb-e165-4fb3-968d-ee5c472aaed4
+:ID:       785ed2c4-e68c-4d1a-a286-65c17d965a52
 :END:
 at some point will hold a preview
