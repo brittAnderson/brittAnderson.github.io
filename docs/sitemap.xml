@@ -9,59 +9,56 @@
      xmlns:georss="http://www.georss.org/georss"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
-  <title></title>
+  <title>Blog - Britt Anderson's Personal Website</title>
   <atom:link href="https://brittAnderson.github.io/sitemap.xml" rel="self" type="application/rss+xml" />
   <link>https://brittAnderson.github.io/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 10 Apr 2023 19:13:30 -0400</pubDate>
-  <lastBuildDate>Mon, 10 Apr 2023 19:13:30 -0400</lastBuildDate>
+  <pubDate>Mon, 10 Apr 2023 19:38:58 -0400</pubDate>
+  <lastBuildDate>Mon, 10 Apr 2023 19:38:58 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
-  <webMaster>britt@joy (nil)</webMaster>
+  <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
     <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
-    <title></title>
+    <title>Blog - Britt Anderson's Personal Website</title>
     <link>https://brittAnderson.github.io/</link>
   </image>
 
   <item>
-    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.org</title>
-    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html</link>
-    <author>britt@joy (nil)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-09-test.html</guid>
+    <title>This is a test</title>
+    <link>https://brittAnderson.github.io/2023-04-09-test.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/2023-04-09-test.html</guid>
     <pubDate>Sun, 09 Apr 2023 00:00:00 -0400</pubDate>
 
-    <description><![CDATA[]]></description>
-  </item>
-
-  <item>
-    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.org</title>
-    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html</link>
-    <author>britt@joy (nil)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html</guid>
-    <pubDate>Sat, 08 Apr 2023 00:00:00 -0400</pubDate>
-
-    <description><![CDATA[]]></description>
-  </item>
-
-  <item>
-    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.org</title>
-    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html</link>
-    <author>britt@joy (nil)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html</guid>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 -0400</pubDate>
-
-    <description><![CDATA[]]></description>
-  </item>
-
-  <item>
-    <title>file:/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.org</title>
-    <link>https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html</link>
-    <author>britt@joy (nil)</author>
-    <guid isPermaLink="false">https://brittAnderson.github.io//home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html</guid>
-    <pubDate>Mon, 09 Jan 2023 00:00:00 -0500</pubDate>
-
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p>
+    at some point will hold a preview*  RSS Feeds From Org Mode and Ox-rss
+    </p>
+    <p>
+    :PUBDATE: 2023-04-08 Sat
+    :RSS<sub>PERMALINK</sub>: 2023-04-08-rss-and-org-mode.html
+    :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
+    </p>
+    <p>
+    at some point will hold a preview*  Publish Your Embarassing Code
+    </p>
+    <p>
+    :PUBDATE: 2023-04-03 Mon
+    :RSS<sub>PERMALINK</sub>: 2023-04-03-writing-emacs-lisp.html
+    :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
+    </p>
+    <p>
+    at some point will hold a preview*  Back to Org Mode
+    </p>
+    <p>
+    :PUBDATE: 2023-01-09 Mon
+    :RSS<sub>PERMALINK</sub>: 2023-01-09-back-to-org-mode.html
+    :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
+    </p>
+    <p>
+    at some point will hold a preview
+    </p>
+    ]]></description>
   </item>
 </channel>
 </rss>

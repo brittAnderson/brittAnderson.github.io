@@ -43,13 +43,18 @@
 	     (bd (plist-get (cdr my-proj-plist) :base-directory))
 	     (fpths (get-link my-list)))
 	(dolist (fp fpths)
-	  (insert "\n")
 	  (let* ((fn (plist-get (elt fp 1) :path))
 		 (my-date (format-time-string (car org-time-stamp-formats) (org-publish-find-date fn my-proj-plist)))
 		 (full-fn (expand-file-name fn bd)))
-	    (insert (format "* [[file:%s][%s]]\n" full-fn (org-publish-find-title fn my-proj-plist)))
-	    (insert (format ":PROPERTIES:\n:PUBDATE: %s 
-:RSS_PERMALINK: %s\n:END:\n" my-date (concat (file-name-sans-extension full-fn) ".html")))))
+	    (insert (format "*  %s\n" (org-publish-find-title fn my-proj-plist)))
+	    (insert (format ":PROPERTIES:\n:PUBDATE: %s\n:RSS_PERMALINK: %s\n:PERMALINK: %s\n:END:\n" my-date
+(concat (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
+	    (insert "at some point will hold a preview")))
+	(goto-char (point-min))
+	(insert "#+OPTIONS: title:nil\n")
+	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
+	(insert "#+AUTHOR: Britt Anderson\n")
+	(insert "#+EMAIL: britt@b3l.xyz\n")
 	(buffer-string)))))
 
 (setq org-publish-project-alist 
