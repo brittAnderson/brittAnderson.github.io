@@ -1,28 +1,6 @@
-#+OPTIONS: title:nil
-#+TITLE: Blog - Britt Anderson's Personal Website
-#+AUTHOR: Britt Anderson
-#+EMAIL: britt@b3l.xyz
-*  RSS Feeds From Org Mode and Ox-rss
-:PROPERTIES:
-:PUBDATE: 2023-04-08 Sat
-:RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
-:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
-:ID:       9a504ac0-72ed-4eb1-8f2d-cce41bae60d7
-:END:
-at some point will hold a preview
-*  Publish Your Embarassing Code
-:PROPERTIES:
-:PUBDATE: 2023-04-03 Mon
-:RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
-:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
-:ID:       d513bac6-141b-4d16-9d8b-23ca4d0f7583
-:END:
-at some point will hold a preview
-*  Back to Org Mode
-:PROPERTIES:
-:PUBDATE: 2023-01-09 Mon
-:RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
-:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
-:ID:       1ca7e981-3d37-4e46-996e-72b4827c6bd3
-:END:
-at some point will hold a preview
+#+TITLE: Sitemap for project britt-blog-sitemap
+
+- [[file:2023-05-15-inductive-inference.org][Coincidence and Inductive Inference]]
+- [[file:2023-04-08-rss-and-org-mode.org][RSS Feeds From Org Mode and Ox-rss]]
+- [[file:2023-04-03-writing-emacs-lisp.org][Publish Your Embarassing Code]]
+- [[file:2023-01-09-back-to-org-mode.org][Back to Org Mode]]
