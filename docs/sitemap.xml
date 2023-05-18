@@ -9,26 +9,68 @@
      xmlns:georss="http://www.georss.org/georss"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
-  <title>Sitemap for project britt-blog-sitemap</title>
-  <atom:link href="https://brittanderson.github.io/sitemap.xml" rel="self" type="application/rss+xml" />
-  <link>https://brittanderson.github.io</link>
+  <title>Blog - Britt Anderson's Personal Website</title>
+  <atom:link href="https://brittAnderson.github.io/sitemap.xml" rel="self" type="application/rss+xml" />
+  <link>https://brittAnderson.github.io/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 15 May 2023 10:22:03 -0400</pubDate>
-  <lastBuildDate>Mon, 15 May 2023 10:22:03 -0400</lastBuildDate>
+  <pubDate>Thu, 18 May 2023 05:24:01 -0400</pubDate>
+  <lastBuildDate>Thu, 18 May 2023 05:24:01 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
-  <webMaster>britt@uwaterloo.ca (Britt Anderson)</webMaster>
+  <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
     <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
-    <title>Sitemap for project britt-blog-sitemap</title>
-    <link>https://brittanderson.github.io</link>
+    <title>Blog - Britt Anderson's Personal Website</title>
+    <link>https://brittAnderson.github.io/</link>
   </image>
 
-  <ul class="org-ul">
-    <li><a href="2023-05-15-inductive-inference.html">Coincidence and Inductive Inference</a></li>
-    <li><a href="2023-04-08-rss-and-org-mode.html">RSS Feeds From Org Mode and Ox-rss</a></li>
-    <li><a href="2023-04-03-writing-emacs-lisp.html">Publish Your Embarassing Code</a></li>
-    <li><a href="2023-01-09-back-to-org-mode.html">Back to Org Mode</a></li>
-  </ul>
+  <item>
+    <title>Coincidence and Inductive Inference</title>
+    <link>https://brittAnderson.github.io/posts/2023-05-15-inductive-inference.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-05-15-inductive-inference.html</guid>
+    <pubDate>Mon, 15 May 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[<p>
+    at some point will hold a preview
+    </p>
+    ]]></description>
+  </item>
+  <item>
+    <title>RSS Feeds From Org Mode and Ox-rss</title>
+    <link>https://brittAnderson.github.io/posts/2023-04-08-rss-and-org-mode.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-04-08-rss-and-org-mode.html</guid>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[<p>
+    at some point will hold a preview
+    </p>
+    ]]></description>
+  </item>
+  <item>
+    <title>Publish Your Embarassing Code</title>
+    <link>https://brittAnderson.github.io/posts/2023-04-03-writing-emacs-lisp.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-04-03-writing-emacs-lisp.html</guid>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[<p>
+    at some point will hold a preview
+    </p>
+    ]]></description>
+  </item>
+  <item>
+    <title>Back to Org Mode</title>
+    <link>https://brittAnderson.github.io/posts/2023-01-09-back-to-org-mode.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-01-09-back-to-org-mode.html</guid>
+    <pubDate>Mon, 09 Jan 2023 00:00:00 -0500</pubDate>
+
+    <description><![CDATA[<p>
+    at some point will hold a preview
+    </p>
+    ]]></description>
+  </item>
 </channel>
 </rss>

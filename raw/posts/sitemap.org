@@ -1,6 +1,36 @@
-#+TITLE: Sitemap for project britt-blog-sitemap
-
-- [[file:2023-05-15-inductive-inference.org][Coincidence and Inductive Inference]]
-- [[file:2023-04-08-rss-and-org-mode.org][RSS Feeds From Org Mode and Ox-rss]]
-- [[file:2023-04-03-writing-emacs-lisp.org][Publish Your Embarassing Code]]
-- [[file:2023-01-09-back-to-org-mode.org][Back to Org Mode]]
+#+OPTIONS: title:nil
+#+TITLE: Blog - Britt Anderson's Personal Website
+#+AUTHOR: Britt Anderson
+#+EMAIL: britt@b3l.xyz
+*  Coincidence and Inductive Inference
+:PROPERTIES:
+:PUBDATE: 2023-05-15 Mon
+:RSS_PERMALINK: posts/2023-05-15-inductive-inference.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-15-inductive-inference.html
+:ID:       47b648e7-7d59-4f95-b315-783907e6e1d4
+:END:
+at some point will hold a preview
+*  RSS Feeds From Org Mode and Ox-rss
+:PROPERTIES:
+:PUBDATE: 2023-04-08 Sat
+:RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
+:ID:       17da6a86-26df-4507-985b-4223a14b1539
+:END:
+at some point will hold a preview
+*  Publish Your Embarassing Code
+:PROPERTIES:
+:PUBDATE: 2023-04-03 Mon
+:RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
+:ID:       ebe8a5a9-37f7-4eba-a6a3-c2d170c9d709
+:END:
+at some point will hold a preview
+*  Back to Org Mode
+:PROPERTIES:
+:PUBDATE: 2023-01-09 Mon
+:RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
+:ID:       dc589e14-7ba0-4757-a91c-a6ba5235dca7
+:END:
+at some point will hold a preview
