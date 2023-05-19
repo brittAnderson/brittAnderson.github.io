@@ -1,0 +1,14 @@
+#+title: Epicurus - If it ain't wrong it is still game
+#+date: <2023-05-15 Mon>
+#+author: Britt Anderson
+#+email: britt@uwaterloo.ca
+
+Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Occam's Razor.]] It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the *right* explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
+
+While there might be many plausible reasons for arguing that simplicity is desirable, and that one typically finds simplicity in nature, it is not the true that all mechanisms are simple. We should also remember what is sometimes called the Epicurus Principle: eliminate no hypothesis that is not known to be false [fn:1].
+
+If you only get to make one choice in an important matter: chose the simplest hypothesis. But in all circumstances where you get multiple guesses or you can wager on multiple horses, so to speak, [[https://en.wikipedia.org/wiki/Gambling_and_information_theory][then bet in proportion to simplicity]]. Have some money on the complex long shots. In the long run you will maximize your winnings. 
+
+* Footnotes
+
+[fn:1] Though I see this a lot in [[http://hutter1.net/][Hutter]]'s writings I can't find an example where Solomonoff referenced Epicurus. If you know of one please let me know.  

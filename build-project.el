@@ -16,6 +16,15 @@
 (setq org-cite-global-bibliography '("/home/britt/gitRepos/masterBib/britt.bib"))
 (setq org-cite-export-processors '((csl "/home/britt/gitRepos/brittAnderson.github.io/raw/assets/chicago-note-bibliography-16th-edition.cls")))
 
+(defun get-first-paragraph (fn)
+  (with-temp-buffer
+    (insert-file-contents fn)
+    (goto-char (point-min))
+    (kill-region 1 (search-forward "\n\n"))
+    (forward-paragraph)
+    (kill-region (point) (point-max))
+    (buffer-string)))
+
 ;; In order to have a common navigation list at the top I add this to pages
 ;; via a function and file rather than just re-typing the string over and over. 
 (setq brittgithub-header-file (expand-file-name "/home/britt/gitRepos/brittAnderson.github.io/raw/assets/html-preamble.html"))
@@ -49,7 +58,9 @@
 	    (insert (format "*  %s\n" (org-publish-find-title fn my-proj-plist)))
 	    (insert (format ":PROPERTIES:\n:PUBDATE: %s\n:RSS_PERMALINK: %s\n:PERMALINK: %s\n:END:\n" my-date
 (concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
-	    (insert "at some point will hold a preview\n")))
+	  (insert (format "  - %s\n" my-date))
+	    (insert (get-first-paragraph full-fn))
+	    (insert (format "  [[file:%s][To read more ...]]\n" fn))))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")
 	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
