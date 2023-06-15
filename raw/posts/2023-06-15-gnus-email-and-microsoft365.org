@@ -1,0 +1,207 @@
+#+title: Setting up email with gnus, mbsync, dovecot, and davmail
+#+date: <2023-06-15 Thu>
+#+author: Britt Anderson
+#+email: britt@uwaterloo.ca
+#+options: toc:nil
+
+* The problem
+My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
+
+* The Solution
+
+** In outline
+The solution, culled from numerous blog posts and stackoverflow and reddit posts, that I implemented was to use [[https://davmail.sourceforge.net/][davmail]] to communicate with exchange, [[https://sourceforge.net/projects/isync/][isync]] to give me a local copy of all my mail, [[https://www.dovecot.org/][dovecot]] to act as an email server from the local stored emails that [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Gnus.html][gnus]] can talk to to display my mails for me.
+
+** The walk-through and some details
+1. Davmail
+
+   Davmail is the program that we will use to talk to the exchange account. Davmail has been around for a long time and seems to be very solid. It is also something for which I could not find a lot of novice documentation. One of the better sources for me was [[https://douglasrumbaugh.com/post/davmail-authentication/][Douglas Rumbaugh's post]]. I use archlinux and getting davmail meant downling the package and installing from AUR. My properties file was in my home directory with the name ~.davmail.properties~. This is the file that you edit to affect your properties and you can launch the program from the command line with ~davmail .davmail.properties~. Initially, keep the server mode to false to be able to see the gui and the output from your various manipulations. Eventually you can turn the server setting to true and enable it as a systemd unit. Arch provides a file for this that you can find in =/usr/lib/system.d/system/davmail@.service=. If you look in here you will see that it expects the properties file to be in a particular subdirectory. After you get things set up you can move the file there and test with ~sudo systemctl start davmail@britt.service~ (replacing my name with your user name).
+
+   One of the challenges is getting things set up correctly the first time. I used the O365Manual mode to start with. That gave me a url that I posted into a browser window and provoked some authentication steps. I failed to notice that the address had changed, but after successfully authenticating the URL in the browser address bar changed. I needed to copy that and paste into the appropriate field of my davmail.properties file. Then I could just run davmail. Presumably I will have to repeat this step every several weeks.
+
+   #+Name: davmail properties
+   #+Caption: Here for reference are some of the settings in my davmail.properties file.
+   #+begin_src sh :eval never
+davmail.smtpPort=1025
+davmail.folderSizeLimit=0
+davmail.forceActiveSyncUpdate=false
+davmail.imapAutoExpunge=true
+davmail.useSystemProxies=false
+davmail.caldavEditNotifications=false
+davmail.ssl.nosecuresmtp=false
+davmail.caldavPastDelay=0
+davmail.server=true
+davmail.popMarkReadOnRetr=false
+davmail.ssl.nosecureimap=false
+davmail.disableTrayActivitySwitch=false
+davmail.caldavAutoSchedule=true
+davmail.enableProxy=false
+davmail.mode=O365Manual
+davmail.smtpSaveInSent=false
+davmail.ssl.nosecurepop=false
+davmail.imapPort=1143
+davmail.url=https://outlook.office365.com/EWS/Exchange.asmx
+davmail.sentKeepDelay=0
+davmail.ssl.nosecureldap=false
+davmail.imapAlwaysApproxMsgSize=false
+davmail.ssl.nosecurecaldav=false
+davmail.showStartupBanner=false
+davmail.disableGuiNotifications=false
+davmail.allowRemote=false
+davmail.disableUpdateCheck=false
+davmail.enableKeepAlive=true
+davmail.keepDelay=30
+davmail.oauth.britt@uwaterloo.ca.refreshToken={AES}Thisiswherethelongstringofyouraestokengoes
+#+end_src
+
+   There are many others. Note I only wanted IMAP. I did not use any of the other features that davmail can help you sync such as POP mail or your calendar and contacts.
+
+2. ISync
+
+   You can let Gnus directly query your exchange server once davmail is working. When I did it it was /very/ slow. This seems to be due to some weirdness around the size of individual files. Since I have something like 100K email stored that means a lot of files are checked every time. And this is even done when I all I wanted to do was refresh the in box. I decided to move copies local and then refer to them there. There are two popular tools for this: offlineimap and isync. I have used both. I started with offlineimap long ago, had some problem that I can't remember what it was and then switched to Isync. Since I have not had any problems since I never switched back. Offlineimap may now work great. I just don't know.
+
+   Isync is available from [[https://wiki.archlinux.org/title/Isync][Archlinux (Isync)]]. The actual program you execute is called ~mbsync~ and it too requires set up that can be arcane to a new user. There are examples throughout the internet on this. My advice is to double check the dates. Some of the top hits on an internet search may point to older posts that refer to deprecated configuration terms. As a starting point here is my config which is in my home directory and that I run as from the command line. 
+
+    #+Name: .mbsyncrc
+    #+Caption: My isync configuration for three different accounts
+    #+begin_src sh :eval never
+    IMAPAccount b3l
+    Host mail.gandi.net
+    User britt@b3l.xyz
+    Pass <Ijustentermypasswordhere-youcandobetter>
+    SSLType IMAPS
+    
+    IMAPStore b3l-remote
+    Account b3l
+    
+    MaildirStore b3l-local
+    Subfolders Verbatim
+    Path ~/.local/share/mail/b3l.xyz/britt/
+    Inbox ~/.local/share/mail/b3l.xyz/britt/Inbox
+    
+    Channel b3l
+    Far :b3l-remote:
+    Near :b3l-local:
+    Patterns INBOX archives/y2023
+    Create Near
+    SyncState *
+    Sync All
+    Expunge Both
+    
+    
+    IMAPAccount proton
+    Host 127.0.0.1
+    User brittanderson@protonmail.com
+    PassCmd "cat ~/.protonBridgePass"
+    Port 1144
+    SSLType NONE
+    CertificateFile /etc/ssl/certs/ca-certificates.crt
+    Authmechs Login
+    
+    IMAPStore proton-remote
+    Account proton
+    
+    MaildirStore proton-local
+    Subfolders Verbatim
+    Path ~/.local/share/mail/protonmail.com/brittanderson/
+    Inbox ~/.local/share/mail/protonmail.com/brittanderson/Inbox
+    
+    Channel proton
+    Far :proton-remote:
+    Near :proton-local:
+    Patterns INBOX Folders/arch2023
+    Create Near
+    SyncState *
+    Sync All
+    Expunge Both
+    
+    IMAPAccount university
+    Host localhost
+    Port 1143
+    User britt@uwaterloo.ca
+    Pass <Againsloppysecurity-usePasscmd>
+    SSLType None
+    Authmechs LOGIN
+    PipelineDepth 1
+    
+    IMAPStore university-remote
+    Account university
+    MaxSize 40M
+    PathDelimiter /
+    
+    MaildirStore university-local
+    AltMap yes
+    Subfolders Verbatim
+    Path ~/.local/share/mail/uwaterloo.ca/britt/
+    Inbox ~/.local/share/mail/uwaterloo.ca/britt/Inbox
+    
+    Channel university
+    Far :university-remote:
+    Near :university-local:
+    SyncState *
+    Patterns  INBOX archives/y2023 
+    Create Near
+    Sync All
+    Expunge Both
+    #+end_src
+
+    A few comments: Note that exchange insists on using certain imap/smtp ports. I had to manually adjust the protonmail-bridge to use different ports to avoid a conflict. Don't turn on the *Expunge* options until are sure things are working well for you. In fact you may only want to sync to the "near" part of your channel until you are confident all is functioning like you want.
+
+    An initial sync can take a /long/ time. It depends on how much you are transferring. I initially set the patterns to "*" in order to get everything and have a local back up of all my emails. Then I adjusted to just refresh the folders that were going to see changes. I create a new archive each year to keep some chronological structure. I didn't seem to be getting my inbox to sync until I put the pattern in all uppercase (INBOX not Inbox or inbox).
+
+3. Dovecot
+
+   You don't need dovecot. Gnus can talk directly to your maildir, but that made me feel a bit queasy. I did not want gnus messing with the actual files. I decided to run a local imap server. Dovecot is made for bigger and better things, but it can also be used for this minimal case. You have to set up the configuration and write yet another configuration file. The it too can be run as a systemd unit. A lot of the configurations for dovecot and the rest of my set up are privacy casual, but that is just for the components that run locally on my machine. I don't need dovecot to use ssl to talk to a directory on the same laptop it is running. That made it simpler for me. Again, I did a lot of cutting and pasting from internet sources and the trial and error resulted in this.
+
+   #+Name: Dovecot-config
+   #+Caption: My Dovecot Configuration
+   #+begin_src sh :eval never
+	maildir_very_dirty_syncs = yes
+	ssl = no
+	log_path = /var/log/dovecot.log
+	disable_plaintext_auth = no
+	protocols = imap
+	listen = *,::
+	auth_verbose = yes
+	auth_debug_passwords = yes
+	auth_mechanisms = plain
+	mail_location = maildir:~/.local/share/mail/:LAYOUT=fs
+	passdb {
+	    driver = passwd-file
+	    args = /etc/dovecot/passwd
+	}
+	userdb {
+	    driver = passwd-file
+	    args = uid=britt gid=britt home=/home/britt/.local/share/mail/%d/%n
+	    default_fields = mail=maildir:/home/britt/.local/share/mail/%d/%n
+	}
+   #+end_src
+
+   #+Name: dovecot-passwd
+   #+Caption: Dovecot passwd file style
+   #+begin_src sh :eval never
+     britt@uwaterloo.ca:{PLAIN}passwd1
+     brittanderson@protonmail.com:{PLAIN}passwd2
+     britt@b3l.xyz:{PLAIN}passwd3
+   #+end_src
+
+   Note: the ~%d~ and ~%n~ in the =userdb= refer to the domain and name from the password file. That is the reason for the very particular storage that I set up and reference in the ~.mbsyncrc~ file above.
+   
+4. Gnus
+
+   This is not the blogpost to learn how to use Gnus. I figure that any reader finding there way here is already a Gnus user and is trying to figure out how to stay that way after their University or Company forces them to use Microsoft365. That said there may be a couple of points. Since you are running dovecot you don't need multiple accounts. Gnus will find them all and create Groups for them with just a single specification of an nnimap-method.
+
+   #+Name: gnus
+   #+Caption: Specifying a gnus method
+   #+begin_src emacs-lisp :eval never
+     (setq gnus-secondary-select-methods
+	   '( (nnimap "dovecot"
+		      (nnimap-address "localhost")
+		      (nnimap-stream shell)
+		      (nnimap-shell-program "/usr/lib/dovecot/imap")
+		      (nnimap-authenticator login))))
+   #+end_src
+
+   There is lots more you can do to improve your experience, but if you get this far then you can do the tweaking without worrying too much about the preceding stages in the pipeline. Do note that you have to keep mbsync polling for new mail. You can do this with a cron job, or by setting up a key combination to invoke the shell command from inside emacs. It might be a good idea to add it to the hooks for when you start and kill gnus too.
+
+

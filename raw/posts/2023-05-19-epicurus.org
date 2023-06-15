@@ -1,5 +1,5 @@
 #+title: Epicurus - If it ain't wrong it is still game
-#+date: <2023-05-15 Mon>
+#+date: <2023-05-19 Fri>
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
 
@@ -11,4 +11,6 @@ If you only get to make one choice in an important matter: chose the simplest hy
 
 * Footnotes
 
-[fn:1] Though I see this a lot in [[http://hutter1.net/][Hutter]]'s writings I can't find an example where Solomonoff referenced Epicurus. If you know of one please let me know.  
+[fn:1] Though I see this a lot in [[http://hutter1.net/][Hutter]]'s writings I can't find an example where Solomonoff referenced Epicurus. If you know of one please let me know.
+
+

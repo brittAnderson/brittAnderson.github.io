@@ -14,8 +14,8 @@
   <link>https://brittAnderson.github.io/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Fri, 19 May 2023 12:50:35 -0400</pubDate>
-  <lastBuildDate>Fri, 19 May 2023 12:50:35 -0400</lastBuildDate>
+  <pubDate>Thu, 15 Jun 2023 15:00:38 -0400</pubDate>
+  <lastBuildDate>Thu, 15 Jun 2023 15:00:38 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
   <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
@@ -25,14 +25,39 @@
   </image>
 
   <item>
+    <title>Setting up email with gnus, mbsync, dovecot, and davmail</title>
+    <link>https://brittAnderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html</guid>
+    <pubDate>Thu, 15 Jun 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[<ul class="org-ul">
+    <li>2023-06-15 Thu</li>
+    </ul>
+    ]]></description>
+  </item>
+  <item>
+    <title>The problem</title>
+    <link>https://brittAnderson.github.io/sitemap.html#org355707f</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittAnderson.github.io/sitemap.html#org355707f</guid>
+    <pubDate>Thu, 15 Jun 2023 15:00:00 -0400</pubDate>
+
+    <description><![CDATA[<p>
+    My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
+    <a href="2023-06-15-gnus-email-and-microsoft365.html">To read more ...</a>
+    </p>
+    ]]></description>
+  </item>
+  <item>
     <title>Epicurus - If it ain't wrong it is still game</title>
     <link>https://brittAnderson.github.io/posts/2023-05-19-epicurus.html</link>
     <author>britt@b3l.xyz (Britt Anderson)</author>
     <guid isPermaLink="false">https://brittAnderson.github.io/posts/2023-05-19-epicurus.html</guid>
-    <pubDate>Mon, 15 May 2023 00:00:00 -0400</pubDate>
+    <pubDate>Fri, 19 May 2023 00:00:00 -0400</pubDate>
 
     <description><![CDATA[<ul class="org-ul">
-    <li>2023-05-15 Mon</li>
+    <li>2023-05-19 Fri</li>
     </ul>
     <p>
     Most of us are familiar with <a href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam's Razor.</a> It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the <b>right</b> explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
