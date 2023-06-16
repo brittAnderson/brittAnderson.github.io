@@ -60,7 +60,7 @@
 (concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
 	  (insert (format "  - %s\n" my-date))
 	    (insert (get-first-paragraph full-fn))
-	    (insert (format "  [[file:%s][To read more ...]]\n" fn))))
+	    (insert (format "  [[file:%s][To read more ...]]\n" (concat "posts/" (file-name-sans-extension fn) ".html")))))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")
 	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
