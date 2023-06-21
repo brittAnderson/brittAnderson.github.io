@@ -18,7 +18,7 @@
     (dolist (r reg-list)
       (insert-register r t)
       (insert "\n"))
-    (insert (format "[[%s][%s]] \n\n" (concat "posts/" fn) "read full entry"))))
+    (insert (format "[[%s][%s]] \n\n" fn "read full entry"))))
 
 (defun get-post-list (post-dir n-posts)
   "Gets the list of the n-posts most recent files in the post-dir"

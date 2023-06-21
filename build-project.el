@@ -50,6 +50,7 @@
       (goto-char 1)
       (let* ((my-proj-plist (assoc "britt-blog-sitemap" org-publish-project-alist))
 	     (bd (plist-get (cdr my-proj-plist) :base-directory))
+	     (hl (plist-get (cdr (assoc "britt-blog-rss" org-publish-project-alist)) :html-link-home))
 	     (fpths (get-link my-list)))
 	(dolist (fp fpths)
 	  (let* ((fn (plist-get (elt fp 1) :path))
@@ -58,9 +59,9 @@
 	    (insert (format "*  %s\n" (org-publish-find-title fn my-proj-plist)))
 	    (insert (format ":PROPERTIES:\n:PUBDATE: %s\n:RSS_PERMALINK: %s\n:PERMALINK: %s\n:END:\n" my-date
 (concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
-	  (insert (format "  - %s\n" my-date))
+	    (insert (format "  - %s\n" my-date))
 	    (insert (get-first-paragraph full-fn))
-	    (insert (format "  [[file:%s][To read more ...]]\n" fn))))
+	    (insert (format "To read more ... [[file:%s]]\n" fn))))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")
 	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
@@ -99,8 +100,7 @@
          :html-link-home "https://brittanderson.github.io"
          :html-link-use-abs-url t
          :rss-extension "xml"
-	 :html-link-home "https://brittAnderson.github.io/"
-         :publishing-directory "~/gitRepos/brittAnderson.github.io/docs/"
+         :publishing-directory "~/gitRepos/brittAnderson.github.io/docs/posts/"
          :publishing-function org-rss-publish-to-rss
          :section-numbers nil
          :exclude ".*"         
@@ -116,6 +116,7 @@
 	("britt-blog-all" :components ("britt-blog-base" "britt-blog-sitemap" "britt-blog-static" "britt-blog-rss"))))
 
 (setq org-fold-core-style  'overlay)
+;(org-publish "britt-blog-base" t)
 ;(org-publish "britt-blog-sitemap" t)
 ;(org-publish "britt-blog-rss" t)
 (org-publish-all t)
@@ -123,5 +124,4 @@
 (message "Done")
 
 ;; add in the css
-;; add the blurb
-;; make sure antichronological formatting
+

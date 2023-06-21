@@ -18,7 +18,7 @@ Welcome to yet another Britt Blog. You can find some of my academic work in the 
 #+end_src
 
 #+begin_src emacs-lisp :exports none :results silent
-  (clean-and-refresh-new-posts "./posts/" 3)
+  (clean-and-refresh-new-posts "./posts/" 4)
 #+end_src
 
 
@@ -48,9 +48,17 @@ During the pandemic, and for a term or two thereafter, I, like a lot of men, let
 
 [[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-15-inductive-inference.org][read full entry]] 
 
+**  RSS Feeds From Org Mode and Ox-rss
+Date: <2023-04-08 Sat>
+Author: Britt Anderson
+
+Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.org][read full entry]] 
+
 
 * Older Posts
-For a listing of all posts [[file:posts/sitemap.org][click here]].
+[[file:posts.org][Post List]]
 
 * RSS
-This [[file:sitemap.xml][link]] should work for subscribing.
+[[https://brittanderson.github.io/posts/sitemap.xml][RSS Feed]]
