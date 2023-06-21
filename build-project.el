@@ -61,8 +61,7 @@
 (concat "posts/" (file-name-sans-extension fn) ".html") (concat (file-name-sans-extension full-fn) ".html")))
 	    (insert (format "  - %s\n" my-date))
 	    (insert (get-first-paragraph full-fn))
-	    (insert (concat "#+begin_export html\n<a href=\"" (concat hl "/posts/" (file-name-sans-extension fn) ".html") "\">To Read More ...</a>\n#+end_export"))))
-;	(concat (file-name-sans-extension full-fn) ".html")))))
+	    (insert (concat "#+begin_export html\n<a href=\"" (concat hl "/posts/" (file-name-sans-extension fn) ".html") "\">To Read More ...</a>\n#+end_export\n"))))
 	(goto-char (point-min))
 	(insert "#+OPTIONS: title:nil\n")
 	(insert "#+TITLE: Blog - Britt Anderson's Personal Website\n")
@@ -79,7 +78,8 @@
 	 :recursive nil
 	 :publishing-function org-html-publish-to-html
 	 :headline-levels 4
-	 :html-head    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/css/tufte.css\" />"
+	 :html-head nil
+	 ;;"<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/css/tufte.css\" />"
 	 :html-preamble brittgithub-header
 	 :with-author t
 	 )
@@ -91,6 +91,7 @@
 	 :publishing-function org-html-publish-to-html
 	 :headline-levels 4
 	 :auto-sitemap t
+	 :html-preamble brittgithub-header
 	 :sitemap-function test-sitemap
 	 :sitemap-filename "sitemap.org"
 	 :sitemap-title "Britt Anderson's Personal Web Log"

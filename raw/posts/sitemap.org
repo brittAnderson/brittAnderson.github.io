@@ -7,62 +7,72 @@
 :PUBDATE: 2023-06-15 Thu
 :RSS_PERMALINK: posts/2023-06-15-gnus-email-and-microsoft365.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-15-gnus-email-and-microsoft365.html
-:ID:       a5288304-4b01-4daa-b01b-a718258ed2a8
+:ID:       2b1d63dc-9359-4896-ba92-774adb688ec5
 :END:
   - 2023-06-15 Thu
 * The problem
 :PROPERTIES:
-:ID:       f642aa68-bef1-45da-a7ca-9bb1eabb01b5
-:PUBDATE:  2023-06-21 Wed 16:56
+:ID:       5ce0e420-a0e9-4b0b-9433-0e79445e03d5
+:PUBDATE:  2023-06-21 Wed 17:05
 :END:
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html">To Read More ...</a>
-#+end_export*  Epicurus - If it ain't wrong it is still game
+#+end_export
+*  Epicurus - If it ain't wrong it is still game
 :PROPERTIES:
 :PUBDATE: 2023-05-19 Fri
 :RSS_PERMALINK: posts/2023-05-19-epicurus.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-19-epicurus.html
+:ID:       b9631d0d-e851-4ab3-84a0-55ff24be4f3c
 :END:
   - 2023-05-19 Fri
 Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Occam's Razor.]] It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the *right* explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2023-05-19-epicurus.html">To Read More ...</a>
-#+end_export*  Coincidence and Inductive Inference
+#+end_export
+*  Coincidence and Inductive Inference
 :PROPERTIES:
 :PUBDATE: 2023-05-15 Mon
 :RSS_PERMALINK: posts/2023-05-15-inductive-inference.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-15-inductive-inference.html
+:ID:       75f7185a-a61d-4eb2-9622-e8c77b020fff
 :END:
   - 2023-05-15 Mon
 During the pandemic, and for a term or two thereafter, I, like a lot of men, let myself grow a beard and let my hair get a bit crazy. One day when I was trying to track down a reference about something (I forget exactly what) I came across this image [[https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wJ0Z713Zmu1ymJu7dv45IAHaKt%26pid%3DApi&f=1&ipt=65c31f7f09559cc54323f891c4c0812e607b7698085d75222ca366bd551e99a7&ipo=images][of Ray Solomonoff]] and was struck by our similar hair-dos. Who was this guy? While it was the overlapping of my interests and his work that led me to the web page where the picture appeared it was the overlap of our beard aesthetics that led me to read more about him in particular. I am so glad I did.
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2023-05-15-inductive-inference.html">To Read More ...</a>
-#+end_export*  RSS Feeds From Org Mode and Ox-rss
+#+end_export
+*  RSS Feeds From Org Mode and Ox-rss
 :PROPERTIES:
 :PUBDATE: 2023-04-08 Sat
 :RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
+:ID:       7d6543d3-d21c-412c-80c3-cf079ca32a9d
 :END:
   - 2023-04-08 Sat
 Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2023-04-08-rss-and-org-mode.html">To Read More ...</a>
-#+end_export*  Publish Your Embarassing Code
+#+end_export
+*  Publish Your Embarassing Code
 :PROPERTIES:
 :PUBDATE: 2023-04-03 Mon
 :RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
+:ID:       5584268e-bf05-4dd4-a5ed-951eae29c358
 :END:
   - 2023-04-03 Mon
 I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2023-04-03-writing-emacs-lisp.html">To Read More ...</a>
-#+end_export*  Back to Org Mode
+#+end_export
+*  Back to Org Mode
 :PROPERTIES:
 :PUBDATE: 2023-01-09 Mon
 :RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
+:ID:       628955cd-d28c-4cb1-8264-56ef87683905
 :END:
   - 2023-01-09 Mon
 For sometime now my [[https://brittlab.uwaterloo.ca][laboratory website]] has been in Jekyll.
