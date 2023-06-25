@@ -14,8 +14,8 @@
   <link>https://brittanderson.github.io</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Wed, 21 Jun 2023 17:05:50 -0400</pubDate>
-  <lastBuildDate>Wed, 21 Jun 2023 17:05:50 -0400</lastBuildDate>
+  <pubDate>Sun, 25 Jun 2023 12:19:08 -0400</pubDate>
+  <lastBuildDate>Sun, 25 Jun 2023 12:19:08 -0400</lastBuildDate>
   <generator>Emacs 28.2 Org-mode 9.7-pre</generator>
   <webMaster>britt@b3l.xyz (Britt Anderson)</webMaster>
   <image>
@@ -24,6 +24,27 @@
     <link>https://brittanderson.github.io</link>
   </image>
 
+  <item>
+    <title>The Genesis of Category Theory</title>
+    <link>https://brittanderson.github.io/posts/2023-06-24-the-genesis-of-category-theory.html</link>
+    <author>britt@b3l.xyz (Britt Anderson)</author>
+    <guid isPermaLink="false">https://brittanderson.github.io/posts/2023-06-24-the-genesis-of-category-theory.html</guid>
+    <pubDate>Sun, 25 Jun 2023 00:00:00 -0400</pubDate>
+
+    <description><![CDATA[<ul class="org-ul">
+    <li>2023-06-25 Sun</li>
+    </ul>
+    <div id="outline-container-orgff59b75" class="outline-4">
+    <h4 id="orgff59b75">A creation narrative for category theory</h4>
+    <div class="outline-text-4" id="text-orgff59b75">
+    <p>
+    In the beginning was chaos.
+    </p>
+    <a href="https://brittanderson.github.io/posts/2023-06-24-the-genesis-of-category-theory.html">To Read More ...</a>
+    </div>
+    </div>
+    ]]></description>
+  </item>
   <item>
     <title>Setting up email with gnus, mbsync, dovecot, and davmail</title>
     <link>https://brittanderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html</link>
@@ -34,19 +55,15 @@
     <description><![CDATA[<ul class="org-ul">
     <li>2023-06-15 Thu</li>
     </ul>
-    ]]></description>
-  </item>
-  <item>
-    <title>The problem</title>
-    <link>https://brittanderson.github.io/sitemap.html#org671ae4d</link>
-    <author>britt@b3l.xyz (Britt Anderson)</author>
-    <guid isPermaLink="false">https://brittanderson.github.io/sitemap.html#org671ae4d</guid>
-    <pubDate>Wed, 21 Jun 2023 17:05:00 -0400</pubDate>
-
-    <description><![CDATA[<p>
+    <div id="outline-container-org71a4a25" class="outline-4">
+    <h4 id="org71a4a25">The problem</h4>
+    <div class="outline-text-4" id="text-org71a4a25">
+    <p>
     My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
     </p>
     <a href="https://brittanderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html">To Read More ...</a>
+    </div>
+    </div>
     ]]></description>
   </item>
   <item>
@@ -59,10 +76,15 @@
     <description><![CDATA[<ul class="org-ul">
     <li>2023-05-19 Fri</li>
     </ul>
+    <div id="outline-container-org4c444c2" class="outline-4">
+    <h4 id="org4c444c2">A distribution over all possible answers</h4>
+    <div class="outline-text-4" id="text-org4c444c2">
     <p>
     Most of us are familiar with <a href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam's Razor.</a> It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the <b>right</b> explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
     </p>
     <a href="https://brittanderson.github.io/posts/2023-05-19-epicurus.html">To Read More ...</a>
+    </div>
+    </div>
     ]]></description>
   </item>
   <item>

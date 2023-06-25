@@ -4,15 +4,15 @@
 #+email: britt@uwaterloo.ca
 #+options: toc:nil
 
-* The problem
+*** The problem
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
 
-* The Solution
+*** The Solution
 
-** In outline
+**** In outline
 The solution, culled from numerous blog posts and stackoverflow and reddit posts, that I implemented was to use [[https://davmail.sourceforge.net/][davmail]] to communicate with exchange, [[https://sourceforge.net/projects/isync/][isync]] to give me a local copy of all my mail, [[https://www.dovecot.org/][dovecot]] to act as an email server from the local stored emails that [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Gnus.html][gnus]] can talk to to display my mails for me.
 
-** The walk-through and some details
+**** The walk-through and some details
 1. Davmail
 
    Davmail is the program that we will use to talk to the exchange account. Davmail has been around for a long time and seems to be very solid. It is also something for which I could not find a lot of novice documentation. One of the better sources for me was [[https://douglasrumbaugh.com/post/davmail-authentication/][Douglas Rumbaugh's post]]. I use archlinux and getting davmail meant downling the package and installing from AUR. My properties file was in my home directory with the name ~.davmail.properties~. This is the file that you edit to affect your properties and you can launch the program from the command line with ~davmail .davmail.properties~. Initially, keep the server mode to false to be able to see the gui and the output from your various manipulations. Eventually you can turn the server setting to true and enable it as a systemd unit. Arch provides a file for this that you can find in =/usr/lib/system.d/system/davmail@.service=. If you look in here you will see that it expects the properties file to be in a particular subdirectory. After you get things set up you can move the file there and test with ~sudo systemctl start davmail@britt.service~ (replacing my name with your user name).

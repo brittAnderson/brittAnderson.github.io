@@ -79,7 +79,6 @@
 	 :publishing-function org-html-publish-to-html
 	 :headline-levels 4
 	 :html-head nil
-	 ;;"<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/css/tufte.css\" />"
 	 :html-preamble brittgithub-header
 	 :with-author t
 	 )
