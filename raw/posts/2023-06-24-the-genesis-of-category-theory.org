@@ -1,0 +1,24 @@
+#+title: The Genesis of Category Theory
+#+date: <2023-06-25 Sun>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+
+*** A creation narrative for category theory
+In the beginning was chaos.
+
+Let there be objects.
+
+Each object was unique. It had its identity. But they were alone.
+
+Co-mpanions for objects, source and target, the ties that bind.
+
+Go forth and multiply. For each mate-able arrow there shall be another.
+
+There are no favored creations. When a and b beget c that mates with d it will be one with the begetting of a with that which was beget by b and d.
+
+And now for all the rest ...
+
+
+
+
+
