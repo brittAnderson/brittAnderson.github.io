@@ -1,0 +1,36 @@
+#+title: Tagging Posts with the Ox-Publish =:makeindex= Function
+#+date: <2023-07-20 Thu>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+#+INDEX: emacs!orgmode
+
+I have been wanting to have a way to /tag/ different blog posts with different topics. This is a personal blog so the topics can ramble from fun one offs, to technical thoughts, to code snippets I want to remember. I did not see an easy way to do this until I stumbled across the =:makeindex= option for orgmode.
+
+Essentiall you use the ~#+Index: some-topic-here~ keyword and then when you publish your org-project, assuming you set the ~:makeindex~ to non-nil you will get an ~theindex.org~ file that inputs ~theindex.inc~. If you do that you will see a decent index, but the way the links are created you will see the same keyword multiple times with no individuation. I found that the function to make the index lives in ~ox-publish.el~ and I fiddled with the formatting in the ~org-publish-index-generate-theindex~ function. The following snippet contains more for context, but all I changed was the format line to make the keyword appear in bold and the link to the blog post file follow.
+
+#+begin_src emacs-lisp :eval never
+(dotimes (n len)
+		(insert
+		 (concat
+		  (make-string (* (+ rank n) 2) ?\s) "  - "
+		  (if (not (= (1- len) n)) (nth (+ rank n) entry)
+		    ;; Last term: Link it to TARGET, if possible.
+		    (let ((target (nth 2 idx)))
+		      (format
+		       "*%s* [[%s]]"
+                       (car (last entry))
+                       ;; Destination.
+		       (pcase (car target)
+			 (`nil (format "file:%s" file))
+			 (`id (format "id:%s" (cdr target)))
+			 (`custom-id (format "file:%s::#%s" file (cdr target)))
+			 (_ (format "file:%s::*%s" file (cdr target))))
+		       ;; Description.
+		       )))
+		  "\n"))))
+
+
+#+end_src
+
+I hope this helps someone else (and me when  I next update org and it goes away). Soon I will ask on the mailing list how an option like this might be best incorporated.
+

@@ -2,17 +2,29 @@
 #+TITLE: Blog - Britt Anderson's Personal Website
 #+AUTHOR: Britt Anderson
 #+EMAIL: britt@b3l.xyz
+*  Tagging Posts with the Ox-Publish =:makeindex= Function
+:PROPERTIES:
+:PUBDATE: 2023-07-20 Thu
+:RSS_PERMALINK: posts/2023-07-20-make-an-org-publish-index.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-07-20-make-an-org-publish-index.html
+:ID:       1a5db87e-1060-471e-b047-01c09695e22c
+:END:
+  - 2023-07-20 Thu
+I have been wanting to have a way to /tag/ different blog posts with different topics. This is a personal blog so the topics can ramble from fun one offs, to technical thoughts, to code snippets I want to remember. I did not see an easy way to do this until I stumbled across the =:makeindex= option for orgmode.
+#+begin_export html
+<a href="https://brittanderson.github.io/posts/2023-07-20-make-an-org-publish-index.html">To Read More ...</a>
+#+end_export
 *  The Genesis of Category Theory
 :PROPERTIES:
 :PUBDATE: 2023-06-25 Sun
 :RSS_PERMALINK: posts/2023-06-24-the-genesis-of-category-theory.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-24-the-genesis-of-category-theory.html
-:ID:       4e3cc09e-3eea-4adb-ac8b-f159d9442be2
+:ID:       64b629e4-d196-4d2f-a856-aa2b8f137e68
 :END:
   - 2023-06-25 Sun
 *** A creation narrative for category theory
 :PROPERTIES:
-:ID:       1ea45567-bb79-41f0-8ec4-f3f715cc39ee
+:ID:       359fa6b0-43f2-45ea-8ab8-d117aa8d13d7
 :END:
 In the beginning was chaos.
 #+begin_export html
@@ -23,12 +35,12 @@ In the beginning was chaos.
 :PUBDATE: 2023-06-15 Thu
 :RSS_PERMALINK: posts/2023-06-15-gnus-email-and-microsoft365.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-15-gnus-email-and-microsoft365.html
-:ID:       fb436192-3aba-45c5-b1b8-68001e4eb969
+:ID:       dbc9d70b-d111-4925-8c9b-c561dd8f7b0c
 :END:
   - 2023-06-15 Thu
 *** The problem
 :PROPERTIES:
-:ID:       351576b8-a41b-46f4-8d94-5d64816c813b
+:ID:       1501b4d3-c5d1-4090-bc36-b2733ab660d1
 :END:
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
 #+begin_export html
@@ -39,12 +51,12 @@ My university's connect server was recently hacked, which meant that I had to le
 :PUBDATE: 2023-05-19 Fri
 :RSS_PERMALINK: posts/2023-05-19-epicurus.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-19-epicurus.html
-:ID:       445777da-37c9-496b-b809-2e1d78461b0d
+:ID:       b1064c6d-bc84-4536-bd45-5e1ebcbc1f1f
 :END:
   - 2023-05-19 Fri
 *** A distribution over all possible answers
 :PROPERTIES:
-:ID:       09c6bb43-a6a5-4301-b323-fd92934af316
+:ID:       7b4240ee-9ebe-4f25-9f0a-7977bba53aff
 :END:
 Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Occam's Razor.]] It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the *right* explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
 #+begin_export html
@@ -55,12 +67,12 @@ Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Oc
 :PUBDATE: 2023-05-15 Mon
 :RSS_PERMALINK: posts/2023-05-15-inductive-inference.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-15-inductive-inference.html
-:ID:       6ad9def1-ae32-4831-a1c2-44679fc1a162
+:ID:       ffadd11f-2f12-4519-a446-f64b9c55dde7
 :END:
   - 2023-05-15 Mon
 *** Crazy beard and crazy smart
 :PROPERTIES:
-:ID:       5d848359-6385-462d-adb3-e7bb50a1abba
+:ID:       435e3f4d-9ce1-4eec-af36-49b02805625a
 :END:
 During the pandemic, and for a term or two thereafter, I, like a lot of men, let myself grow a beard and let my hair get a bit crazy. One day when I was trying to track down a reference about something (I forget exactly what) I came across this image [[https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wJ0Z713Zmu1ymJu7dv45IAHaKt%26pid%3DApi&f=1&ipt=65c31f7f09559cc54323f891c4c0812e607b7698085d75222ca366bd551e99a7&ipo=images][of Ray Solomonoff]] and was struck by our similar hair-dos. Who was this guy? While it was the overlapping of my interests and his work that led me to the web page where the picture appeared it was the overlap of our beard aesthetics that led me to read more about him in particular. I am so glad I did.
 #+begin_export html
@@ -71,7 +83,7 @@ During the pandemic, and for a term or two thereafter, I, like a lot of men, let
 :PUBDATE: 2023-04-08 Sat
 :RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
-:ID:       c0961673-c168-4afe-98c4-ea432f65a703
+:ID:       9de60ed9-51de-42df-948a-4cfd8343c902
 :END:
   - 2023-04-08 Sat
 Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
@@ -83,7 +95,7 @@ Just a place holder for now, but to come is a tear stained entry of my efforts t
 :PUBDATE: 2023-04-03 Mon
 :RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
-:ID:       2ee2a761-71e9-45b4-8746-6f6db946f5c1
+:ID:       360b042e-78b2-4712-94de-9c3790ef405c
 :END:
   - 2023-04-03 Mon
 I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
@@ -95,7 +107,7 @@ I am a long term Emacs user, and I love it, but while I am quick to adopt new pa
 :PUBDATE: 2023-01-09 Mon
 :RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
-:ID:       d5ceb184-35b9-4299-b595-f547393ab3fb
+:ID:       6a81ac4f-cfca-43ea-bc2d-a6181a49bd01
 :END:
   - 2023-01-09 Mon
 For sometime now my [[https://brittlab.uwaterloo.ca][laboratory website]] has been in Jekyll.

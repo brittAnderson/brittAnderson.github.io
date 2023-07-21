@@ -1,6 +1,8 @@
 #+title: RSS Feeds From Org Mode and Ox-rss
 #+date: <2023-04-08 Sat>
 #+author: Britt Anderson
+#+INDEX: rss
+#+INDEX: emacs!orgmode
 
 Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
 

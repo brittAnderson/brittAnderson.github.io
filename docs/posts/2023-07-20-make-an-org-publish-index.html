@@ -6,7 +6,7 @@
 <!-- 2023-07-20 Thu 20:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog - Britt Anderson's Personal Website</title>
+<title>Tagging Posts with the Ox-Publish =:makeindex= Function</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -205,175 +205,46 @@
 </nav>
 </div>
 <div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org160299b">1. Tagging Posts with the Ox-Publish <code>:makeindex</code> Function</a></li>
-<li><a href="#org3f5833a">2. The Genesis of Category Theory</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org55421eb">2.0.1. A creation narrative for category theory</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org0607936">3. Setting up email with gnus, mbsync, dovecot, and davmail</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org56c8553">3.0.1. The problem</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org40ab69d">4. Epicurus - If it ain't wrong it is still game</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org39e8358">4.0.1. A distribution over all possible answers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgdc639c1">5. Coincidence and Inductive Inference</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org99710f3">5.0.1. Crazy beard and crazy smart</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org69abed0">6. RSS Feeds From Org Mode and Ox-rss</a></li>
-<li><a href="#org313c311">7. Publish Your Embarassing Code</a></li>
-<li><a href="#orge0c7acc">8. Back to Org Mode</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org160299b" class="outline-2">
-<h2 id="org160299b"><span class="section-number-2">1.</span> Tagging Posts with the Ox-Publish <code>:makeindex</code> Function</h2>
-<div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>2023-07-20 Thu</li>
-</ul>
+<h1 class="title">Tagging Posts with the Ox-Publish <code>:makeindex</code> Function</h1>
 <p>
 I have been wanting to have a way to <i>tag</i> different blog posts with different topics. This is a personal blog so the topics can ramble from fun one offs, to technical thoughts, to code snippets I want to remember. I did not see an easy way to do this until I stumbled across the <code>:makeindex</code> option for orgmode.
 </p>
-<a href="https://brittanderson.github.io/posts/2023-07-20-make-an-org-publish-index.html">To Read More ...</a>
-</div>
-</div>
-<div id="outline-container-org3f5833a" class="outline-2">
-<h2 id="org3f5833a"><span class="section-number-2">2.</span> The Genesis of Category Theory</h2>
-<div class="outline-text-2" id="text-2">
-<ul class="org-ul">
-<li>2023-06-25 Sun</li>
-</ul>
-</div>
-<div id="outline-container-org55421eb" class="outline-4">
-<h4 id="org55421eb"><span class="section-number-4">2.0.1.</span> A creation narrative for category theory</h4>
-<div class="outline-text-4" id="text-2-0-1">
+
 <p>
-In the beginning was chaos.
+Essentiall you use the <code>#+Index: some-topic-here</code> keyword and then when you publish your org-project, assuming you set the <code>:makeindex</code> to non-nil you will get an <code>theindex.org</code> file that inputs <code>theindex.inc</code>. If you do that you will see a decent index, but the way the links are created you will see the same keyword multiple times with no individuation. I found that the function to make the index lives in <code>ox-publish.el</code> and I fiddled with the formatting in the <code>org-publish-index-generate-theindex</code> function. The following snippet contains more for context, but all I changed was the format line to make the keyword appear in bold and the link to the blog post file follow.
 </p>
-<a href="https://brittanderson.github.io/posts/2023-06-24-the-genesis-of-category-theory.html">To Read More ...</a>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">dotimes</span> (n len)
+                (insert
+                 (concat
+                  (make-string (* (+ rank n) 2) ?\s) <span style="font-style: italic;">"  - "</span>
+                  (<span style="font-weight: bold;">if</span> (not (= (1- len) n)) (nth (+ rank n) entry)
+                    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Last term: Link it to TARGET, if possible.</span>
+                    (<span style="font-weight: bold;">let</span> ((target (nth 2 idx)))
+                      (format
+                       <span style="font-style: italic;">"*%s* [[%s]]"</span>
+                       (car (last entry))
+                       <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Destination.</span>
+                       (<span style="font-weight: bold;">pcase</span> (car target)
+                         (`nil (format <span style="font-style: italic;">"file:%s"</span> file))
+                         (`id (format <span style="font-style: italic;">"id:%s"</span> (cdr target)))
+                         (`custom-id (format <span style="font-style: italic;">"file:%s::#%s"</span> file (cdr target)))
+                         (_ (format <span style="font-style: italic;">"file:%s::*%s"</span> file (cdr target))))
+                       <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Description.</span>
+                       )))
+                  <span style="font-style: italic;">"\n"</span>))))
+
+
+</pre>
 </div>
-</div>
-</div>
-<div id="outline-container-org0607936" class="outline-2">
-<h2 id="org0607936"><span class="section-number-2">3.</span> Setting up email with gnus, mbsync, dovecot, and davmail</h2>
-<div class="outline-text-2" id="text-3">
-<ul class="org-ul">
-<li>2023-06-15 Thu</li>
-</ul>
-</div>
-<div id="outline-container-org56c8553" class="outline-4">
-<h4 id="org56c8553"><span class="section-number-4">3.0.1.</span> The problem</h4>
-<div class="outline-text-4" id="text-3-0-1">
+
 <p>
-My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
+I hope this helps someone else (and me when  I next update org and it goes away). Soon I will ask on the mailing list how an option like this might be best incorporated.
 </p>
-<a href="https://brittanderson.github.io/posts/2023-06-15-gnus-email-and-microsoft365.html">To Read More ...</a>
-</div>
-</div>
-</div>
-<div id="outline-container-org40ab69d" class="outline-2">
-<h2 id="org40ab69d"><span class="section-number-2">4.</span> Epicurus - If it ain't wrong it is still game</h2>
-<div class="outline-text-2" id="text-4">
-<ul class="org-ul">
-<li>2023-05-19 Fri</li>
-</ul>
-</div>
-<div id="outline-container-org39e8358" class="outline-4">
-<h4 id="org39e8358"><span class="section-number-4">4.0.1.</span> A distribution over all possible answers</h4>
-<div class="outline-text-4" id="text-4-0-1">
-<p>
-Most of us are familiar with <a href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam's Razor.</a> It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the <b>right</b> explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
-</p>
-<a href="https://brittanderson.github.io/posts/2023-05-19-epicurus.html">To Read More ...</a>
-</div>
-</div>
-</div>
-<div id="outline-container-orgdc639c1" class="outline-2">
-<h2 id="orgdc639c1"><span class="section-number-2">5.</span> Coincidence and Inductive Inference</h2>
-<div class="outline-text-2" id="text-5">
-<ul class="org-ul">
-<li>2023-05-15 Mon</li>
-</ul>
-</div>
-<div id="outline-container-org99710f3" class="outline-4">
-<h4 id="org99710f3"><span class="section-number-4">5.0.1.</span> Crazy beard and crazy smart</h4>
-<div class="outline-text-4" id="text-5-0-1">
-<p>
-During the pandemic, and for a term or two thereafter, I, like a lot of men, let myself grow a beard and let my hair get a bit crazy. One day when I was trying to track down a reference about something (I forget exactly what) I came across this image <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wJ0Z713Zmu1ymJu7dv45IAHaKt%26pid%3DApi&amp;f=1&amp;ipt=65c31f7f09559cc54323f891c4c0812e607b7698085d75222ca366bd551e99a7&amp;ipo=images">of Ray Solomonoff</a> and was struck by our similar hair-dos. Who was this guy? While it was the overlapping of my interests and his work that led me to the web page where the picture appeared it was the overlap of our beard aesthetics that led me to read more about him in particular. I am so glad I did.
-</p>
-<a href="https://brittanderson.github.io/posts/2023-05-15-inductive-inference.html">To Read More ...</a>
-</div>
-</div>
-</div>
-<div id="outline-container-org69abed0" class="outline-2">
-<h2 id="org69abed0"><span class="section-number-2">6.</span> RSS Feeds From Org Mode and Ox-rss</h2>
-<div class="outline-text-2" id="text-6">
-<ul class="org-ul">
-<li>2023-04-08 Sat</li>
-</ul>
-<p>
-Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
-</p>
-<a href="https://brittanderson.github.io/posts/2023-04-08-rss-and-org-mode.html">To Read More ...</a>
-</div>
-</div>
-<div id="outline-container-org313c311" class="outline-2">
-<h2 id="org313c311"><span class="section-number-2">7.</span> Publish Your Embarassing Code</h2>
-<div class="outline-text-2" id="text-7">
-<ul class="org-ul">
-<li>2023-04-03 Mon</li>
-</ul>
-<p>
-I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my <code>init.el</code>) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
-</p>
-<a href="https://brittanderson.github.io/posts/2023-04-03-writing-emacs-lisp.html">To Read More ...</a>
-</div>
-</div>
-<div id="outline-container-orge0c7acc" class="outline-2">
-<h2 id="orge0c7acc"><span class="section-number-2">8.</span> Back to Org Mode</h2>
-<div class="outline-text-2" id="text-8">
-<ul class="org-ul">
-<li>2023-01-09 Mon</li>
-</ul>
-<p>
-For sometime now my <a href="https://brittlab.uwaterloo.ca">laboratory website</a> has been in Jekyll.
-This was a really nice solution in the beginning.
-The look was clean, everyone in the lab could update their own content, and new members could learn to use a mark-up language to write posts.
-However, Jekyll and the Ruby engine that powers it have gotten a bit harder to use over the years, and now everytime I want to update the lab webpage I have to figure out how to update all my gems, and various other housekeeping procedures just to write a blog post or remind myself how to create an internal link.
-I wanted to simplify again and use something that I would not have to constantly re-educate myself how to use.
-</p>
-<a href="https://brittanderson.github.io/posts/2023-01-09-back-to-org-mode.html">To Read More ...</a>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
+<p class="date">Date: 2023-07-20 Thu 00:00</p>
 <p class="author">Author: Britt Anderson</p>
 <p class="date">Created: 2023-07-20 Thu 20:47</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>

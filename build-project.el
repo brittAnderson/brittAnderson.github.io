@@ -94,7 +94,9 @@
 	 :sitemap-function test-sitemap
 	 :sitemap-filename "sitemap.org"
 	 :sitemap-title "Britt Anderson's Personal Web Log"
-	 :sitemap-sort-files anti-chronologically)
+	 :sitemap-sort-files anti-chronologically
+	 :exclude "theindex.org"
+	 :makeindex t)
 	("britt-blog-rss"
          :base-directory "~/gitRepos/brittAnderson.github.io/raw/posts/"
          :base-extension "org"
@@ -116,6 +118,7 @@
 	 :publishing-function org-publish-attachment)
 	("britt-blog-all" :components ("britt-blog-base" "britt-blog-sitemap" "britt-blog-static" "britt-blog-rss"))))
 
+(setq org-export-with-broken-links t)
 (setq org-fold-core-style  'overlay)
 ;(org-publish "britt-blog-base" t)
 ;(org-publish "britt-blog-sitemap" t)

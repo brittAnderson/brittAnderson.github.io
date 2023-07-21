@@ -2,6 +2,7 @@
 #+date: <2023-04-03 Mon>
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
+#+Index: emacs!emacs-lisp
 
 I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
 

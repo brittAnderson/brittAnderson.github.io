@@ -1,0 +1,5 @@
+#+TITLE: Index
+#+options: toc:nil
+
+#+INCLUDE: "theindex.inc"
+

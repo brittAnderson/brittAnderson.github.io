@@ -3,6 +3,8 @@
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
 #+options: toc:nil
+#+Index: emacs
+#+Index: email
 
 *** The problem
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
@@ -203,5 +205,4 @@ davmail.oauth.britt@uwaterloo.ca.refreshToken={AES}Thisiswherethelongstringofyou
    #+end_src
 
    There is lots more you can do to improve your experience, but if you get this far then you can do the tweaking without worrying too much about the preceding stages in the pipeline. Do note that you have to keep mbsync polling for new mail. You can do this with a cron job, or by setting up a key combination to invoke the shell command from inside emacs. It might be a good idea to add it to the hooks for when you start and kill gnus too.
-
 
