@@ -1,0 +1,37 @@
+#+Title: Just Use Common Lisp
+#+date: <2023-12-08 Fri>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+#+options: toc:nil
+#+INDEX: programming!lisp
+
+*** Why Aren't We All Just Coding in Common Lisp?
+There is history here, and I don't have the expertise to revisit it or adjudicate, but I can say that my beginner's experience with *Common Lisp* has been very favorable.
+
+*** What Do I Like?
+
+1. The language is stable.
+   I have gone from Python2 to Python3. I tried to use Haskell, but as someone who codes intermittently it was always days of fixing a broken installation before I could resume learning. Idris published a book to teach you how to program with dependent types and then just withered while the designers re-invent it. Common Lisp just is. It goes back to the days of giants when we built bridges, subways, and software standards.
+
+   Working with a group of undergraduates to explore an older, but interesting, neural network model: [[https://www.cs.cmu.edu/~sef/sefCascor.htm][Cascade Correlation]] I was able to run the ~cc.lsp~ file in SBCL/emacs/slime with no changes! There were a few deprecation warnings (old keywords for an ~eval-when~ function), but that was it. Anyone want to try and get 30 year old <enter language here> to run [fn:1]?
+
+2. The language is modern.
+   When the Lisp grandfathers (recognizable by the gray neck beards) tout the advantages of their language the new generation's response is often, but we have lisp-language-feature-* in <enter language here> now. And, except for the macro system it is basically true. That is why I say the language is modern. The "new" additions to contemporary, popular languages are there in Lisp. So, Lisp feels modern.
+
+3. The Lisp community is the right size.
+   There was a time when Hackage for Haskell was great, but it didn't scale well. As Haskell grew in popularity, and as all those bright young minds graduated and found jobs in our e-commerce-centric world the centre of mass of the language shifted to block chain and web back ends. Lisp has plenty of young and old users. It has the quicklisp/ultralisp package repository that reminds one of the good old days of hackage. There are enough young people to push the language forward, but not so many that you get lost in a sea of incompatibilities. I feel though, it may be getting close.
+
+4. There is still a genie in the Lisp bottle.
+   Objects are old news, but the common lisp object system was new to me. And the idea of multiple dispatch is cool. Objects that beget objects with wonderful effects, a consequence I think of the metaobject protocol is still something new to learn. And macros really are cool. They are not perhaps as strange as one is led to believe when they are simply described, rather than experienced, but still, being able to use ~macrolet~ to define a local macro that has scope within the function that calls it to rewrite code that appears later in the function can save a lot of boiler plate. Writing code that writes code is still an under exploited tool.
+
+*** So What Are Lisp Hackers Saying Now?
+
+  - https://leanpub.com/lisphackers/read
+  - Want to meet them?
+    https://european-lisp-symposium.org/2024/
+
+
+
+*** Footnotes
+
+[fn:1] The recurrent version of the cascade correlation was harder, but still fairly easy. It used a different compiler, the [[https://cmucl.org/][cmucl compiler]]. But the love of Lispers for their language means that even this 32 bit compiler is alive and well and completely usable. And for me it was an easy install on [[https://archlinux.org/packages/multilib/x86_64/cmucl/][ArchLinux]]. I did have to edit out some of the older code for the visualizations and windows management.   
