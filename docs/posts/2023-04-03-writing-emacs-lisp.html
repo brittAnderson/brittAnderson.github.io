@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-07-20 Thu 20:47 -->
+<!-- 2023-12-08 Fri 13:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Publish Your Embarassing Code</title>
@@ -255,7 +255,7 @@ The way I decided to deal with this was by reading the post directory, finding b
 
 (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">get-post-list</span> (post-dir n-posts)
   <span style="font-style: italic;">"Gets the list of the n-posts most recent files in the post-dir"</span>
-  (<span style="font-weight: bold;">setq</span> ps (directory-files post-dir t <span style="font-style: italic;">"[0-9]\\{4\\}.*[org]$"</span>))
+  (<span style="font-weight: bold;">setq</span> ps (directory-files post-dir t <span style="font-style: italic;">"[0-9]\\{</span><span style="font-weight: bold; font-style: italic;">4\\</span><span style="font-style: italic;">}.*[org]$"</span>))
   (<span style="font-weight: bold;">setq</span> most-recent (nreverse (last ps n-posts)))
   most-recent)
 
@@ -294,7 +294,7 @@ The way I decided to deal with this was by reading the post directory, finding b
 <div id="postamble" class="status">
 <p class="date">Date: 2023-04-03 Mon 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2023-07-20 Thu 20:47</p>
+<p class="date">Created: 2023-12-08 Fri 13:34</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
