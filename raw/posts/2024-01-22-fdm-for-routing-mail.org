@@ -1,0 +1,42 @@
+#+Title: Use ~fdm~ to make your emacs-org-mode email workflow smoother
+#+date: <2024-01-22 Mon>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+#+options: toc:nil
+#+INDEX: email!fdm
+
+*** FDM: a tool to make an emacs email workflow smoother
+
+If you are one of the intermediate Emacs users who has cobbled together your own email pipeline you might find [[https://github.com/nicm/fdm][~fdm~]] a convenient addition to the workflow.
+
+For a long time I had used ~gnus~ and I loved it, but lately things had gotten tricky when my university forced us all to use their microsoft exchange accounts and a more restrictive authorization process. Instead of just using ~gnus~ imap capacities to directly get my mail I had to put a new tool in between: [[https://davmail.sourceforge.net/][~davmail~]]. Then I was back to using a ~dovecot~ locally to serve up the mail to ~gnus~ (although this probably was not necessary). All these changes provoked me to rethink my use case a bit: as much as I liked ~gnus~ the audience for it seems to be decreasing as the graying neckbeard population thins out. If I wanted to old on to my old school email tools a little longer maybe I should retreat to the one with the largest population of users; that seemed to be the ~mutt/neomutt~ family. But still I sometimes wanted the comfort and familiarity of ~emacs~ and the currently most popular package there is undoubtedly ~mu4e~. But both ~mutt~ and ~mu4e~ where missing something I really liked in ~gnus~: fancy (or even vanilla) splitting of incoming emails. You take your incoming email and direct it to a folder based on criteria you set. Maybe just a from or to field. Or maybe a very complicated hierarchy of headers, dates, and subject lines. Then, when you open gnus and you decide to create an ~org~ event or todo while reading the email your link will work, because you have no need to refile the email. If you just let everything dump into an inbox that you manually redirect then you either have to remember to create the link after moving it, or you create the link before moving the email and later on the link is incorrect and you end up searching by subject line or something. This is where [[https://github.com/nicm/fdm][~fdm~]] fits in. It can essentially function as the "splitter" for you.
+
+You might have a bit of trouble finding documentation on it, but the manual is included when you clone or download. In my case there is an Archlinux [[https://wiki.archlinux.org/title/Fdm][package.]] The basic splitting use can be straightforward for a pipeline like mine.
+
+I use ~mbsync~ to gather my mail from there different email providers and deposit that in three different ~Inboxes~ that live in a hierarchy that looks a bit like: /home/britt/.local/share/mail/<acct1>/<usernameforthisacct>/... for each of the accounts. Then three is an ~fdm.conf~ file that in my case looks like:
+
+#+Caption: Pseudo Version of an FDM conf file
+#+begin_src sh :eval never
+  $genpath = "/home/britt/.local/share/mail"
+  $a1path = "${genpath}/acct1/brittanderson/"
+  ...
+  account "acct1" maildir "${a1path}Inbox"
+  ...
+  action "a1-2arch" maildir "${a1path}Folders/arch2024"
+
+  action "harddelete" pipe "cat > /dev/null"
+
+
+  match "^From:.*spammy.com" in headers action "harddelete"
+  ... 
+  match "^To:.*britt.*@acct1.*" in headers and account "acct1"  action "a1-2arch"
+  ...
+#+end_src
+
+Then to get new mail I just invoke ~(mbsync --all || mbsync --all) && fdm fetch~.[fn:1] Now when I open either ~mutt~ or ~mu4e~ my mail is already in the email box (folder/directory) that I want it to remain. So, when I read the new message I can simply act on it when the notion is fresh, and the org links will just work (of course for mutt you have to set up an ~org-protocol~; that is a discussion for another time [mostly because I am still working on it]). 
+
+Hope this helps someone like me trying to do things that far exceed their time, need or ability. 
+
+* Footnotes
+
+[fn:1] Occassionally I was getting a fetch error when running ~mbsync~ that would always clear up on a second run. That "or" bit only runs the second ~mbsync~ command if the first returns 0. It just saved me having to manually repeat every once in awhile. Though for the last few months the fetch errors are gone.  
