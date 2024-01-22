@@ -8,7 +8,11 @@
     - [[file:2023-04-08-rss-and-org-mode.org][orgmode]]
     - [[file:2023-07-20-make-an-org-publish-index.org][orgmode]]
     - [[file:2023-01-09-back-to-org-mode.org][orgmode]]
-  - [[file:2023-06-15-gnus-email-and-microsoft365.org][email]]
+  - email
+    - [[file:2023-06-15-gnus-email-and-microsoft365.org][davmail]]
+    - [[file:2024-01-22-fdm-for-routing-mail.org][fdm]]
+    - [[file:2023-06-15-gnus-email-and-microsoft365.org][gnus]]
+    - [[file:2023-06-15-gnus-email-and-microsoft365.org][mbsync]]
 * P
   - programming
     - [[file:2023-12-08-use-common-lisp.org][lisp]]

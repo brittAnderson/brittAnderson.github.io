@@ -4,7 +4,9 @@
 #+email: britt@uwaterloo.ca
 #+options: toc:nil
 #+Index: emacs
-#+Index: email
+#+Index: email!davmail
+#+Index: email!mbsync
+#+Index: email!gnus
 
 *** The problem
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.

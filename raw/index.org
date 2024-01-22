@@ -2,7 +2,7 @@
 #+Title: Britt Blog
 #+email: britt@b3l.xyz
 #+options: timestamp:t title:t toc:nil todo:t |:t
-#+date: <2023-04-03 Mon>
+#+date: <2024-01-22 Mon>
 #+author: Britt Anderson
 #+email: britt@uwaterloo.ca
 #+language: en
@@ -23,6 +23,14 @@ Welcome to yet another Britt Blog. You can find some of my academic work in the 
 
 
 * Recent Posts
+**  Use ~fdm~ to make your emacs-org-mode email workflow smoother
+Date: <2024-01-22 Mon>
+Author: Britt Anderson
+
+*** FDM: a tool to make an emacs email workflow smoother
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-01-22-fdm-for-routing-mail.org][read full entry]] 
+
 **  Just Use Common Lisp
 Date: <2023-12-08 Fri>
 Author: Britt Anderson
@@ -48,15 +56,6 @@ Author: Britt Anderson
 In the beginning was chaos.
 
 [[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-24-the-genesis-of-category-theory.org][read full entry]] 
-
-**  Setting up email with gnus, mbsync, dovecot, and davmail
-Date: <2023-06-15 Thu>
-Author: Britt Anderson
-
-*** The problem
-My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
-
-[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-15-gnus-email-and-microsoft365.org][read full entry]] 
 
 
 * Older Posts
