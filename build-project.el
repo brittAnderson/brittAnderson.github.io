@@ -1,8 +1,8 @@
-(let ((default-directory  "~/.emacs.d/straight/build/"))
+(let ((default-directory  "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path ))
 
 
-(add-to-list 'load-path "~/.emacs.d/straight/repos/org/lisp")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;;needed for a bug when setting property (seems a 9.6 issue)
 

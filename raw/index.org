@@ -23,6 +23,15 @@ Welcome to yet another Britt Blog. You can find some of my academic work in the 
 
 
 * Recent Posts
+**  Haskell, Eglot, Language Servers, and Emacs
+Date: <2024-04-19 Fri>
+Author: Britt Anderson
+
+*** Haskell Coding in Emacs
+Haskell is a programming language where the rate of development and the evolution of its tooling can make it challenging to love. But love it I do, even though in many ways it is the antithesis of Common Lisp. If the latter is a /forever language/ it sometimes feels as if Haskell is a /never language/, because I spend so much time trying to figure out how to get it working (admittedly I am only an intermittent user) that by the time I am done, I never write any code.
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-04-19-haskell-emacs.org][read full entry]] 
+
 **  Use ~fdm~ to make your emacs-org-mode email workflow smoother
 Date: <2024-01-22 Mon>
 Author: Britt Anderson
@@ -47,15 +56,6 @@ Author: Britt Anderson
 I have been wanting to have a way to /tag/ different blog posts with different topics. This is a personal blog so the topics can ramble from fun one offs, to technical thoughts, to code snippets I want to remember. I did not see an easy way to do this until I stumbled across the =:makeindex= option for orgmode.
 
 [[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-07-20-make-an-org-publish-index.org][read full entry]] 
-
-**  The Genesis of Category Theory
-Date: <2023-06-25 Sun>
-Author: Britt Anderson
-
-*** A creation narrative for category theory
-In the beginning was chaos.
-
-[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-24-the-genesis-of-category-theory.org][read full entry]] 
 
 
 * Older Posts
