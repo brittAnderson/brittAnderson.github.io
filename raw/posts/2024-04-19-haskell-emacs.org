@@ -1,0 +1,103 @@
+#+Title: Haskell, Eglot, Language Servers, and Emacs
+#+date: <2024-04-19 Fri>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+#+options: toc:nil
+#+INDEX: haskell
+#+INDEX: emacs!eglot
+
+*** Haskell Coding in Emacs
+Haskell is a programming language where the rate of development and the evolution of its tooling can make it challenging to love. But love it I do, even though in many ways it is the antithesis of Common Lisp. If the latter is a /forever language/ it sometimes feels as if Haskell is a /never language/, because I spend so much time trying to figure out how to get it working (admittedly I am only an intermittent user) that by the time I am done, I never write any code.
+
+But here I am once again hoping to go to [[https://zfoh.ch/zurihac2024/][ZuriHac 24]], and I would like to have a basic functioning environment by the time I get there.
+
+The memory of the internet is long and that doesn't play well with the constantly changing tooling of emacs and Haskell. I had a lot of trouble finding contemporary guidance. These are my breadcrumbs as of April 2024 for a minimal functional set up using Emacs as the editor. 
+
+First you need Haskell. You will have to look to your distribution for how to get that installed. I am using Archlinux. At one point it was the go to distribution for Linux users, but with a change a few years ago static to dynamic linking things stopped working smoothly. Now the go to Linux for Haskell users is probably [[https://nixos.org/][NixOS]], but that will not be a simple transition, and I think the much simpler way to go is [[https://www.haskell.org/ghcup/][ghcup]]. Ghcup is a tool that allows you to install multiple versions of ~cabal~ (a packaging tool and more), ~stack~ (an alternative or even complementary packaging tool), and ~ghc~ the compiler. You can also switch between versions. In addition, you can use ~ghcup~ to get the ~haskell language server~ that matches each ~ghc~ version you install, and an =haskell-language-server-wrapper= should track the changes you make when switching between installed ~ghc~ versions.
+
+Here is the warning. If you have not used ~ghcup~ before, and you decide to use it now clean out your old haskell installation and start with a clean slate. Then, install ghc, cabal, and a compatible [[https://haskell-language-server.readthedocs.io/en/latest/configuration.html#configuring-haskell-language-server][haskell-language-server]]-wrapper using ghcup. 
+
+[[https://joaotavora.github.io/eglot/][Eglot]] is now a part of Emacs (I think it came in 29, but I am using 30.50 here). Eglot is the Emacs polyglot. It provides a consistent interface to various language servers. You can use it for all your programming languages. Here I am only looking at Haskell. If you are using modern Emacs there is nothing to install. You just ~require~ it. In addition, I installed ~haskell-mode~. I don't know if it is necessary, but it doesn't seem to be hurting anything.
+
+Basic ~eglot~ configuration was very minimal, and a lot of this is not strictly necessary. Here is the snippet in my ~.init.el~ file:
+
+#+begin_src elisp :eval never
+(use-package eglot
+  :config
+  (add-hook 'haskell-mode-hook 'eglot-ensure)
+  :custom
+  (eglot-autoshutdown t)  ;; shutdown language server after closing last file
+  (eglot-confirm-server-initiated-edits nil)  ;; allow edits without confirmation
+  )
+#+end_src
+
+Some gotchas. *~PATH~* Variables for both your Linux system and your Emacs installation. In order to find the tools you installed with ~ghcup~ your system needs to know where to look for them. Mine are in =~/.ghcup/bin/=. There are many ways to add things to the path of a Linux system, but I chose to use a method described in the [[https://wiki.archlinux.org/title/Environment_variables#Globally][environment variables Arch wiki page]]. It looks like this:
+
+
+#+Caption: A function to set paths for individual users, and an example of its use.
+#+begin_src sh :eval never
+
+  set_path(){
+
+    # Check if user id is 1000 or higher
+    [ "$(id -u)" -ge 1000 ] || return
+
+    for i in "$@";
+    do
+        # Check if the directory exists
+        [ -d "$i" ] || continue
+
+        # Check if it is not already in your $PATH.
+        echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
+
+        # Then append it to $PATH and export it
+        export PATH="${PATH}:$i"
+    done
+}
+
+set_path ~/.ghcup/bin
+
+#+end_src
+
+You also *must* make sure your Emacs path also gets the message. I mistakenly believed that Emacs would inherit my system path, especially since I could find the programs using ~which~ in an ~eshell~ session running inside Emacs. Not so. And Emacs has different paths. There are paths for loading libraries, executing things that Emacs manages for itself, internals if you will, and then the path for system executables. This is the one we want. There is a concise little library in ~MELPA~ that allows you to do this ~exec-path-from-shell~. If you run emacs server, as I do, as a ~systemd --user~ unit you will need that ~daemonp~ line. 
+
+#+begin_src elisp :eval never
+(use-package exec-path-from-shell)
+(when (daemonp)
+  (exec-path-from-shell-initialize))
+#+end_src
+
+The next gotcha: Compiling. You can easily do this from your terminal if you wish, but it would be nice to do it inside emacs. Given some key conflicts I needed to remap the "C-c C-c" key that my muscle memory insists must be the compile command to the "haskell" compile command.
+
+#+begin_src elisp :eval never
+(use-package haskell-mode
+  :bind (:map haskell-mode-map
+	      (("C-c C-c" . haskell-compile))))
+#+end_src
+
+Penultimate gotcha: configuring the specific language server features and plugins you want to use with ~eglot~.
+
+I found this the hardest to get right, since I do not really know what all the ~haskell-language-server~ offers in the way of plugins, and what all the configuration variables are. The language servers use json, but emacs tends to use ~alists~ and ~plists~, and  in this situation there is a blend. You may find a lot of trial and error is required, and the advice I read suggests doing this local to a project and not globally. In each project directory write a file ~.dir-locals.el~. Emacs info has a node on directory local definitions. This is an ~alist~, but the ~eglot~ tool looks for a ~plist~, so, as an example, you end up with something like this:
+
+#+Caption: Example Eglot Workspace Configuration
+#+begin_src elisp :eval never
+  ((nil . ((eglot-workspace-configuration . (:haskell
+					     (:plugins
+					      (:stan (:globalOn :json-false)
+						     :ghcide-code-actions-fill-holes (:enabled t))))))))
+#+end_src
+
+
+Last gotcha: You need to sort of remember or figure out how ~cabal~ works and what it expects. I recommend for a practice project creating a directory with some name, e.g. ~tesths~. Inside that directory, probably from a terminal, run ~cabal init~. Then move to the ~./app/~ sub-directory and write your ~Test.hs~ file, maybe something like:
+
+#+begin_src haskell :eval never
+  module Main where 
+
+
+  main :: IO ()
+  main = putStrLn "howdy"
+#+end_src
+
+~Cabal~ expects a ~main~ for executable so just leave it like this to get started. Then you should be able to "C-c C-c" and ~haskell-language-server-wrapper~ will figure out to use ~cabal~ to build your executable. That will end up somewhere. Depending on exactly how you invoked the compilation it may be deep in  ~.dist-newstyle~ sub-directory or more likely stored in a "store" in a sub-directory of a parent that looks like this: =~/.cache/hie-bios/dist-tesths-c1e9a7a89739f25f6dd9edc617b06f68=.
+
+If this doesn't work for you, hopefully it will help save you some time. And if you have a better way to do it please let me know. Thanks. 
