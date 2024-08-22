@@ -1,0 +1,50 @@
+#+Title: Lean 4, Emacs, and Archlinux
+#+date: <2024-08-22 Thu>
+#+author: Britt Anderson
+#+email: britt@b3l.xyz
+#+options: toc:nil
+#+INDEX: lean
+#+INDEX: emacs
+
+*** Formalizing Cognitive Science
+This is the clear goal. The path remains murky. But, inspired by the recent [[https://www.youtube.com/live/ZOT5jQ8W2Nc?feature=shared][Topos Institute Colloquium by Will Crichton]], I decided to download [[https://lean-lang.org/download/][Lean]] to my computer to see if I could begin to explore it as yet another tool I will only use intermittently, if at all, in my pursuit of the "clear goal" via the process of iterative preparation.
+
+**** What the Archlinux Wiki has to say.
+
+We will want ~elan~ to manage our =lean= installation, and there is a package for its installation in AUR.[fn:1] After downloading that snapshot [fn:2] we expand the package and ~makepkg~ and ~sudo pacman -U elan-lean-3.1.1-2-x86_64.pkg.tar.zst~.[fn:3]
+
+Then, assuming you want to use the math library, you will want to check the [[https://github.com/leanprover-community/mathlib4/blob/master/lean-toolchain][link]] to get a suitable build. In my case this meant: ~elan toolchain install leanprover/lean4:v4.11.0-rc2~. However, a ~elan show~ did not show the toolchain as active so I did ~elan default v4.11.0-rc2~ which repeated the download, but then did make it active. I suppose there was a command to activate the earlier install, but the latter command seemed to work as well.
+
+**** And of course Emacs
+
+The Archlinux wiki here is feigning helpfulness telling us that we can just install the ~lean-mode~ package from ~melpa~. However, that doesn't work. Instead, I had to follow the [[https://github.com/leanprover-community/lean4-mode][instructions]] from the =lean= people. 
+
+1. Clone the repo.
+2. Tell emacs where it can find the package by adding it to your ~load-path~.
+3. Make sure you have needed dependencies, and then
+4  Use package ~lean4-mode~.
+
+For me this becomes, 
+
+#+begin_src emacs-lisp :eval never
+(use-package dash)
+(use-package flycheck)
+(use-package lsp-mode)
+(use-package magit-section)
+(use-package lean4-mode
+  :load-path "/home/britt/Nextcloud/admin/computer/lean.d/lean4-mode"
+  :requires (dash flycheck lsp-mode magit-section) ;; prevents loading if they are missing; so install them
+  :commands (lean4-mode))
+#+end_src
+
+**** Testing
+Just open an empty file with the ~.lean~ extension. Make sure you answer the interactive prompts affirmatively to define the project root. Then you should see when you type ~#check id~ incomprehensible stuff that tells you ~lean~ is installed and working.
+
+
+* Footnotes
+
+[fn:3] Of course your specific package number will probably be different.
+
+[fn:2] You may need some dependencies for ~elan~. In my case it was ~cargo~ and that meant ~rust~. 
+
+[fn:1] Generally, it is good advice to make sure your system is up-to-date before installing finicky software (and =Lean= has a reputation of being finicky to install. Don't forget ~pacman -Syyu~.  
