@@ -4,6 +4,7 @@
   - [[file:2023-06-24-the-genesis-of-category-theory.org][category theory]]
 * E
   - [[file:2023-06-15-gnus-email-and-microsoft365.org][emacs]]
+  - [[file:2024-08-22-lean-emacs-and-archlinux.org][emacs]]
     - [[file:2024-04-19-haskell-emacs.org][eglot]]
     - [[file:2023-04-03-writing-emacs-lisp.org][emacs-lisp]]
     - [[file:2023-04-08-rss-and-org-mode.org][orgmode]]
@@ -16,6 +17,8 @@
     - [[file:2023-06-15-gnus-email-and-microsoft365.org][mbsync]]
 * H
   - [[file:2024-04-19-haskell-emacs.org][haskell]]
+* L
+  - [[file:2024-08-22-lean-emacs-and-archlinux.org][lean]]
 * P
   - programming
     - [[file:2023-12-08-use-common-lisp.org][lisp]]

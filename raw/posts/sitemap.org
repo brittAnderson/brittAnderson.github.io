@@ -2,17 +2,33 @@
 #+TITLE: Blog - Britt Anderson's Personal Website
 #+AUTHOR: Britt Anderson
 #+EMAIL: britt@b3l.xyz
+*  Lean 4, Emacs, and Archlinux
+:PROPERTIES:
+:PUBDATE: 2024-08-22 Thu
+:RSS_PERMALINK: posts/2024-08-22-lean-emacs-and-archlinux.html
+:PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-08-22-lean-emacs-and-archlinux.html
+:ID:       920becc8-ced7-49e9-a4f4-7b1e1725d021
+:END:
+  - 2024-08-22 Thu
+*** Formalizing Cognitive Science
+:PROPERTIES:
+:ID:       49cfa139-3a6b-4d90-b051-f74aced1fece
+:END:
+This is the clear goal. The path remains murky. But, inspired by the recent [[https://www.youtube.com/live/ZOT5jQ8W2Nc?feature=shared][Topos Institute Colloquium by Will Crichton]], I decided to download [[https://lean-lang.org/download/][Lean]] to my computer to see if I could begin to explore it as yet another tool I will only use intermittently, if at all, in my pursuit of the "clear goal" via the process of iterative preparation.
+#+begin_export html
+<a href="https://brittanderson.github.io/posts/2024-08-22-lean-emacs-and-archlinux.html">To Read More ...</a>
+#+end_export
 *  Haskell, Eglot, Language Servers, and Emacs
 :PROPERTIES:
 :PUBDATE: 2024-04-19 Fri
 :RSS_PERMALINK: posts/2024-04-19-haskell-emacs.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-04-19-haskell-emacs.html
-:ID:       48ffb9e5-4f98-4e92-8283-63c94e3a12ec
+:ID:       a3ee9017-1a43-4e2f-953a-f94b206ec055
 :END:
   - 2024-04-19 Fri
 *** Haskell Coding in Emacs
 :PROPERTIES:
-:ID:       20a6f563-ad37-4616-862e-6806b72645d2
+:ID:       c9db141d-24f7-4aa3-9632-9549b1593443
 :END:
 Haskell is a programming language where the rate of development and the evolution of its tooling can make it challenging to love. But love it I do, even though in many ways it is the antithesis of Common Lisp. If the latter is a /forever language/ it sometimes feels as if Haskell is a /never language/, because I spend so much time trying to figure out how to get it working (admittedly I am only an intermittent user) that by the time I am done, I never write any code.
 #+begin_export html
@@ -23,12 +39,12 @@ Haskell is a programming language where the rate of development and the evolutio
 :PUBDATE: 2024-01-22 Mon
 :RSS_PERMALINK: posts/2024-01-22-fdm-for-routing-mail.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-01-22-fdm-for-routing-mail.html
-:ID:       19c5898b-2975-466c-948b-2ebf189eacc5
+:ID:       a9c64f5c-cf89-4a60-8561-e5352bc76c64
 :END:
   - 2024-01-22 Mon
 *** FDM: a tool to make an emacs email workflow smoother
 :PROPERTIES:
-:ID:       287bd58f-4151-490c-8f36-5ab6bb635b35
+:ID:       8993c6b6-f867-4866-98dc-77747a78e532
 :END:
 #+begin_export html
 <a href="https://brittanderson.github.io/posts/2024-01-22-fdm-for-routing-mail.html">To Read More ...</a>
@@ -38,12 +54,12 @@ Haskell is a programming language where the rate of development and the evolutio
 :PUBDATE: 2023-12-08 Fri
 :RSS_PERMALINK: posts/2023-12-08-use-common-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-12-08-use-common-lisp.html
-:ID:       a775acc3-5738-4c81-b0ca-47a66305be30
+:ID:       a37eb65a-e267-4ef7-b9d8-5c30ba9537ca
 :END:
   - 2023-12-08 Fri
 *** Why Aren't We All Just Coding in Common Lisp?
 :PROPERTIES:
-:ID:       32d7f25f-1ef1-4b75-acd7-7db0517259ce
+:ID:       366cfa53-0918-4e88-8354-16e364496935
 :END:
 There is history here, and I don't have the expertise to revisit it or adjudicate, but I can say that my beginner's experience with *Common Lisp* has been very favorable.
 #+begin_export html
@@ -54,7 +70,7 @@ There is history here, and I don't have the expertise to revisit it or adjudicat
 :PUBDATE: 2023-07-20 Thu
 :RSS_PERMALINK: posts/2023-07-20-make-an-org-publish-index.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-07-20-make-an-org-publish-index.html
-:ID:       6bc59853-4e87-4b23-9a7a-8b68ec2ca7c2
+:ID:       5ce128d5-afb8-4476-acbf-19260e2776e5
 :END:
   - 2023-07-20 Thu
 I have been wanting to have a way to /tag/ different blog posts with different topics. This is a personal blog so the topics can ramble from fun one offs, to technical thoughts, to code snippets I want to remember. I did not see an easy way to do this until I stumbled across the =:makeindex= option for orgmode.
@@ -66,12 +82,12 @@ I have been wanting to have a way to /tag/ different blog posts with different t
 :PUBDATE: 2023-06-25 Sun
 :RSS_PERMALINK: posts/2023-06-24-the-genesis-of-category-theory.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-24-the-genesis-of-category-theory.html
-:ID:       fef905b8-dbfd-420c-a1da-f986f080f75a
+:ID:       4c0cb893-ca2d-4d3a-87e8-71575333dd59
 :END:
   - 2023-06-25 Sun
 *** A creation narrative for category theory
 :PROPERTIES:
-:ID:       d263e433-9879-4ff6-9473-b754c3b8c1a3
+:ID:       4615a27d-284d-4bf5-8e94-5e410978f80f
 :END:
 In the beginning was chaos.
 #+begin_export html
@@ -82,12 +98,12 @@ In the beginning was chaos.
 :PUBDATE: 2023-06-15 Thu
 :RSS_PERMALINK: posts/2023-06-15-gnus-email-and-microsoft365.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-06-15-gnus-email-and-microsoft365.html
-:ID:       5052ecd4-d290-4521-816c-b5d04c297f6f
+:ID:       759eea43-6377-4ec3-ac6e-4ca5df1ff935
 :END:
   - 2023-06-15 Thu
 *** The problem
 :PROPERTIES:
-:ID:       bb5edd9b-f68b-49ab-a05c-4d420d4fd508
+:ID:       0af79792-8723-4a03-911d-b17daed8a379
 :END:
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
 #+begin_export html
@@ -98,12 +114,12 @@ My university's connect server was recently hacked, which meant that I had to le
 :PUBDATE: 2023-05-19 Fri
 :RSS_PERMALINK: posts/2023-05-19-epicurus.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-19-epicurus.html
-:ID:       2a7712a6-0852-4ee5-bfcd-52b8fc185228
+:ID:       ad385c91-b065-43c6-9da6-890159efcd88
 :END:
   - 2023-05-19 Fri
 *** A distribution over all possible answers
 :PROPERTIES:
-:ID:       98d610ed-b53d-4d0b-b4d2-9b3e942efdfc
+:ID:       0e563223-e2b0-403f-9682-889452442167
 :END:
 Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Occam's Razor.]] It is a heuristic for reasoning that is often framed as the simplest explanation is the best explanation. What many of us do though is misinterpret this heuristic as suggesting that the simplest explanation is the *right* explanation. A nice by product of reading some of the literature around Solomonoff induction is to be reminded of the companion idea that any hypothesis not contradicted by experience should be retained in your set of possible answers.
 #+begin_export html
@@ -114,12 +130,12 @@ Most of us are familiar with [[https://en.wikipedia.org/wiki/Occam%27s_razor][Oc
 :PUBDATE: 2023-05-15 Mon
 :RSS_PERMALINK: posts/2023-05-15-inductive-inference.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-05-15-inductive-inference.html
-:ID:       8eee5bd3-1548-4c61-b5d9-2a321bb57e43
+:ID:       475bcb11-887c-4429-83d1-35cba87074a7
 :END:
   - 2023-05-15 Mon
 *** Crazy beard and crazy smart
 :PROPERTIES:
-:ID:       07a5c311-d865-44cf-90a5-21509971e7e5
+:ID:       4780cf5c-8998-4bd1-b15a-9a5de7f51954
 :END:
 During the pandemic, and for a term or two thereafter, I, like a lot of men, let myself grow a beard and let my hair get a bit crazy. One day when I was trying to track down a reference about something (I forget exactly what) I came across this image [[https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wJ0Z713Zmu1ymJu7dv45IAHaKt%26pid%3DApi&f=1&ipt=65c31f7f09559cc54323f891c4c0812e607b7698085d75222ca366bd551e99a7&ipo=images][of Ray Solomonoff]] and was struck by our similar hair-dos. Who was this guy? While it was the overlapping of my interests and his work that led me to the web page where the picture appeared it was the overlap of our beard aesthetics that led me to read more about him in particular. I am so glad I did.
 #+begin_export html
@@ -130,7 +146,7 @@ During the pandemic, and for a term or two thereafter, I, like a lot of men, let
 :PUBDATE: 2023-04-08 Sat
 :RSS_PERMALINK: posts/2023-04-08-rss-and-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-08-rss-and-org-mode.html
-:ID:       b5ec49de-335f-405f-a924-c0463fdbd15d
+:ID:       015fe2b6-606c-4476-b521-745f2349865c
 :END:
   - 2023-04-08 Sat
 Just a place holder for now, but to come is a tear stained entry of my efforts to come to terms with RSS feeds and org for blogging.
@@ -142,7 +158,7 @@ Just a place holder for now, but to come is a tear stained entry of my efforts t
 :PUBDATE: 2023-04-03 Mon
 :RSS_PERMALINK: posts/2023-04-03-writing-emacs-lisp.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-04-03-writing-emacs-lisp.html
-:ID:       62560790-faa8-46b9-b735-a77fbf5452c5
+:ID:       74027fd6-db49-49fb-9087-6069145b946f
 :END:
   - 2023-04-03 Mon
 I am a long term Emacs user, and I love it, but while I am quick to adopt new packages (and frequently break my ~init.el~) I have never fully exploited the fact that Emacs is programmable. The pitch I am making here is to publish your embarassing code so that you help give courage to others to try. You do this by debunking the myth that everyone else is an Uber-coder, and by giving more beginner friendly examples to help people get a leg up.
@@ -154,7 +170,7 @@ I am a long term Emacs user, and I love it, but while I am quick to adopt new pa
 :PUBDATE: 2023-01-09 Mon
 :RSS_PERMALINK: posts/2023-01-09-back-to-org-mode.html
 :PERMALINK: /home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-01-09-back-to-org-mode.html
-:ID:       3b2cb758-41ec-4df6-bb51-b3a642490444
+:ID:       2526abd5-824d-48b9-93a4-dbe1f6fa9714
 :END:
   - 2023-01-09 Mon
 For sometime now my [[https://brittlab.uwaterloo.ca][laboratory website]] has been in Jekyll.
