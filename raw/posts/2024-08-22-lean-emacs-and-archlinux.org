@@ -47,4 +47,4 @@ Just open an empty file with the ~.lean~ extension. Make sure you answer the int
 
 [fn:2] You may need some dependencies for ~elan~. In my case it was ~cargo~ and that meant ~rust~. 
 
-[fn:1] Generally, it is good advice to make sure your system is up-to-date before installing finicky software (and =Lean= has a reputation of being finicky to install. Don't forget ~pacman -Syyu~.  
+[fn:1] Generally, it is good advice to make sure your system is up-to-date before installing finicky software (and =Lean= has a reputation of being finicky to install). Don't forget ~pacman -Syyu~.  
