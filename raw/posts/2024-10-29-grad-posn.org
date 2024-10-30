@@ -1,0 +1,36 @@
+#+Title: Interested in a weird graduate student project?
+#+Date: <2024-10-29 Tue>
+#+Author: Britt Anderson
+#+bibliography: /home/britt/gitRepos/masterBib/britt.bib
+#+bibliography: /home/britt/gitRepos/masterBib/bayatt.bib
+#+bibliography: /home/britt/Nextcloud/admin/univ/teach/grad/fundamentals2024/lec.bib
+#+cite_export: csl /home/britt/gitRepos/brittsite/assets/chicago-fullnote-bibliography.csl
+
+The question is can we bring the language of category theory
+[cite:@Cheng_2022; @leinster14_basic; @lawvere93_concep] and
+verifiable programs [cite:@de_Moura_2015] to the world of cognitive
+modeling? To be honest, I rather doubt it, at least in the near term,
+but I am going to try, and I would love to have some help on this
+quest, but anyone contemplating it should think long and hard about
+the trade-offs. It will be an adventure of exploration, fun to be
+sure, but a risky foundation for a career. The surer path to academic
+stability will be to grind away in a lab that is exploiting known
+science to accumulate incrementally new knowledge on a socially
+important topic.
+
+This project also requires someone who feels comfortable expressing
+their ideas formally. One wouldn't need to know either category theory or how
+to program in [[https://lean-lang.org/][Lean4]], but you shouldn't be put off or scared of either
+programming or expressing oneself in the language of mathematics.
+Notably, most psychology students will not have the background for
+this sort of thing, unless you are a renegade from CS or Math.
+
+What then is the idea in a bit more detail? There is talk of a "theory crisis" in psychology [cite:@Oberauer_2019]. And this talk goes back a long time, maybe to Wundt and Watson, but certainly to 1978 [cite:@Meehl_1992]. Why does it exist? One suggestion is that we don't actually teach theory construction in psychology [cite:@Borsboom_2021], for others it seems more to be about the way we formulate our ideas around effects instead of causes and explanations [cite:@rooij21_theor_befor_test]. The suggested solution is that we should convert our ideas into a formal language so that we can clearly test their implications and be unambiguous in their expression. For some authors this means equations, and for others it means programs, but I don't feel that either prescription is sufficiently explicit.
+
+If we want general theories in psychology, theories that apply broadly beyond particular domains or paradigms, then we need to express them in a more general formal language; a language with the capacity to accommodate many formal framings. This is, I think, the value of the mathematical Ur-language, category theory. And given the way we write software in science, I don't have much faith that we should assume a program written to implement the proto-theoretical ideas of Prof. X necessarily is a faithful honoring of the proto-theoretical specifications. It is not just bugs. It is that we humans are not very good at reasoning about complex situations or thinking hierarchically and considering all the edge cases and end results of long chains of implications. We want to offload all that to software and computers. That is why a programming language that emphasizes formal verification and is able to be used for everyday programming tasks is what we need, and right now Lean4 seems closest to this goal (but there are other contenders, maybe some combination of Haskell and Agda?).
+
+All this resolves to a process of deliberate theory creation, followed by translation to a formal specification in category theory, that is then implemented as code in Lean. Simulations results in Lean are compared to empirical results collected in parallel. 
+
+If any of this interests you, even if you do not want to spend your graduate student years studying it, please reach out. I would love to hear more thoughts from more people on the feasibility of this approach, and any critiques of the specific tools I have chosen for my effort. 
+
+
