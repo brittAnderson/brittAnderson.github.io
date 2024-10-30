@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Use ~fdm~ to make your emacs-org-mode email workflow smoother</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -206,9 +206,8 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Use <code>fdm</code> to make your emacs-org-mode email workflow smoother</h1>
-
-<div id="outline-container-org1e8a5a2" class="outline-2">
-<h2 id="org1e8a5a2"><span class="section-number-2">1.</span> FDM: a tool to make an emacs email workflow smoother</h2>
+<div id="outline-container-org4e40f1f" class="outline-2">
+<h2 id="org4e40f1f"><span class="section-number-2">1.</span> FDM: a tool to make an emacs email workflow smoother</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 If you are one of the intermediate Emacs users who has cobbled together your own email pipeline you might find <a href="https://github.com/nicm/fdm"><code>fdm</code></a> a convenient addition to the workflow.
@@ -231,19 +230,19 @@ I use <code>mbsync</code> to gather my mail from there different email providers
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Pseudo Version of an FDM conf file</label><pre class="src src-sh">$<span style="font-weight: bold; font-style: italic;">genpath</span> = <span style="font-style: italic;">"/home/britt/.local/share/mail"</span>
-$<span style="font-weight: bold; font-style: italic;">a1path</span> = <span style="font-style: italic;">"${genpath}/acct1/brittanderson/"</span>
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Pseudo Version of an FDM conf file</label><pre class="src src-sh">$<span style="color: #e69f00; font-weight: bold;">genpath</span> = <span style="color: #848ea9;">"/home/britt/.local/share/mail"</span>
+$<span style="color: #e69f00; font-weight: bold;">a1path</span> = <span style="color: #848ea9;">"${genpath}/acct1/brittanderson/"</span>
 ...
-account <span style="font-style: italic;">"acct1"</span> maildir <span style="font-style: italic;">"${a1path}Inbox"</span>
+account <span style="color: #848ea9;">"acct1"</span> maildir <span style="color: #848ea9;">"${a1path}Inbox"</span>
 ...
-action <span style="font-style: italic;">"a1-2arch"</span> maildir <span style="font-style: italic;">"${a1path}Folders/arch2024"</span>
+action <span style="color: #848ea9;">"a1-2arch"</span> maildir <span style="color: #848ea9;">"${a1path}Folders/arch2024"</span>
 
-action <span style="font-style: italic;">"harddelete"</span> pipe <span style="font-style: italic;">"cat &gt; /dev/null"</span>
+action <span style="color: #848ea9;">"harddelete"</span> pipe <span style="color: #848ea9;">"cat &gt; /dev/null"</span>
 
 
-match <span style="font-style: italic;">"^From:.*spammy.com"</span><span style="font-weight: bold;"> in</span> headers action <span style="font-style: italic;">"harddelete"</span>
+match <span style="color: #848ea9;">"^From:.*spammy.com"</span><span style="color: #56b4e9; font-weight: bold;"> in</span> headers action <span style="color: #848ea9;">"harddelete"</span>
 ... 
-match <span style="font-style: italic;">"^To:.*britt.*@acct1.*"</span><span style="font-weight: bold;"> in</span> headers and account <span style="font-style: italic;">"acct1"</span>  action <span style="font-style: italic;">"a1-2arch"</span>
+match <span style="color: #848ea9;">"^To:.*britt.*@acct1.*"</span><span style="color: #56b4e9; font-weight: bold;"> in</span> headers and account <span style="color: #848ea9;">"acct1"</span>  action <span style="color: #848ea9;">"a1-2arch"</span>
 ...
 </pre>
 </div>
@@ -271,7 +270,7 @@ Occassionally I was getting a fetch error when running <code>mbsync</code> that 
 <div id="postamble" class="status">
 <p class="date">Date: 2024-01-22 Mon 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

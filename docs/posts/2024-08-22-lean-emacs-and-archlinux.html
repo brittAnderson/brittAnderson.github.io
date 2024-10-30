@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lean 4, Emacs, and Archlinux</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -206,17 +206,15 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Lean 4, Emacs, and Archlinux</h1>
-
-<div id="outline-container-orge8cc900" class="outline-2">
-<h2 id="orge8cc900"><span class="section-number-2">1.</span> Formalizing Cognitive Science</h2>
+<div id="outline-container-org6bff57f" class="outline-2">
+<h2 id="org6bff57f"><span class="section-number-2">1.</span> Formalizing Cognitive Science</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 This is the clear goal. The path remains murky. But, inspired by the recent <a href="https://www.youtube.com/live/ZOT5jQ8W2Nc?feature=shared">Topos Institute Colloquium by Will Crichton</a>, I decided to download <a href="https://lean-lang.org/download/">Lean</a> to my computer to see if I could begin to explore it as yet another tool I will only use intermittently, if at all, in my pursuit of the "clear goal" via the process of iterative preparation.
 </p>
 </div>
-
-<div id="outline-container-orgb6baa96" class="outline-3">
-<h3 id="orgb6baa96"><span class="section-number-3">1.1.</span> What the Archlinux Wiki has to say.</h3>
+<div id="outline-container-org4c3af4b" class="outline-3">
+<h3 id="org4c3af4b"><span class="section-number-3">1.1.</span> What the Archlinux Wiki has to say.</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 We will want <code>elan</code> to manage our <code>lean</code> installation, and there is a package for its installation in AUR.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> After downloading that snapshot <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> we expand the package and <code>makepkg</code> and <code>sudo pacman -U elan-lean-3.1.1-2-x86_64.pkg.tar.zst</code>.<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
@@ -227,9 +225,8 @@ Then, assuming you want to use the math library, you will want to check the <a h
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgd7fb844" class="outline-3">
-<h3 id="orgd7fb844"><span class="section-number-3">1.2.</span> And of course Emacs</h3>
+<div id="outline-container-org9b67adf" class="outline-3">
+<h3 id="org9b67adf"><span class="section-number-3">1.2.</span> And of course Emacs</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 The Archlinux wiki here is feigning helpfulness telling us that we can just install the <code>lean-mode</code> package from <code>melpa</code>. However, that doesn't work. Instead, I had to follow the <a href="https://github.com/leanprover-community/lean4-mode">instructions</a> from the <code>lean</code> people. 
@@ -249,21 +246,20 @@ For me this becomes,
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">use-package</span> dash)
-(<span style="font-weight: bold;">use-package</span> flycheck)
-(<span style="font-weight: bold;">use-package</span> lsp-mode)
-(<span style="font-weight: bold;">use-package</span> magit-section)
-(<span style="font-weight: bold;">use-package</span> lean4-mode
-  <span style="font-weight: bold;">:load-path</span> <span style="font-style: italic;">"/home/britt/Nextcloud/admin/computer/lean.d/lean4-mode"</span>
-  <span style="font-weight: bold;">:requires</span> (dash flycheck lsp-mode magit-section) <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">prevents loading if they are missing; so install them</span>
-  <span style="font-weight: bold;">:commands</span> (lean4-mode))
+<pre class="src src-emacs-lisp">(<span style="color: #56b4e9; font-weight: bold;">use-package</span> dash)
+(<span style="color: #56b4e9; font-weight: bold;">use-package</span> flycheck)
+(<span style="color: #56b4e9; font-weight: bold;">use-package</span> lsp-mode)
+(<span style="color: #56b4e9; font-weight: bold;">use-package</span> magit-section)
+(<span style="color: #56b4e9; font-weight: bold;">use-package</span> lean4-mode
+  <span style="color: #0072b2;">:load-path</span> <span style="color: #848ea9;">"/home/britt/Nextcloud/admin/computer/lean.d/lean4-mode"</span>
+  <span style="color: #0072b2;">:requires</span> (dash flycheck lsp-mode magit-section) <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">prevents loading if they are missing; so install them</span>
+  <span style="color: #0072b2;">:commands</span> (lean4-mode))
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org431132e" class="outline-3">
-<h3 id="org431132e"><span class="section-number-3">1.3.</span> Testing</h3>
+<div id="outline-container-org9a1da78" class="outline-3">
+<h3 id="org9a1da78"><span class="section-number-3">1.3.</span> Testing</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Just open an empty file with the <code>.lean</code> extension. Make sure you answer the interactive prompts affirmatively to define the project root. Then you should see when you type <code>#check id</code> incomprehensible stuff that tells you <code>lean</code> is installed and working.
@@ -293,7 +289,7 @@ Of course your specific package number will probably be different.
 <div id="postamble" class="status">
 <p class="date">Date: 2024-08-22 Thu 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

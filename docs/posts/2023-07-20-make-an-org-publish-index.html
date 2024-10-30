@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tagging Posts with the Ox-Publish =:makeindex= Function</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -215,25 +215,25 @@ Essentiall you use the <code>#+Index: some-topic-here</code> keyword and then wh
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">dotimes</span> (n len)
+<pre class="src src-emacs-lisp">(<span style="color: #56b4e9; font-weight: bold;">dotimes</span> (n len)
                 (insert
                  (concat
-                  (make-string (* (+ rank n) 2) ?\s) <span style="font-style: italic;">"  - "</span>
-                  (<span style="font-weight: bold;">if</span> (not (= (1- len) n)) (nth (+ rank n) entry)
-                    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Last term: Link it to TARGET, if possible.</span>
-                    (<span style="font-weight: bold;">let</span> ((target (nth 2 idx)))
+                  (make-string (* (+ rank n) 2) ?\s) <span style="color: #848ea9;">"  - "</span>
+                  (<span style="color: #56b4e9; font-weight: bold;">if</span> (not (= (1- len) n)) (nth (+ rank n) entry)
+                    <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">Last term: Link it to TARGET, if possible.</span>
+                    (<span style="color: #56b4e9; font-weight: bold;">let</span> ((target (nth 2 idx)))
                       (format
-                       <span style="font-style: italic;">"*%s* [[%s]]"</span>
+                       <span style="color: #848ea9;">"*%s* [[%s]]"</span>
                        (car (last entry))
-                       <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Destination.</span>
-                       (<span style="font-weight: bold;">pcase</span> (car target)
-                         (`nil (format <span style="font-style: italic;">"file:%s"</span> file))
-                         (`id (format <span style="font-style: italic;">"id:%s"</span> (cdr target)))
-                         (`custom-id (format <span style="font-style: italic;">"file:%s::#%s"</span> file (cdr target)))
-                         (_ (format <span style="font-style: italic;">"file:%s::*%s"</span> file (cdr target))))
-                       <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Description.</span>
+                       <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">Destination.</span>
+                       (<span style="color: #56b4e9; font-weight: bold;">pcase</span> (car target)
+                         (`nil (format <span style="color: #848ea9;">"file:%s"</span> file))
+                         (`id (format <span style="color: #848ea9;">"id:%s"</span> (cdr target)))
+                         (`custom-id (format <span style="color: #848ea9;">"file:%s::#%s"</span> file (cdr target)))
+                         (_ (format <span style="color: #848ea9;">"file:%s::*%s"</span> file (cdr target))))
+                       <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">Description.</span>
                        )))
-                  <span style="font-style: italic;">"\n"</span>))))
+                  <span style="color: #848ea9;">"\n"</span>))))
 
 
 </pre>
@@ -246,7 +246,7 @@ I hope this helps someone else (and me when  I next update org and it goes away)
 <div id="postamble" class="status">
 <p class="date">Date: 2023-07-20 Thu 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

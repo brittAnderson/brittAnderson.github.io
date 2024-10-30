@@ -120,10 +120,11 @@
 
 (setq org-export-with-broken-links t)
 (setq org-fold-core-style  'overlay)
-;(org-publish "britt-blog-base" t)
-;(org-publish "britt-blog-sitemap" t)
-;(org-publish "britt-blog-rss" t)
-(org-publish-all t)
+(org-publish "britt-blog-base" t)
+(org-publish "britt-blog-sitemap" t)
+(org-publish "britt-blog-static" t)
+(org-publish "britt-blog-rss" t)
+;(org-publish-all t)
 (message (org-version))
 (message "Done")
 

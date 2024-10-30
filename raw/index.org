@@ -23,6 +23,24 @@ Welcome to yet another Britt Blog. You can find some of my academic work in the 
 
 
 * Recent Posts
+**  Interested in a weird graduate student project?
+Date: <2024-10-29 Tue>
+Author: Britt Anderson
+
+The question is can we bring the language of category theory
+[cite:@Cheng_2022; @leinster14_basic; @lawvere93_concep] and
+verifiable programs [cite:@de_Moura_2015] to the world of cognitive
+modeling? To be honest, I rather doubt it, at least in the near term,
+but I am going to try, and I would love to have some help on this
+quest, but anyone contemplating it should think long and hard about
+the trade-offs. It will be an adventure of exploration, fun to be
+sure, but a risky foundation for a career. The surer path to academic
+stability will be to grind away in a lab that is exploiting known
+science to accumulate incrementally new knowledge on a socially
+important topic.
+
+[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-10-29-grad-posn.org][read full entry]] 
+
 **  Lean 4, Emacs, and Archlinux
 Date: <2024-08-22 Thu>
 Author: Britt Anderson
@@ -48,15 +66,6 @@ Author: Britt Anderson
 *** FDM: a tool to make an emacs email workflow smoother
 
 [[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2024-01-22-fdm-for-routing-mail.org][read full entry]] 
-
-**  Just Use Common Lisp
-Date: <2023-12-08 Fri>
-Author: Britt Anderson
-
-*** Why Aren't We All Just Coding in Common Lisp?
-There is history here, and I don't have the expertise to revisit it or adjudicate, but I can say that my beginner's experience with *Common Lisp* has been very favorable.
-
-[[/home/britt/gitRepos/brittAnderson.github.io/raw/posts/2023-12-08-use-common-lisp.org][read full entry]] 
 
 
 * Older Posts

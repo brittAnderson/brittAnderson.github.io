@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Setting up email with gnus, mbsync, dovecot, and davmail</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -206,31 +206,28 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Setting up email with gnus, mbsync, dovecot, and davmail</h1>
-
-<div id="outline-container-orgf73e7c7" class="outline-2">
-<h2 id="orgf73e7c7"><span class="section-number-2">1.</span> The problem</h2>
+<div id="outline-container-org4562d40" class="outline-2">
+<h2 id="org4562d40"><span class="section-number-2">1.</span> The problem</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 My university's connect server was recently hacked, which meant that I had to leave the University's internal email system (something I had been resisting for years) for the University's preferred alternative: microsoft 365. So, now I have to reconstruct the pipeline that gets my emails from my various accounts to GNUs on my laptop.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgeb711d0" class="outline-2">
-<h2 id="orgeb711d0"><span class="section-number-2">2.</span> The Solution</h2>
+<div id="outline-container-org4b21066" class="outline-2">
+<h2 id="org4b21066"><span class="section-number-2">2.</span> The Solution</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgb806bca" class="outline-3">
-<h3 id="orgb806bca"><span class="section-number-3">2.1.</span> In outline</h3>
+<div id="outline-container-orgac49d14" class="outline-3">
+<h3 id="orgac49d14"><span class="section-number-3">2.1.</span> In outline</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 The solution, culled from numerous blog posts and stackoverflow and reddit posts, that I implemented was to use <a href="https://davmail.sourceforge.net/">davmail</a> to communicate with exchange, <a href="https://sourceforge.net/projects/isync/">isync</a> to give me a local copy of all my mail, <a href="https://www.dovecot.org/">dovecot</a> to act as an email server from the local stored emails that <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Gnus.html">gnus</a> can talk to to display my mails for me.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orga5ee4b5" class="outline-3">
-<h3 id="orga5ee4b5"><span class="section-number-3">2.2.</span> The walk-through and some details</h3>
+<div id="outline-container-org547bf2e" class="outline-3">
+<h3 id="org547bf2e"><span class="section-number-3">2.2.</span> The walk-through and some details</h3>
 <div class="outline-text-3" id="text-2-2">
 <ol class="org-ol">
 <li><p>
@@ -246,7 +243,7 @@ One of the challenges is getting things set up correctly the first time. I used 
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Here for reference are some of the settings in my davmail.properties file.</label><pre class="src src-sh" id="org4b28fc8">davmail.smtpPort=1025
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Here for reference are some of the settings in my davmail.properties file.</label><pre class="src src-sh" id="org2eed909">davmail.smtpPort=1025
 davmail.folderSizeLimit=0
 davmail.forceActiveSyncUpdate=false
 davmail.imapAutoExpunge=true
@@ -296,7 +293,7 @@ Isync is available from <a href="https://wiki.archlinux.org/title/Isync">Archlin
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>My isync configuration for three different accounts</label><pre class="src src-sh" id="org97fe570">IMAPAccount b3l
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>My isync configuration for three different accounts</label><pre class="src src-sh" id="org76f826f">IMAPAccount b3l
 Host mail.gandi.net
 User britt@b3l.xyz
 Pass &lt;Ijustentermypasswordhere-youcandobetter&gt;
@@ -323,7 +320,7 @@ Expunge Both
 IMAPAccount proton
 Host 127.0.0.1
 User brittanderson@protonmail.com
-PassCmd <span style="font-style: italic;">"cat ~/.protonBridgePass"</span>
+PassCmd <span style="color: #848ea9;">"cat ~/.protonBridgePass"</span>
 Port 1144
 SSLType NONE
 CertificateFile /etc/ssl/certs/ca-certificates.crt
@@ -394,7 +391,7 @@ You don't need dovecot. Gnus can talk directly to your maildir, but that made me
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>My Dovecot Configuration</label><pre class="src src-sh" id="org3d9a5c6">maildir_very_dirty_syncs = yes
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>My Dovecot Configuration</label><pre class="src src-sh" id="org426ee6b">maildir_very_dirty_syncs = yes
 ssl = no
 log_path = /var/log/dovecot.log
 disable_plaintext_auth = no
@@ -403,21 +400,21 @@ listen = *,::
 auth_verbose = yes
 auth_debug_passwords = yes
 auth_mechanisms = plain
-mail_location = maildir:~/.local/share/mail/:<span style="font-weight: bold; font-style: italic;">LAYOUT</span>=fs
+mail_location = maildir:~/.local/share/mail/:<span style="color: #e69f00; font-weight: bold;">LAYOUT</span>=fs
 passdb {
     driver = passwd-file
     args = /etc/dovecot/passwd
 }
 userdb {
     driver = passwd-file
-    args = <span style="font-weight: bold; font-style: italic;">uid</span>=britt <span style="font-weight: bold; font-style: italic;">gid</span>=britt <span style="font-weight: bold; font-style: italic;">home</span>=/home/britt/.local/share/mail/%d/%n
-    default_fields = <span style="font-weight: bold; font-style: italic;">mail</span>=maildir:/home/britt/.local/share/mail/%d/%n
+    args = <span style="color: #e69f00; font-weight: bold;">uid</span>=britt <span style="color: #e69f00; font-weight: bold;">gid</span>=britt <span style="color: #e69f00; font-weight: bold;">home</span>=/home/britt/.local/share/mail/%d/%n
+    default_fields = <span style="color: #e69f00; font-weight: bold;">mail</span>=maildir:/home/britt/.local/share/mail/%d/%n
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Dovecot passwd file style</label><pre class="src src-sh" id="orgad66bf6">britt@uwaterloo.ca:{PLAIN}passwd1
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Dovecot passwd file style</label><pre class="src src-sh" id="org129871c">britt@uwaterloo.ca:{PLAIN}passwd1
 brittanderson@protonmail.com:{PLAIN}passwd2
 britt@b3l.xyz:{PLAIN}passwd3
 </pre>
@@ -436,12 +433,12 @@ This is not the blogpost to learn how to use Gnus. I figure that any reader find
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span>Specifying a gnus method</label><pre class="src src-emacs-lisp" id="orga01120e">(<span style="font-weight: bold;">setq</span> gnus-secondary-select-methods
-      '( (nnimap <span style="font-style: italic;">"dovecot"</span>
-                 (nnimap-address <span style="font-style: italic;">"localhost"</span>)
-                 (nnimap-stream shell)
-                 (nnimap-shell-program <span style="font-style: italic;">"/usr/lib/dovecot/imap"</span>)
-                 (nnimap-authenticator login))))
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Specifying a gnus method</label><pre class="src src-emacs-lisp" id="org2fd8ad1">(<span style="color: #56b4e9; font-weight: bold;">setq</span> gnus-secondary-select-methods
+           '( (nnimap <span style="color: #848ea9;">"dovecot"</span>
+                      (nnimap-address <span style="color: #848ea9;">"localhost"</span>)
+                      (nnimap-stream shell)
+                      (nnimap-shell-program <span style="color: #848ea9;">"/usr/lib/dovecot/imap"</span>)
+                      (nnimap-authenticator login))))
 </pre>
 </div>
 
@@ -456,7 +453,7 @@ There is lots more you can do to improve your experience, but if you get this fa
 <div id="postamble" class="status">
 <p class="date">Date: 2023-06-15 Thu 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

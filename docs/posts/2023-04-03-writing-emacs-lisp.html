@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Publish Your Embarassing Code</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -231,62 +231,62 @@ The way I decided to deal with this was by reading the post directory, finding b
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">get-post-metadata</span> ()
-<span style="font-style: italic;">"Relies on org-mode headers to extract post-meta data and first paragraph and stores in registers"</span>
+<pre class="src src-emacs-lisp">(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">get-post-metadata</span> ()
+<span style="color: #848ea9;">"Relies on org-mode headers to extract post-meta data and first paragraph and stores in registers"</span>
   (goto-char (point-min))
-  (<span style="font-weight: bold;">let</span> ((meta-data '((<span style="font-weight: bold;">:reg</span> ?t <span style="font-weight: bold;">:search-for</span> <span style="font-style: italic;">"#+title: "</span> <span style="font-weight: bold;">:start</span> <span style="font-style: italic;">"**  "</span>)
-                     (<span style="font-weight: bold;">:reg</span> ?d <span style="font-weight: bold;">:search-for</span> <span style="font-style: italic;">"#+date: "</span>  <span style="font-weight: bold;">:start</span> <span style="font-style: italic;">"Date: "</span>)
-                     (<span style="font-weight: bold;">:reg</span> ?a <span style="font-weight: bold;">:search-for</span> <span style="font-style: italic;">"#+author: "</span> <span style="font-weight: bold;">:start</span> <span style="font-style: italic;">"Author: "</span>))))
-    (<span style="font-weight: bold;">dolist</span> (md meta-data)
-      (set-register (plist-get md '<span style="font-weight: bold;">:reg</span>) (plist-get md '<span style="font-weight: bold;">:start</span>))
-      (append-to-register (plist-get md '<span style="font-weight: bold;">:reg</span>) (goto-char (search-forward (plist-get md '<span style="font-weight: bold;">:search-for</span>))) (line-end-position)))
+  (<span style="color: #56b4e9; font-weight: bold;">let</span> ((meta-data '((<span style="color: #0072b2;">:reg</span> ?t <span style="color: #0072b2;">:search-for</span> <span style="color: #848ea9;">"#+title: "</span> <span style="color: #0072b2;">:start</span> <span style="color: #848ea9;">"**  "</span>)
+                     (<span style="color: #0072b2;">:reg</span> ?d <span style="color: #0072b2;">:search-for</span> <span style="color: #848ea9;">"#+date: "</span>  <span style="color: #0072b2;">:start</span> <span style="color: #848ea9;">"Date: "</span>)
+                     (<span style="color: #0072b2;">:reg</span> ?a <span style="color: #0072b2;">:search-for</span> <span style="color: #848ea9;">"#+author: "</span> <span style="color: #0072b2;">:start</span> <span style="color: #848ea9;">"Author: "</span>))))
+    (<span style="color: #56b4e9; font-weight: bold;">dolist</span> (md meta-data)
+      (set-register (plist-get md '<span style="color: #0072b2;">:reg</span>) (plist-get md '<span style="color: #0072b2;">:start</span>))
+      (append-to-register (plist-get md '<span style="color: #0072b2;">:reg</span>) (goto-char (search-forward (plist-get md '<span style="color: #0072b2;">:search-for</span>))) (line-end-position)))
     (forward-paragraph)
-    (copy-to-register ?s (point) (<span style="font-weight: bold;">progn</span>
+    (copy-to-register ?s (point) (<span style="color: #56b4e9; font-weight: bold;">progn</span>
                                    (forward-paragraph)
                                    (point)))))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">put-post-metadata</span> (fn)
-  <span style="font-style: italic;">"Inserts the registers holding post metadata into current-buffer"</span>
-  (<span style="font-weight: bold;">let</span> ((reg-list '(?t ?d ?a ?s)))
-    (<span style="font-weight: bold;">dolist</span> (r reg-list)
+(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">put-post-metadata</span> (fn)
+  <span style="color: #848ea9;">"Inserts the registers holding post metadata into current-buffer"</span>
+  (<span style="color: #56b4e9; font-weight: bold;">let</span> ((reg-list '(?t ?d ?a ?s)))
+    (<span style="color: #56b4e9; font-weight: bold;">dolist</span> (r reg-list)
       (insert-register r t)
-      (insert <span style="font-style: italic;">"\n"</span>))
-    (insert (format <span style="font-style: italic;">"[[%s][%s]] \n\n"</span> fn <span style="font-style: italic;">"read full entry"</span>))))
+      (insert <span style="color: #848ea9;">"\n"</span>))
+    (insert (format <span style="color: #848ea9;">"[[%s][%s]] \n\n"</span> fn <span style="color: #848ea9;">"read full entry"</span>))))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">get-post-list</span> (post-dir n-posts)
-  <span style="font-style: italic;">"Gets the list of the n-posts most recent files in the post-dir"</span>
-  (<span style="font-weight: bold;">setq</span> ps (directory-files post-dir t <span style="font-style: italic;">"[0-9]\\{</span><span style="font-weight: bold; font-style: italic;">4\\</span><span style="font-style: italic;">}.*[org]$"</span>))
-  (<span style="font-weight: bold;">setq</span> most-recent (nreverse (last ps n-posts)))
+(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">get-post-list</span> (post-dir n-posts)
+  <span style="color: #848ea9;">"Gets the list of the n-posts most recent files in the post-dir"</span>
+  (<span style="color: #56b4e9; font-weight: bold;">setq</span> ps (directory-files post-dir t <span style="color: #848ea9;">"[0-9]\\{</span><span style="color: #e69f00; font-weight: bold;">4\\</span><span style="color: #848ea9;">}.*[org]$"</span>))
+  (<span style="color: #56b4e9; font-weight: bold;">setq</span> most-recent (nreverse (last ps n-posts)))
   most-recent)
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">erase-recent-posts</span> ()
-  <span style="font-style: italic;">"Erases the text in the recent posts section so as to prepare for inserting updated data."</span>
+(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">erase-recent-posts</span> ()
+  <span style="color: #848ea9;">"Erases the text in the recent posts section so as to prepare for inserting updated data."</span>
   (goto-char (point-min))
-  (search-forward <span style="font-style: italic;">"Recent Posts"</span>)
-  (<span style="font-weight: bold;">let</span> ((begin-posts (point))
-        (end-posts (<span style="font-weight: bold;">progn</span> (search-forward <span style="font-style: italic;">"Older Posts"</span>)
+  (search-forward <span style="color: #848ea9;">"Recent Posts"</span>)
+  (<span style="color: #56b4e9; font-weight: bold;">let</span> ((begin-posts (point))
+        (end-posts (<span style="color: #56b4e9; font-weight: bold;">progn</span> (search-forward <span style="color: #848ea9;">"Older Posts"</span>)
                           (beginning-of-line)
                           (point))))
     (delete-region begin-posts end-posts)
-    (insert <span style="font-style: italic;">"\n\n"</span>)))
+    (insert <span style="color: #848ea9;">"\n\n"</span>)))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">insert-recent-posts</span> (list-post-files)
-  <span style="font-style: italic;">"Inserts the post data for all the desired posts into the current-buffer."</span>
-  (<span style="font-weight: bold;">dolist</span> (p (nreverse list-post-files))
-    (<span style="font-weight: bold;">with-temp-buffer</span>
+(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">insert-recent-posts</span> (list-post-files)
+  <span style="color: #848ea9;">"Inserts the post data for all the desired posts into the current-buffer."</span>
+  (<span style="color: #56b4e9; font-weight: bold;">dolist</span> (p (nreverse list-post-files))
+    (<span style="color: #56b4e9; font-weight: bold;">with-temp-buffer</span>
       (insert-file-contents p)
       (goto-char (point-min))
       (get-post-metadata))
     (goto-char (point-min))
-    (search-forward <span style="font-style: italic;">"Recent Posts"</span>)
+    (search-forward <span style="color: #848ea9;">"Recent Posts"</span>)
     (forward-line)
     (put-post-metadata p)))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">clean-and-refresh-new-posts</span> (pd np)
-  <span style="font-style: italic;">"The principal function that calls all others to erase the current entries, generate a new list of posts, get their meta data and put their meta data into the site home page."</span>
+(<span style="color: #56b4e9; font-weight: bold;">defun</span> <span style="color: #d55e00;">clean-and-refresh-new-posts</span> (pd np)
+  <span style="color: #848ea9;">"The principal function that calls all others to erase the current entries, generate a new list of posts, get their meta data and put their meta data into the site home page."</span>
   (goto-char (point-min))
   (erase-recent-posts)
-  (<span style="font-weight: bold;">let</span> ((list-recent-posts (get-post-list pd np)))
+  (<span style="color: #56b4e9; font-weight: bold;">let</span> ((list-recent-posts (get-post-list pd np)))
     (insert-recent-posts list-recent-posts)))
 </pre>
 </div>
@@ -294,7 +294,7 @@ The way I decided to deal with this was by reading the post directory, finding b
 <div id="postamble" class="status">
 <p class="date">Date: 2023-04-03 Mon 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-22 Thu 18:17 -->
+<!-- 2024-10-29 Tue 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Haskell, Eglot, Language Servers, and Emacs</title>
 <meta name="author" content="Britt Anderson" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -206,9 +206,8 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Haskell, Eglot, Language Servers, and Emacs</h1>
-
-<div id="outline-container-org830dd5c" class="outline-2">
-<h2 id="org830dd5c"><span class="section-number-2">1.</span> Haskell Coding in Emacs</h2>
+<div id="outline-container-org56d1699" class="outline-2">
+<h2 id="org56d1699"><span class="section-number-2">1.</span> Haskell Coding in Emacs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Haskell is a programming language where the rate of development and the evolution of its tooling can make it challenging to love. But love it I do, even though in many ways it is the antithesis of Common Lisp. If the latter is a <i>forever language</i> it sometimes feels as if Haskell is a <i>never language</i>, because I spend so much time trying to figure out how to get it working (admittedly I am only an intermittent user) that by the time I am done, I never write any code.
@@ -239,12 +238,12 @@ Basic <code>eglot</code> configuration was very minimal, and a lot of this is no
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> eglot
-  <span style="font-weight: bold;">:config</span>
+<pre class="src src-elisp">(<span style="color: #56b4e9; font-weight: bold;">use-package</span> eglot
+  <span style="color: #0072b2;">:config</span>
   (add-hook 'haskell-mode-hook 'eglot-ensure)
-  <span style="font-weight: bold;">:custom</span>
-  (eglot-autoshutdown t)  <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">shutdown language server after closing last file</span>
-  (eglot-confirm-server-initiated-edits nil)  <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">allow edits without confirmation</span>
+  <span style="color: #0072b2;">:custom</span>
+  (eglot-autoshutdown t)  <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">shutdown language server after closing last file</span>
+  (eglot-confirm-server-initiated-edits nil)  <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">allow edits without confirmation</span>
   )
 </pre>
 </div>
@@ -258,20 +257,20 @@ Some gotchas. <b><code>PATH</code></b> Variables for both your Linux system and 
 <label class="org-src-name"><span class="listing-number">Listing 1: </span>A function to set paths for individual users, and an example of its use.</label><pre class="src src-sh">
   set_path(){
 
-    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Check if user id is 1000 or higher</span>
-    [ <span style="font-style: italic;">"$(</span><span style="font-weight: bold;">id -u</span><span style="font-style: italic;">)"</span> -ge 1000 ] || <span style="font-weight: bold;">return</span>
+    <span style="color: #009e73; font-style: italic;"># </span><span style="color: #009e73; font-style: italic;">Check if user id is 1000 or higher</span>
+    [ <span style="color: #848ea9;">"$(</span><span style="color: #ff00ff;">id -u</span><span style="color: #848ea9;">)"</span> -ge 1000 ] || <span style="color: #56b4e9; font-weight: bold;">return</span>
 
-    <span style="font-weight: bold;">for</span> i<span style="font-weight: bold;"> in</span> <span style="font-style: italic;">"$@"</span>;
-    <span style="font-weight: bold;">do</span>
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Check if the directory exists</span>
-        [ -d <span style="font-style: italic;">"$i"</span> ] || <span style="font-weight: bold;">continue</span>
+    <span style="color: #56b4e9; font-weight: bold;">for</span> i<span style="color: #56b4e9; font-weight: bold;"> in</span> <span style="color: #848ea9;">"$@"</span>;
+    <span style="color: #56b4e9; font-weight: bold;">do</span>
+        <span style="color: #009e73; font-style: italic;"># </span><span style="color: #009e73; font-style: italic;">Check if the directory exists</span>
+        [ -d <span style="color: #848ea9;">"$i"</span> ] || <span style="color: #56b4e9; font-weight: bold;">continue</span>
 
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Check if it is not already in your $PATH.</span>
-        <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"$PATH"</span> | grep -Eq <span style="font-style: italic;">"(^|:)$i(:|$)"</span> &amp;&amp; <span style="font-weight: bold;">continue</span>
+        <span style="color: #009e73; font-style: italic;"># </span><span style="color: #009e73; font-style: italic;">Check if it is not already in your $PATH.</span>
+        <span style="color: #0072b2;">echo</span> <span style="color: #848ea9;">"$PATH"</span> | grep -Eq <span style="color: #848ea9;">"(^|:)$i(:|$)"</span> &amp;&amp; <span style="color: #56b4e9; font-weight: bold;">continue</span>
 
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Then append it to $PATH and export it</span>
-        <span style="font-weight: bold;">export</span> <span style="font-weight: bold; font-style: italic;">PATH</span>=<span style="font-style: italic;">"${PATH}:$i"</span>
-    <span style="font-weight: bold;">done</span>
+        <span style="color: #009e73; font-style: italic;"># </span><span style="color: #009e73; font-style: italic;">Then append it to $PATH and export it</span>
+        <span style="color: #0072b2;">export</span> <span style="color: #e69f00; font-weight: bold;">PATH</span>=<span style="color: #848ea9;">"${PATH}:$i"</span>
+    <span style="color: #56b4e9; font-weight: bold;">done</span>
 }
 
 set_path ~/.ghcup/bin
@@ -284,8 +283,8 @@ You also <b>must</b> make sure your Emacs path also gets the message. I mistaken
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> exec-path-from-shell)
-(<span style="font-weight: bold;">when</span> (daemonp)
+<pre class="src src-elisp">(<span style="color: #56b4e9; font-weight: bold;">use-package</span> exec-path-from-shell)
+(<span style="color: #56b4e9; font-weight: bold;">when</span> (daemonp)
   (exec-path-from-shell-initialize))
 </pre>
 </div>
@@ -295,9 +294,9 @@ The next gotcha: Compiling. You can easily do this from your terminal if you wis
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> haskell-mode
-  <span style="font-weight: bold;">:bind</span> (<span style="font-weight: bold;">:map</span> haskell-mode-map
-              ((<span style="font-style: italic;">"C-c C-c"</span> . haskell-compile))))
+<pre class="src src-elisp">(<span style="color: #56b4e9; font-weight: bold;">use-package</span> haskell-mode
+  <span style="color: #0072b2;">:bind</span> (<span style="color: #0072b2;">:map</span> haskell-mode-map
+              ((<span style="color: #848ea9;">"C-c C-c"</span> . haskell-compile))))
 </pre>
 </div>
 
@@ -310,10 +309,10 @@ I found this the hardest to get right, since I do not really know what all the <
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example Eglot Workspace Configuration</label><pre class="src src-elisp">((nil . ((eglot-workspace-configuration . (<span style="font-weight: bold;">:haskell</span>
-                                           (<span style="font-weight: bold;">:plugins</span>
-                                            (<span style="font-weight: bold;">:stan</span> (<span style="font-weight: bold;">:globalOn</span> <span style="font-weight: bold;">:json-false</span>)
-                                                   <span style="font-weight: bold;">:ghcide-code-actions-fill-holes</span> (<span style="font-weight: bold;">:enabled</span> t))))))))
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example Eglot Workspace Configuration</label><pre class="src src-elisp">((nil . ((eglot-workspace-configuration . (<span style="color: #0072b2;">:haskell</span>
+                                             (<span style="color: #0072b2;">:plugins</span>
+                                              (<span style="color: #0072b2;">:stan</span> (<span style="color: #0072b2;">:globalOn</span> <span style="color: #0072b2;">:json-false</span>)
+                                                     <span style="color: #0072b2;">:ghcide-code-actions-fill-holes</span> (<span style="color: #0072b2;">:enabled</span> t))))))))
 </pre>
 </div>
 
@@ -323,11 +322,11 @@ Last gotcha: You need to sort of remember or figure out how <code>cabal</code> w
 </p>
 
 <div class="org-src-container">
-<pre class="src src-haskell">module Main where 
+<pre class="src src-haskell"><span style="color: #56b4e9; font-weight: bold;">module</span> <span style="color: #0072b2; font-weight: bold;">Main</span> <span style="color: #56b4e9; font-weight: bold;">where</span> 
 
 
-main :: IO ()
-main = putStrLn "howdy"
+<span style="color: #d55e00;">main</span> <span style="color: #e69f00; font-weight: bold;">::</span> <span style="color: #0072b2; font-weight: bold;">IO</span> <span style="color: #0072b2; font-weight: bold;">()</span>
+<span style="color: #d55e00;">main</span> <span style="color: #e69f00; font-weight: bold;">=</span> putStrLn <span style="color: #848ea9;">"howdy"</span>
 </pre>
 </div>
 
@@ -344,7 +343,7 @@ If this doesn't work for you, hopefully it will help save you some time. And if 
 <div id="postamble" class="status">
 <p class="date">Date: 2024-04-19 Fri 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-08-22 Thu 18:17</p>
+<p class="date">Created: 2024-10-29 Tue 21:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
