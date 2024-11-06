@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-29 Tue 21:52 -->
+<!-- 2024-11-06 Wed 10:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lean 4, Emacs, and Archlinux</title>
@@ -246,14 +246,14 @@ For me this becomes,
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #56b4e9; font-weight: bold;">use-package</span> dash)
-(<span style="color: #56b4e9; font-weight: bold;">use-package</span> flycheck)
-(<span style="color: #56b4e9; font-weight: bold;">use-package</span> lsp-mode)
-(<span style="color: #56b4e9; font-weight: bold;">use-package</span> magit-section)
-(<span style="color: #56b4e9; font-weight: bold;">use-package</span> lean4-mode
-  <span style="color: #0072b2;">:load-path</span> <span style="color: #848ea9;">"/home/britt/Nextcloud/admin/computer/lean.d/lean4-mode"</span>
-  <span style="color: #0072b2;">:requires</span> (dash flycheck lsp-mode magit-section) <span style="color: #009e73; font-style: italic;">;; </span><span style="color: #009e73; font-style: italic;">prevents loading if they are missing; so install them</span>
-  <span style="color: #0072b2;">:commands</span> (lean4-mode))
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">use-package</span> dash)
+(<span style="font-weight: bold;">use-package</span> flycheck)
+(<span style="font-weight: bold;">use-package</span> lsp-mode)
+(<span style="font-weight: bold;">use-package</span> magit-section)
+(<span style="font-weight: bold;">use-package</span> lean4-mode
+  <span style="font-weight: bold;">:load-path</span> <span style="font-style: italic;">"/home/britt/Nextcloud/admin/computer/lean.d/lean4-mode"</span>
+  <span style="font-weight: bold;">:requires</span> (dash flycheck lsp-mode magit-section) <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">prevents loading if they are missing; so install them</span>
+  <span style="font-weight: bold;">:commands</span> (lean4-mode))
 </pre>
 </div>
 </div>
@@ -289,7 +289,7 @@ Of course your specific package number will probably be different.
 <div id="postamble" class="status">
 <p class="date">Date: 2024-08-22 Thu 00:00</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2024-10-29 Tue 21:52</p>
+<p class="date">Created: 2024-11-06 Wed 10:32</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
