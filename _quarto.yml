@@ -1,4 +1,5 @@
 project:
+  output-dir: docs/
   type: website
 
 website:
@@ -7,9 +8,9 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/brittAnderson
+      - icon: cloud
+        href: https://bsky.app/profile/britt-anderson.bsky.social
 format:
   html:
     theme:
