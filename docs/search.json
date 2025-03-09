@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/belief-cogsci-2024/index.html",
+    "href": "posts/belief-cogsci-2024/index.html",
+    "title": "Cog Sci 2024 - Rotterdam: Negative Ranking Theory",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "YABB: Yet Another Britt Blog",
-    "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 9, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 6, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me: Britt Anderson",
-    "section": "",
-    "text": "About this blog more text"
+    "text": "Hanbin Go and I have spent a lot of the last couple of years trying to come up with ways to probe belief that depart from the conventional subjective probability model. That model is incomplete at best, and probably wrong for many of the most interesting cases: such as when you have to consider counterfactuals or one-off scenarios. We came across the negative ranking theory of Wolfgang Spohn and found it appealing in that it limits much of the computational burden of comparing and updating degrees of belief. But do people actually adhere to this formalism? That has been Hanbin’s project for the last few years and he is sharing his first comprehensive overview at this month’s (July 2024) Cognitive Science Society meeting in Rotterdam, the Netherlands. Come by and let us know what you think or take a look at the attached poster/paper combo and send us an email. We would love to get feedback on this work.\nTo see the poster pdf please click here."
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -26,5 +12,26 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me: Britt Anderson",
+    "section": "",
+    "text": "I am an associate professor at the University of Waterloo affilated with the Cognitive Neuroscience area of the Department of Psychology and the University’s Centre for Theoretical Neuroscience. This is a site I am building to teach the use of Quarto for my Psych390 class in Winter 2024."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "YABB: Yet Another Britt Blog",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 9, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nCog Sci 2024 - Rotterdam: Negative Ranking Theory\n\n\n\n\n\n\nbelief\n\n\nresearch\n\n\n\n\n\n\n\n\n\nMar 9, 2025\n\n\nBritt Anderson\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 6, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]

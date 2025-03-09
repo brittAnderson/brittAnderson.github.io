@@ -1,0 +1,12 @@
+---
+title: "Cog Sci 2024 - Rotterdam: Negative Ranking Theory"
+author: "Britt Anderson"
+date: today
+categories: [belief,research]
+image: ../../images/conf-posters/cogsci24fp.jpg
+---
+
+
+Hanbin Go and I have spent a lot of the last couple of years trying to come up with ways to probe belief that depart from the conventional subjective probability model. That model is incomplete at best, and probably wrong for many of the most interesting cases: such as when you have to consider counterfactuals or one-off scenarios. We came across the negative ranking theory of [Wolfgang Spohn](https://en.wikipedia.org/wiki/Wolfgang_Spohn) and found it appealing in that it limits much of the computational burden of comparing and updating degrees of belief. But do people actually adhere to this formalism? That has been Hanbin's project for the last few years and he is sharing his first comprehensive overview at this month's (July 2024) [Cognitive Science Society meeting in Rotterdam](https://cognitivesciencesociety.org/cogsci-2024/), the Netherlands. Come by and let us know what you think or take a look at the attached poster/paper combo and send us an email. We would love to get feedback on this work.
+
+
