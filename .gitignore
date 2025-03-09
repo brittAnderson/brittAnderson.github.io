@@ -3,3 +3,6 @@ dist-newstyle/
 *.swp
 *~
 *.org#
+_site/
+.quarto/
+
