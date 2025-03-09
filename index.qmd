@@ -1,5 +1,5 @@
 ---
-title: "brittAnderson.github.io"
+title: "YABB: Yet Another Britt Blog"
 listing:
   contents: posts
   sort: "date desc"
